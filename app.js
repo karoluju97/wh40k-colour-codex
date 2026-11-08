@@ -57,11 +57,15 @@
     return { armour: "armour", armour2: "armour", trim: "trim" }[c.r] || "details";
   }
   function toPaints(scheme) {
-    const seen = new Set();
+    const seen = {};
     scheme.colours = scheme.colours.map((c) => {
       const [pn, ph] = paintFor(c);
       return { n: pn, h: ph, r: c.r, part: partOf(c), orig: c.n, origHex: c.h };
-    }).filter((c) => { const k = c.n + "|" + c.part; if (seen.has(k)) return false; seen.add(k); return true; });
+    }).filter((c) => {
+      const prev = seen[c.n];
+      if (prev) { if (!prev.part.split(", ").includes(c.part)) prev.part += ", " + c.part; return false; }
+      seen[c.n] = c; return true;
+    });
   }
   LEGIONS.forEach((lg) => lg.schemes.forEach(toPaints));
   CHAPTERS.forEach((ch) => toPaints(ch.scheme));
@@ -226,7 +230,7 @@
   function schemeBlock(s) {
     return `<div class="scheme">${pad(s)}<div>${s.label ? `<div class="name">${esc(s.label)}</div>` : ""}
       <div class="chiplist">${s.colours.map((c) => `<button class="chip" data-copy="${esc(c.n)}" title="Copy &quot;${esc(c.n)}&quot;"><i style="background:${c.h}"></i>${esc(c.n)} <small>${esc(c.part)}</small></button>`).join("")}</div>
-      <div class="hint">Closest Citadel paints · ${s.pattern === "halved" ? "halved livery" : s.pattern === "quartered" ? "quartered livery" : "solid main colour"} · click a paint to copy its name</div></div></div>`;
+      ${s.pattern !== "solid" ? `<div class="hint">${s.pattern === "halved" ? "Halved" : "Quartered"} livery</div>` : ""}</div></div>`;
   }
   const favBtn = (id) => `<button class="btn ${favs.has(id) ? "on" : ""}" data-fav="${id}">${favs.has(id) ? "★ Shortlisted" : "☆ Shortlist"}</button>`;
   const linkBtns = (name) => linksFor(name).map((l) => `<a class="btn" href="${l.u}" target="_blank" rel="noopener">${esc(l.t)} ↗</a>`).join("");
@@ -245,7 +249,7 @@
         <div class="badges"><span class="badge ${lg.allegiance}">${lg.allegiance}</span>${primBadge(e)}</div></div>
         <div class="actions">${favBtn(e.id)}${linkBtns(lg.name)}</div></div>
       <div class="prose"><p>${esc(lg.primarchBio)}</p><p>${esc(lg.legionBio)}</p></div>
-      <div class="section-title">Colour scheme${lg.schemes.length > 1 ? "s" : ""}</div><div class="schemes">${lg.schemes.map(schemeBlock).join("")}</div>
+      <div class="section-title">Colour scheme${lg.schemes.length > 1 ? "s" : ""}</div><div class="section-hint">Closest Citadel paints · click one to copy its name</div><div class="schemes">${lg.schemes.map(schemeBlock).join("")}</div>
       <div class="section-title">Pictures</div>
       <div class="pics">${pics.map((p) => `<figure>${plate(p.src, p.label)}<figcaption>${esc(p.label)}</figcaption></figure>`).join("")}</div>`;
   }
@@ -258,7 +262,7 @@
         <div class="badges">${allegBadge(e)}${primBadge(e)}</div></div>
         <div class="actions">${favBtn(e.id)}${linkBtns(ch.name)}</div></div>
       <div class="prose">${ch.bio.split(/\n\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
-      <div class="section-title">Colour scheme</div>${schemeBlock(ch.scheme)}
+      <div class="section-title">Colour scheme</div><div class="section-hint">Closest Citadel paints · click one to copy its name</div><div class="schemes">${schemeBlock(ch.scheme)}</div>
       <div class="section-title">Picture</div><div class="pics"><figure>${plate(plateSrc(e), ch.name)}<figcaption>${esc(ch.name)}: colour scheme</figcaption></figure></div>`;
   }
 

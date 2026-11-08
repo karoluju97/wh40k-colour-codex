@@ -159,3 +159,15 @@ button { font: inherit; color: inherit; }
 .badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 .badge.prim { background: rgba(201,162,74,.14); color: #e2c27a; }
 .badge.Renegade { background: rgba(217,140,40,.16); color: #f0b46a; }
+
+/* Compact colour-scheme cards */
+.schemes { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; max-width: 1100px; }
+.scheme { padding: 10px 12px; gap: 10px; border-radius: 10px; }
+.scheme svg.pad { width: 36px; height: 40px; }
+.scheme .name { font-size: 13.5px; margin-bottom: 6px; }
+.chiplist { gap: 4px; }
+.chip { padding: 3px 7px 3px 3px; font-size: 12.5px; gap: 6px; border-radius: 6px; }
+.chip i { width: 18px; height: 18px; border-radius: 4px; }
+.chip small { font-size: 11px; }
+.scheme .hint { margin-top: 5px; font-size: 11.5px; }
+.section-hint { color: var(--muted); font-size: 12px; margin: -4px 0 10px; }
