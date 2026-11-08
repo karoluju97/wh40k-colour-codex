@@ -158,7 +158,7 @@
     const out = Object.values((j.query && j.query.pages) || {})
       .map((pg) => ({ name: pg.title, ii: (pg.imageinfo || [])[0] }))
       .filter((x) => x.ii && /image\/(jpeg|png|webp)/.test(x.ii.mime) && x.ii.width >= 180 && !skip.test(x.name))
-      .slice(0, 18)
+      .slice(0, 36)
       .map((x) => ({ thumb: x.ii.thumburl || x.ii.url, full: x.ii.url, page: x.ii.descriptionurl, name: x.name.replace(/^File:/, "").replace(/\.\w+$/, "") }));
     galleryCache[title] = out;
     return out;
