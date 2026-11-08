@@ -171,3 +171,5 @@ button { font: inherit; color: inherit; }
 .chip small { font-size: 11px; }
 .scheme .hint { margin-top: 5px; font-size: 11.5px; }
 .section-hint { color: var(--muted); font-size: 12px; margin: -4px 0 10px; }
+/* Centre the scheme cards */
+.schemes { grid-template-columns: repeat(auto-fit, minmax(250px, 290px)); justify-content: center; max-width: none; }
