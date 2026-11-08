@@ -243,7 +243,7 @@
   const tile = (e) => `<button class="tile" data-go="${e.id}">${plate(plateSrc(e), e.name)}<span class="t">${esc(e.name)}</span>${bar(e.schemes[0])}</button>`;
 
   function welcome() {
-    return `<div class="welcome"><h1>Kuur0's Warhammer Color Codex</h1><p>Pick a Legion or Chapter from the sidebar, or search above.</p></div>`;
+    return `<div class="welcome"><h1>Kuur0's Warhammer Color Codex</h1></div>`;
   }
 
   function legionView(e) {
