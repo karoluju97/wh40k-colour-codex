@@ -1,0 +1,411 @@
+/*
+ * Colour Codex data.
+ * Lore summarised in my own words from Lexicanum (wh40k.lexicanum.com) and the
+ * Warhammer 40k Fandom wiki (warhammer40k.fandom.com). Hex values are painter's
+ * approximations of the described liveries, not official paint matches.
+ *
+ * Scheme format:
+ *   pattern: "solid" | "halved" | "quartered"
+ *   colours: [{ n: name, h: hex, r: role }]
+ *     roles: "armour" (main), "armour2" (second half/quarter), "trim", "detail"
+ */
+
+const L = (n, h) => ({ n, h, r: "armour" });
+const L2 = (n, h) => ({ n, h, r: "armour2" });
+const T = (n, h) => ({ n, h, r: "trim" });
+const D = (n, h) => ({ n, h, r: "detail" });
+
+// Shared tones
+const BLACK = "#1b1b1e", BONE = "#d9cca6", WHITE = "#ecebe6", GOLD = "#c49a3c",
+      SILVER = "#a9adb1", BRASS = "#a8823a", RED = "#9e1b1e", GUNMETAL = "#55595e";
+
+const LEGIONS = [
+  {
+    num: "I", name: "Dark Angels", primarch: "Lion El'Jonson", allegiance: "Loyalist",
+    status: "Returned to the Imperium in the Era Indomitus",
+    homeworld: "Caliban (destroyed)",
+    primarchBio: "Found as a feral boy in Caliban's monster-haunted forests and raised by its knightly orders, the Lion was a cold, brilliant strategist. His relationship with his sons was shattered by Luther's rebellion on Caliban, and he slept for ten thousand years before returning.",
+    legionBio: "The First Legion, keepers of secrets. Their modern Chapter hides the shame of the Fallen and hunts them relentlessly. They field the bone-armoured Deathwing and the black-armoured Ravenwing alongside the green battle companies.",
+    schemes: [
+      { label: "Battle companies (modern)", pattern: "solid", colours: [L("Dark green", "#1d4a2b"), T("Dark green", "#1d4a2b"), D("Bone robes", BONE), D("Red", RED), D("Gold", GOLD)] },
+      { label: "Deathwing", pattern: "solid", colours: [L("Bone", BONE), T("Bone", BONE), D("Red", RED), D("Dark green", "#1d4a2b")] },
+      { label: "Ravenwing", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Bone", BONE), D("Silver", SILVER)] },
+      { label: "Horus Heresy Legion", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red", RED), D("Bone", BONE)] },
+    ],
+  },
+  {
+    num: "II", name: "Lost Legion", primarch: "Unknown", allegiance: "Expunged",
+    status: "Erased from all Imperial records", homeworld: "Unknown", lost: true,
+    primarchBio: "Nothing survives of the Second Primarch. Even his name was removed from the Imperial archives, long before the Horus Heresy.",
+    legionBio: "The II Legion was purged from history. Its fate is one of the great unsolved mysteries of the setting, so there's no official colour scheme. That makes it a blank canvas for your own ideas.",
+    schemes: [],
+  },
+  {
+    num: "III", name: "Emperor's Children", primarch: "Fulgrim", allegiance: "Traitor",
+    status: "Daemon Prince of Slaanesh", homeworld: "Chemos",
+    primarchBio: "Fulgrim the Phoenician pursued perfection in every art. A cursed daemon blade led him toward excess and he slew his closest brother, Ferrus Manus, at Isstvan V before ascending as a daemon of Slaanesh.",
+    legionBio: "Once the proud bearers of the Emperor's own aquila, the III Legion fell into hedonism and sensory obsession. Their regal purple and gold became garish pinks, purples and blacks.",
+    schemes: [
+      { label: "Pre-Heresy / Heresy", pattern: "solid", colours: [L("Royal purple", "#5b2a6e"), T("Gold", GOLD), D("White", WHITE), D("Black", BLACK)] },
+      { label: "Chaos (modern)", pattern: "solid", colours: [L("Pink", "#d1579c"), T("Gold", GOLD), D("Purple", "#5b2a6e"), D("Black", BLACK)] },
+    ],
+  },
+  {
+    num: "IV", name: "Iron Warriors", primarch: "Perturabo", allegiance: "Traitor",
+    status: "Daemon Prince", homeworld: "Olympia",
+    primarchBio: "Perturabo was a genius of mathematics and siegecraft, embittered by years of thankless grinding wars. He resented his brother Rogal Dorn and turned traitor, eventually ascending to daemonhood within the Eye of Terror.",
+    legionBio: "Masters of siege warfare who reduce fortresses with grim, methodical patience. Their gunmetal armour carries yellow and black hazard stripes.",
+    schemes: [
+      { label: "Legion colours", pattern: "solid", colours: [L("Gunmetal", GUNMETAL), T("Hazard yellow", "#e6b510"), D("Black stripes", BLACK), D("Silver", SILVER)] },
+    ],
+  },
+  {
+    num: "V", name: "White Scars", primarch: "Jaghatai Khan", allegiance: "Loyalist",
+    status: "Missing, believed lost in the Webway", homeworld: "Chogoris (Mundus Planus)",
+    primarchBio: "The Great Khan grew up among the horse tribes of Chogoris and became their warlord. He was a proud, independent master of fast warfare who valued freedom over politics. He vanished into the Webway pursuing Dark Eldar long after the Heresy.",
+    legionBio: "Lightning-fast raiders who favour bikes, speeders and jump packs. Each warrior ritually scars his face. The white armour with its red lightning-bolt stripe is iconic.",
+    schemes: [
+      { label: "Chapter colours", pattern: "solid", colours: [L("White", WHITE), T("Red stripe", "#a41e22"), D("Black", BLACK), D("Gold", GOLD)] },
+    ],
+  },
+  {
+    num: "VI", name: "Space Wolves", primarch: "Leman Russ", allegiance: "Loyalist",
+    status: "Missing, departed on his 'Wild Hunt'", homeworld: "Fenris",
+    primarchBio: "Raised among the savage tribes of icy Fenris, Leman Russ became the Emperor's executioner. He was a boisterous, saga-loving warrior king who led the burning of Prospero and later left on a final hunt from which he has not returned.",
+    legionBio: "A non-Codex Chapter organised into Great Companies under Wolf Lords, with heavy Norse-style culture. Their unstable gene-seed means true successors are extremely rare (the lost Wolf Brothers and the Primaris Wolfspear). Pelts, talismans and runes cover their armour.",
+    schemes: [
+      { label: "Chapter colours (modern)", pattern: "solid", colours: [L("Wolf grey-blue", "#5f7d94"), T("Wolf grey-blue", "#5f7d94"), D("Yellow", "#e0b23a"), D("Red", "#a8312a"), D("Fur brown", "#6b5136")] },
+      { label: "Horus Heresy Legion", pattern: "solid", colours: [L("Storm grey", "#6e7378"), T("Dark grey", "#45494d"), D("Bone", BONE), D("Red", "#a8312a")] },
+    ],
+  },
+  {
+    num: "VII", name: "Imperial Fists", primarch: "Rogal Dorn", allegiance: "Loyalist",
+    status: "Presumed dead (only his hand was recovered)", homeworld: "Inwit / Terra",
+    primarchBio: "The stoic Praetorian of Terra, Rogal Dorn turned the Imperial Palace into a fortress and held it against Horus. Unbending and honest to a fault, he fell during a crusade against the Black Legion.",
+    legionBio: "Defenders and siege-breakers, famed for stubborn last stands and fortifications. Their bright yellow armour is one of the most recognisable in the galaxy, and they have produced many proud successors.",
+    schemes: [
+      { label: "Chapter colours", pattern: "solid", colours: [L("Yellow", "#f2c200"), T("Yellow", "#f2c200"), D("Red fist", "#b5221d"), D("Black", BLACK), D("White", WHITE)] },
+    ],
+  },
+  {
+    num: "VIII", name: "Night Lords", primarch: "Konrad Curze", allegiance: "Traitor",
+    status: "Dead (executed by the assassin M'Shen, as he foresaw)", homeworld: "Nostramo (destroyed)",
+    primarchBio: "Konrad Curze, the Night Haunter, grew up in the lightless crime-ridden city of Nostramo Quintus and ruled it through terror. He was tormented by visions and believed fear was the only true law. He welcomed the assassin he knew would kill him.",
+    legionBio: "Terror troops who flay, broadcast screams over the vox and strike from the dark. Midnight-blue armour with lightning bolts, bat-wing helms and grim trophies.",
+    schemes: [
+      { label: "Legion colours", pattern: "solid", colours: [L("Midnight blue", "#1b2445"), T("Brass", BRASS), D("Bone", BONE), D("Blood red", "#8f1d1d")] },
+    ],
+  },
+  {
+    num: "IX", name: "Blood Angels", primarch: "Sanguinius", allegiance: "Loyalist",
+    status: "Slain by Horus aboard the Vengeful Spirit", homeworld: "Baal",
+    primarchBio: "The Great Angel, a winged primarch of radiant nobility, loved by all his brothers. He died confronting Horus on the Warmaster's flagship. His death echoes through his gene-line as the Red Thirst and the Black Rage.",
+    legionBio: "Noble, artistic warriors who fight an inner hunger for blood. Their crimson armour is offset by the gold of the Sanguinary Guard and the black of the doomed Death Company.",
+    schemes: [
+      { label: "Chapter colours", pattern: "solid", colours: [L("Crimson", "#a3151c"), T("Crimson", "#a3151c"), D("Gold", GOLD), D("Black", BLACK), D("Bone", BONE)] },
+      { label: "Death Company", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red saltire", "#a3151c"), D("Bone", BONE)] },
+      { label: "Sanguinary Guard", pattern: "solid", colours: [L("Gold", GOLD), T("Gold", GOLD), D("Red", "#a3151c"), D("Black", BLACK)] },
+    ],
+  },
+  {
+    num: "X", name: "Iron Hands", primarch: "Ferrus Manus", allegiance: "Loyalist",
+    status: "Slain by Fulgrim at Isstvan V", homeworld: "Medusa",
+    primarchBio: "Ferrus Manus fought a silver-skinned wyrm on Medusa and was left with hands of living metal. He was blunt and proud, and led the assault at Isstvan V, where his former friend Fulgrim beheaded him.",
+    legionBio: "Grief made the Iron Hands loathe the weakness of flesh, so they replace it with bionics. They are governed by clan councils rather than a single master. Black armour, bare steel and machine parts.",
+    schemes: [
+      { label: "Chapter colours", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Steel", SILVER), D("White markings", WHITE), D("Red lenses", RED)] },
+    ],
+  },
+  {
+    num: "XI", name: "Lost Legion", primarch: "Unknown", allegiance: "Expunged",
+    status: "Erased from all Imperial records", homeworld: "Unknown", lost: true,
+    primarchBio: "Like the Second, the Eleventh Primarch and his Legion were struck from the records. Only the gap in the numbering hints that they ever existed.",
+    legionBio: "No canonical colours exist. Many hobbyists use the XI as an excuse to invent a 'lost' Legion with their own heraldry.",
+    schemes: [],
+  },
+  {
+    num: "XII", name: "World Eaters", primarch: "Angron", allegiance: "Traitor",
+    status: "Daemon Primarch of Khorne", homeworld: "Nuceria",
+    primarchBio: "Angron was a gladiator-slave with the Butcher's Nails, a brutal neural implant, hammered into his brain. The Emperor took him from his doomed rebellion and he never forgave it. Rage-driven and in agony, he ascended as a daemon of the Blood God.",
+    legionBio: "Formerly the War Hounds, the XII Legion copied their primarch's implants and descended into berserk slaughter for Khorne. Their white and blue livery became blood red and brass.",
+    schemes: [
+      { label: "Heresy era", pattern: "solid", colours: [L("White", "#e6e2d6"), T("Blue", "#2f5597"), D("Brass", BRASS), D("Black", BLACK)] },
+      { label: "Khorne (modern)", pattern: "solid", colours: [L("Blood red", "#8e1b17"), T("Brass", BRASS), D("Black", BLACK), D("Bone", BONE)] },
+    ],
+  },
+  {
+    num: "XIII", name: "Ultramarines", primarch: "Roboute Guilliman", allegiance: "Loyalist",
+    status: "Resurrected; Lord Commander of the Imperium", homeworld: "Macragge (Ultramar)",
+    primarchBio: "A statesman and logistician as much as a warrior, Guilliman built Ultramar into a model empire and wrote the Codex Astartes. Mortally wounded by Fulgrim, he lay in stasis for millennia until he was revived to lead the Imperium again.",
+    legionBio: "The largest Legion and the template for most Chapters. They are disciplined and adaptable, and more than half of all Space Marine Chapters descend from their gene-seed.",
+    schemes: [
+      { label: "Chapter colours", pattern: "solid", colours: [L("Ultramarine blue", "#1d3f8f"), T("Gold", GOLD), D("White", WHITE), D("Red", RED)] },
+    ],
+  },
+  {
+    num: "XIV", name: "Death Guard", primarch: "Mortarion", allegiance: "Traitor",
+    status: "Daemon Prince of Nurgle", homeworld: "Barbarus",
+    primarchBio: "Mortarion grew up on poison-fogged Barbarus under a tyrant warlord and led its people in revolt. He prized endurance above all, and in a warp-stranded plague fleet he gave himself and his Legion to Nurgle.",
+    legionBio: "Relentless, unstoppable infantry who march through any punishment. As Plague Marines they now carry rot and disease. Their bone-white armour became sickly green, rusted and brass-studded.",
+    schemes: [
+      { label: "Heresy era", pattern: "solid", colours: [L("Bone white", "#d9d2bb"), T("Dark green", "#48603f"), D("Brass", BRASS), D("Black", BLACK)] },
+      { label: "Nurgle (modern)", pattern: "solid", colours: [L("Plague green", "#76804f"), T("Brass", "#8f7434"), D("Rust", "#7a3f22"), D("Bone", BONE)] },
+    ],
+  },
+  {
+    num: "XV", name: "Thousand Sons", primarch: "Magnus the Red", allegiance: "Traitor",
+    status: "Daemon Prince of Tzeentch", homeworld: "Prospero (destroyed)",
+    primarchBio: "A one-eyed giant of sorcerous genius, Magnus believed psychic knowledge could be mastered safely. His desperate warning to the Emperor shattered the Palace's wards. Russ was sent to burn Prospero, which drove Magnus into Tzeentch's arms.",
+    legionBio: "Scholar-sorcerers whose mutations were 'cured' by the Rubric of Ahriman, which turned most of the Legion into dust-filled automata. Their old crimson changed to Tzeentchian blue and gold.",
+    schemes: [
+      { label: "Heresy era", pattern: "solid", colours: [L("Crimson", "#a51e22"), T("Ivory", "#e6dcc0"), D("Gold", GOLD), D("Black", BLACK)] },
+      { label: "Tzeentch (modern)", pattern: "solid", colours: [L("Sorcerous blue", "#1f4fa0"), T("Gold", GOLD), D("Black", BLACK), D("Bone", BONE)] },
+    ],
+  },
+  {
+    num: "XVI", name: "Sons of Horus / Black Legion", primarch: "Horus Lupercal", allegiance: "Traitor",
+    status: "Slain by the Emperor at the Siege of Terra", homeworld: "Cthonia",
+    primarchBio: "The Emperor's favoured son and first Warmaster, Horus led the Great Crusade. He was corrupted by Chaos after a near-fatal wound on Davin, and his rebellion split the Imperium in the Horus Heresy.",
+    legionBio: "Begun as the Luna Wolves, renamed the Sons of Horus, and after their master's death rebuilt by Abaddon as the Black Legion. They are the spearhead of the Black Crusades. Three famous schemes in one lineage.",
+    schemes: [
+      { label: "Luna Wolves", pattern: "solid", colours: [L("White", WHITE), T("White", WHITE), D("Black", BLACK), D("Gold", GOLD)] },
+      { label: "Sons of Horus", pattern: "solid", colours: [L("Sea green", "#3f8a7a"), T("Black", BLACK), D("Bronze", "#9a6e34"), D("Red eye", RED)] },
+      { label: "Black Legion", pattern: "solid", colours: [L("Black", BLACK), T("Gold", GOLD), D("Red", RED), D("Brass", BRASS)] },
+    ],
+  },
+  {
+    num: "XVII", name: "Word Bearers", primarch: "Lorgar Aurelian", allegiance: "Traitor",
+    status: "Daemon Prince", homeworld: "Colchis",
+    primarchBio: "A preacher who worshipped the Emperor as a god, Lorgar was publicly shamed at Monarchia for it. He searched for new gods and found Chaos, then quietly built the conspiracy that became the Horus Heresy.",
+    legionBio: "Fanatical zealots, the first Legion to turn wholly to the Dark Gods, led by Dark Apostles. Their armour is covered in scripture and sigils. They wore grey before Monarchia, then crimson in mourning and rage.",
+    schemes: [
+      { label: "Pre-Monarchia", pattern: "solid", colours: [L("Grey", "#8d9095"), T("Gold", GOLD), D("Black", BLACK), D("Parchment", BONE)] },
+      { label: "Heresy & Chaos", pattern: "solid", colours: [L("Crimson", "#7c1a20"), T("Black", BLACK), D("Gold", GOLD), D("Parchment", BONE)] },
+    ],
+  },
+  {
+    num: "XVIII", name: "Salamanders", primarch: "Vulkan", allegiance: "Loyalist",
+    status: "Missing (alive; Vulkan is a 'Perpetual')", homeworld: "Nocturne",
+    primarchBio: "A gentle giant and master smith from volcanic Nocturne, Vulkan valued human life above glory. He survived the Dropsite Massacre and many 'deaths', for he cannot truly die.",
+    legionBio: "Humane warriors and craftsmen who protect civilians and favour flamers and meltas. Their skin is coal-black and their eyes glow red. Scaled green armour with flame motifs.",
+    schemes: [
+      { label: "Chapter colours", pattern: "solid", colours: [L("Salamander green", "#2a7a3b"), T("Black", BLACK), D("Flame orange", "#d9541b"), D("Bronze", "#9b7531"), D("Red lenses", RED)] },
+    ],
+  },
+  {
+    num: "XIX", name: "Raven Guard", primarch: "Corvus Corax", allegiance: "Loyalist",
+    status: "Missing (departed into the Eye of Terror)", homeworld: "Deliverance (Kiavahr)",
+    primarchBio: "Corax grew up in a prison moon's mines and led its slaves to freedom. He was a master of stealth and liberation, and was haunted by failing his Legion at Isstvan V and by his flawed attempts to rebuild it.",
+    legionBio: "Masters of infiltration, decapitation strikes and hit-and-run war. Black armour with white details, used in contrast like a raven's plumage.",
+    schemes: [
+      { label: "Chapter colours", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("White", WHITE), D("Dark grey", "#4a4f55"), D("Red lenses", RED)] },
+    ],
+  },
+  {
+    num: "XX", name: "Alpha Legion", primarch: "Alpharius Omegon", allegiance: "Traitor",
+    status: "Unknown (twin primarchs; at least one reported dead)", homeworld: "Unknown",
+    primarchBio: "Twin primarchs sharing one name and identity, the youngest of the Emperor's sons. They were secretive strategists whose true motives for joining Horus remain one of the great mysteries.",
+    legionBio: "Spies, saboteurs and cultist-handlers who show the same face to everyone ('I am Alpharius'). Scaled armour in shifting blue-green with silver.",
+    schemes: [
+      { label: "Legion colours", pattern: "solid", colours: [L("Teal / blue-green", "#1f6f7a"), T("Silver", SILVER), D("Dark blue", "#163a4a"), D("Green lenses", "#4ca85a")] },
+    ],
+  },
+];
+
+/* Successor Chapters: progenitor = Legion number. Progenitors per the Fandom wiki chapter lists. */
+const CHAPTERS = [
+  // ---------- Dark Angels (I) ----------
+  { name: "Angels of Absolution", legion: "I", founding: "Second Founding",
+    bio: "One of the most respected of the Unforgiven. They believe their forebears' deeds have already paid for the Fall of Caliban, so they don't fear damnation and are known for their grim humour. They often fight beside the Dark Angels themselves.",
+    scheme: { pattern: "solid", colours: [L("Bone", BONE), T("Bone", BONE), D("Green robes", "#1d4a2b"), D("Green lenses", "#4ca85a"), D("Red (veterans)", RED)] } },
+  { name: "Angels of Redemption", legion: "I", founding: "Second Founding",
+    bio: "Single-minded Fallen-hunters, notorious for abandoning allies mid-battle when one of the Fallen is sighted. Many Imperial commanders now politely decline their help.",
+    scheme: { pattern: "halved", colours: [L("Dark green", "#1d4a2b"), L2("Ivory", "#e3d9bd"), T("Dark green", "#1d4a2b"), D("Red", RED)] } },
+  { name: "Angels of Vengeance", legion: "I", founding: "Second Founding",
+    bio: "Stubborn almost to fanaticism, they shun glory and focus on duty. They still wear the black of the original First Legion, which is a great scheme if you want a Heresy look in 40k.",
+    scheme: { pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red", RED), D("Bone icons", BONE), D("Black robes", "#2a2a2e")] } },
+  { name: "Consecrators", legion: "I", founding: "Unknown",
+    bio: "A mysterious Chapter that first appeared at Chapter strength without warning. They carry an unusual amount of ancient relic armour and weapons, as though they inherited the Legion's armoury.",
+    scheme: { pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red", RED), D("Gold", GOLD), D("Bone", BONE)] } },
+  { name: "Disciples of Caliban", legion: "I", founding: "Unknown",
+    bio: "A fleet-based strike Chapter whose creation was personally requested by a Dark Angels Supreme Grand Master, which is almost unheard of. Rumour says they exist to hunt Cypher.",
+    scheme: { pattern: "solid", colours: [L("Dark green", "#1d4a2b"), T("Black", BLACK), D("Black limbs", BLACK), D("Bone", BONE)] } },
+  { name: "Guardians of the Covenant", legion: "I", founding: "Unknown",
+    bio: "Deeply devout Unforgiven who inscribe their armour with scripture and hold to strict oaths. Bare polished steel with crimson robes makes a striking, quick-to-paint scheme.",
+    scheme: { pattern: "solid", colours: [L("Polished steel", "#b4b8bc"), T("Steel", "#8d9297"), D("Crimson robes", "#8c1a1f"), D("Black", BLACK)] } },
+
+  // ---------- White Scars (V) ----------
+  { name: "Marauders", legion: "V", founding: "Second Founding",
+    bio: "A Second Founding son of the Khan. Little is recorded beyond their lineage and their bold yellow armour.",
+    scheme: { pattern: "solid", colours: [L("Yellow", "#eec12a"), T("Yellow", "#eec12a"), D("Black", BLACK), D("Red", RED)] } },
+  { name: "Storm Lords", legion: "V", founding: "Second Founding",
+    bio: "Successors who keep the White Scars' love of speed and mounted warfare. Their armour is split down the middle in white and red.",
+    scheme: { pattern: "halved", colours: [L("White", WHITE), L2("Red", "#a41e22"), T("Yellow helmet", "#e6b510"), D("Black", BLACK)] } },
+  { name: "Destroyers", legion: "V", founding: "Second Founding",
+    bio: "One of the original White Scars successors, recorded wearing loud acid-yellow armour with red chevrons.",
+    scheme: { pattern: "solid", colours: [L("Acid yellow", "#d9d22a"), T("Red chevrons", "#b0201c"), D("Black", BLACK)] } },
+  { name: "Rampagers", legion: "V", founding: "Second Founding",
+    bio: "Second Founding White Scars successors in red. Aggressive assault troops, as the name suggests.",
+    scheme: { pattern: "solid", colours: [L("Red", "#a8221d"), T("Red", "#a8221d"), D("Black", BLACK), D("White", WHITE)] } },
+  { name: "Mantis Warriors", legion: "V", founding: "M35 founding (via the Marauders)",
+    bio: "They sided with the rebel Astral Claws in the Badab War and were pardoned afterwards, but many still see them as traitors. They are now on a long penitent crusade.",
+    scheme: { pattern: "solid", colours: [L("Mantis green", "#4f7a32"), T("Yellow", "#e0b52a"), D("Black", BLACK), D("Gold", GOLD)] } },
+
+  // ---------- Imperial Fists (VII) ----------
+  { name: "Black Templars", legion: "VII", founding: "Second Founding",
+    bio: "Zealous crusaders founded by Sigismund, Dorn's champion. They are a vast fleet-based crusading force who reject psykers and never stop moving. Black armour, white tabards and heraldic crosses.",
+    scheme: { pattern: "solid", colours: [L("Black", BLACK), T("White", WHITE), D("White / bone tabard", "#e6e0cc"), D("Red", RED), D("Silver", SILVER)] } },
+  { name: "Crimson Fists", legion: "VII", founding: "Second Founding",
+    bio: "Famous for surviving the destruction of their fortress-monastery on Rynn's World when an Ork invasion and a misfiring missile nearly wiped them out. Led by Pedro Kantor. Deep blue armour with red-painted hands.",
+    scheme: { pattern: "solid", colours: [L("Deep blue", "#1f3270"), T("Deep blue", "#1f3270"), D("Red hands", "#b5221d"), D("Silver", SILVER), D("White", WHITE)] } },
+  { name: "Excoriators", legion: "VII", founding: "Second Founding",
+    bio: "Dorn's sons who share his gene-line's love of pain as a test of devotion, scourging themselves to remember their failures. White armour with bare-silver gauntlets.",
+    scheme: { pattern: "solid", colours: [L("White", WHITE), T("Silver", SILVER), D("Silver gauntlets", SILVER), D("Red", RED)] } },
+  { name: "Iron Knights", legion: "VII", founding: "Second Founding",
+    bio: "A Second Founding son of Dorn, described in polished blue-grey armour.",
+    scheme: { pattern: "solid", colours: [L("Blue-grey", "#6f8396"), T("Silver", SILVER), D("Black", BLACK), D("Gold", GOLD)] } },
+  { name: "Soul Drinkers", legion: "VII", founding: "Second Founding",
+    bio: "A proud Chapter that broke from the Imperium and became renegades over a matter of honour. They are the subject of a whole Black Library series. Purple armour with bone and gold.",
+    scheme: { pattern: "solid", colours: [L("Purple", "#4d2a6b"), T("Bone", BONE), D("Gold", GOLD), D("Black", BLACK)] } },
+  { name: "Celestial Lions", legion: "VII", founding: "Unknown (suspected 23rd)",
+    bio: "Proud warriors with gold armour and blue pauldrons, almost wiped out on Armageddon after an Inquisitorial betrayal. Their losses are a sore point in the Imperium.",
+    scheme: { pattern: "solid", colours: [L("Gold", "#c79a2e"), T("Blue", "#24489a"), D("Blue helmet", "#24489a"), D("Black", BLACK)] } },
+  { name: "Executioners", legion: "VII", founding: "Unknown",
+    bio: "Headhunting Badab War secessionists, later pardoned. They are counted in Imperial Fists lineage lists. Steel-blue and grey armour, sometimes in urban camouflage.",
+    scheme: { pattern: "solid", colours: [L("Steel blue", "#5d7085"), T("Grey", "#8a8f94"), D("Yellow (sergeants)", "#e0b52a"), D("Black", BLACK)] } },
+  { name: "Subjugators", legion: "VII", founding: "23rd or 24th Founding",
+    bio: "A later-founded Chapter suspected to come from Dorn's line, recorded in mid-green armour.",
+    scheme: { pattern: "solid", colours: [L("Mid green", "#3f8a3a"), T("Mid green", "#3f8a3a"), D("Black", BLACK), D("White", WHITE)] } },
+  { name: "Emperor's Warbringers", legion: "VII", founding: "Unknown",
+    bio: "Imperial Fists successors in an unusual grey-green, good for a muted, military look.",
+    scheme: { pattern: "solid", colours: [L("Grey-green", "#6c7a64"), T("Grey-green", "#6c7a64"), D("Black", BLACK), D("Bone", BONE)] } },
+
+  // ---------- Blood Angels (IX) ----------
+  { name: "Flesh Tearers", legion: "IX", founding: "Second Founding",
+    bio: "The most savage of Sanguinius's heirs, teetering on the edge of the Black Rage. Their Death Company is a standing force. Led by the grim Gabriel Seth.",
+    scheme: { pattern: "solid", colours: [L("Dark red", "#7a1015"), T("Black", BLACK), D("Black helmet & pack", BLACK), D("Gold", GOLD)] } },
+  { name: "Angels Encarmine", legion: "IX", founding: "Second Founding",
+    bio: "Large and constantly on campaign. They have a troubled history with the Death Mask of Sanguinius and Inquisitorial scrutiny.",
+    scheme: { pattern: "solid", colours: [L("Red", "#a3151c"), T("Black", BLACK), D("Black backpack", BLACK), D("Gold", GOLD)] } },
+  { name: "Angels Sanguine", legion: "IX", founding: "Second Founding",
+    bio: "Mysterious brothers who hide their faces behind masks, rumoured to be because of their resemblance to Sanguinius himself.",
+    scheme: { pattern: "halved", colours: [L("Red", "#a3151c"), L2("Black", BLACK), T("Gold", GOLD), D("Silver masks", SILVER)] } },
+  { name: "Angels Vermillion", legion: "IX", founding: "Second Founding",
+    bio: "Secretive Blood Angels successors, rarely seen and seldom discussed, in deep red.",
+    scheme: { pattern: "solid", colours: [L("Dark red", "#8c1a17"), T("Dark red", "#8c1a17"), D("Gold", GOLD), D("Black", BLACK)] } },
+  { name: "Blood Drinkers", legion: "IX", founding: "Second Founding",
+    bio: "Unusually for Sanguinius's sons, they follow the Codex Astartes closely. They are infamous for the grim name and the ritual that goes with it.",
+    scheme: { pattern: "solid", colours: [L("Red", "#951a20"), T("Yellow", "#e0b52a"), D("Black", BLACK), D("Gold", GOLD)] } },
+  { name: "Lamenters", legion: "IX", founding: "21st 'Cursed' Founding",
+    bio: "Possibly the unluckiest Chapter in the galaxy. They were dragged into the Badab War on the wrong side, then nearly destroyed by Tyranids during their penance. Yellow armour with a red helmet stripe.",
+    scheme: { pattern: "solid", colours: [L("Mustard yellow", "#d9a92a"), T("Mustard yellow", "#d9a92a"), D("Red helmet stripe", "#a3151c"), D("Black", BLACK)] } },
+  { name: "Flesh Eaters", legion: "IX", founding: "Third Founding",
+    bio: "An old Blood Angels successor with a name that fits the gene-line's curse, recorded in dark red.",
+    scheme: { pattern: "solid", colours: [L("Dark red", "#7d1517"), T("Dark red", "#7d1517"), D("Black", BLACK), D("Bone", BONE)] } },
+
+  // ---------- Iron Hands (X) ----------
+  { name: "Red Talons", legion: "X", founding: "Second Founding",
+    bio: "A Second Founding son of Ferrus Manus that keeps the Iron Hands' disdain for weakness. Red armour with black trim.",
+    scheme: { pattern: "solid", colours: [L("Red", "#9e1b1e"), T("Black", BLACK), D("Steel bionics", SILVER), D("White", WHITE)] } },
+  { name: "Brazen Claws", legion: "X", founding: "Second Founding",
+    bio: "Iron Hands successors who joined the defence against the 13th Black Crusade. Bold quartered blue and red armour.",
+    scheme: { pattern: "quartered", colours: [L("Blue", "#1f4f9e"), L2("Red", "#a3151c"), T("Brass", BRASS), D("Steel", SILVER)] } },
+  { name: "Iron Lords", legion: "X", founding: "23rd Founding",
+    bio: "Stern xenos-haters who fought the Tyranids of Hive Fleet Kraken. Mostly black with red legs, and a helmet stripe that shows the company.",
+    scheme: { pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red legs", "#a3151c"), D("Steel", SILVER)] } },
+  { name: "Sons of Medusa", legion: "X", founding: "Moirae Schism (ratified M37)",
+    bio: "Formed from Iron Hands who took the losing side in the Moirae Schism, a dispute over machine-worship. They were exiled, but their loyalty was later proven in the Badab War.",
+    scheme: { pattern: "solid", colours: [L("Scorpion green", "#3b7a46"), T("Steel", SILVER), D("White helmet", WHITE), D("Black", BLACK)] } },
+  { name: "Iron Fists", legion: "X", founding: "Unknown",
+    bio: "Iron Hands descendants in pale blue-grey with gold arms, a softer take on the metal-and-flesh theme.",
+    scheme: { pattern: "solid", colours: [L("Light blue-grey", "#8fa3b3"), T("Gold", GOLD), D("Gold arms", GOLD), D("Black", BLACK)] } },
+
+  // ---------- Ultramarines (XIII) ----------
+  { name: "Novamarines", legion: "XIII", founding: "Second Founding",
+    bio: "One of the proud Primogenitor Chapters, fought at Thessala against the Emperor's Children. They helped found and train later Chapters such as the Angels of Fury.",
+    scheme: { pattern: "quartered", colours: [L("Navy blue", "#1d2e5c"), L2("Bone", BONE), T("Bone", BONE), D("Red", RED)] } },
+  { name: "Genesis Chapter", legion: "XIII", founding: "Second Founding",
+    bio: "The first of the Ultramarines' Primogenitors to be raised. Their scouts used to make a pilgrimage to Macragge to see the Primarch in stasis.",
+    scheme: { pattern: "solid", colours: [L("Red", "#a3151c"), T("Yellow", "#e0b52a"), D("Yellow details", "#e0b52a"), D("Black", BLACK)] } },
+  { name: "White Consuls", legion: "XIII", founding: "Second Founding",
+    bio: "Primogenitors in gleaming white with blue hawk-head heraldry. A classic clean scheme.",
+    scheme: { pattern: "solid", colours: [L("White", WHITE), T("Blue", "#1d3f8f"), D("Blue", "#1d3f8f"), D("Gold", GOLD)] } },
+  { name: "Black Consuls", legion: "XIII", founding: "Second Founding",
+    bio: "The White Consuls' dark mirror. Black armour, with company colour on the trim and a white eagle's-head badge.",
+    scheme: { pattern: "solid", colours: [L("Black", BLACK), T("Company colour (e.g. yellow)", "#e0b52a"), D("White", WHITE), D("Gold", GOLD)] } },
+  { name: "Doom Eagles", legion: "XIII", founding: "Second Founding",
+    bio: "A fatalistic Chapter that treats every soldier as already dead. Grey-silver armour with red.",
+    scheme: { pattern: "solid", colours: [L("Silver-grey", "#9a9fa4"), T("Red", RED), D("Red", RED), D("Black", BLACK)] } },
+  { name: "Mortifactors", legion: "XIII", founding: "Second Founding",
+    bio: "A morbid Chapter with funerary rites and bone-decorated armour that some call borderline heretical.",
+    scheme: { pattern: "solid", colours: [L("Black", BLACK), T("Bone", BONE), D("Bone", BONE), D("Dark blue", "#1d2e5c")] } },
+  { name: "Praetors of Orpheus", legion: "XIII", founding: "Second Founding",
+    bio: "Strictly Codex-compliant Primogenitors in white with sky-blue pauldron trim.",
+    scheme: { pattern: "solid", colours: [L("White", WHITE), T("Sky blue", "#6aa8d8"), D("Gold", GOLD), D("Black", BLACK)] } },
+  { name: "Silver Skulls", legion: "XIII", founding: "Second Founding (unconfirmed)",
+    bio: "Superstitious warriors who won't go to war until their Prognosticators read the omens. Silver armour with black pauldrons.",
+    scheme: { pattern: "solid", colours: [L("Silver", "#b4b8bc"), T("Black", BLACK), D("Black pauldrons", BLACK), D("Red", RED), D("Yellow", "#e0b52a")] } },
+  { name: "Howling Griffons", legion: "XIII", founding: "Unknown",
+    bio: "Ultramarines descendants known for bright heraldic quartered armour. They fought loyally in the Badab War.",
+    scheme: { pattern: "quartered", colours: [L("Red", "#a8221d"), L2("Yellow", "#eec12a"), T("Gold", GOLD), D("Black", BLACK)] } },
+  { name: "Iron Snakes", legion: "XIII", founding: "Second Founding",
+    bio: "Ithakan seafarers who fight in small, tight squads and use spears. They are the heroes of Dan Abnett's 'Brothers of the Snake'.",
+    scheme: { pattern: "solid", colours: [L("Gunmetal", "#6a7076"), T("Gunmetal", "#6a7076"), D("Green", "#2e6b4a"), D("Bone", BONE)] } },
+  { name: "Aurora Chapter", legion: "XIII", founding: "Disputed",
+    bio: "Nearly destroyed in the 13th Black Crusade, they are rebuilding. Dark green armour with company-colour trim.",
+    scheme: { pattern: "solid", colours: [L("Dark green", "#2c5a3a"), T("Company colour (e.g. orange)", "#d97a1f"), D("White", WHITE), D("Black", BLACK)] } },
+  { name: "Sons of Guilliman", legion: "XIII", founding: "Unknown (M33)",
+    bio: "Named for the Primarch himself, in quartered blue and white.",
+    scheme: { pattern: "quartered", colours: [L("Blue", "#1d3f8f"), L2("White", WHITE), T("Gold", GOLD), D("Red", RED)] } },
+  { name: "Scythes of the Emperor", legion: "XIII", founding: "Third Founding",
+    bio: "Hive Fleet Behemoth destroyed their homeworld and the Chapter has hated Tyranids ever since. They're noted for caring about civilian lives.",
+    scheme: { pattern: "solid", colours: [L("Yellow", "#e6b510"), T("Black", BLACK), D("Black", BLACK), D("Red", RED)] } },
+  { name: "Libators", legion: "XIII", founding: "Second Founding",
+    bio: "Among the most brutal of Guilliman's scions. They have been censured for how they treat captured enemy champions.",
+    scheme: { pattern: "solid", colours: [L("Yellow", "#e0b52a"), T("Black", BLACK), D("Red", RED), D("Silver", SILVER)] } },
+  { name: "Tome Keepers", legion: "XIII", founding: "Fourth Founding",
+    bio: "Fourth Founding scholars of the Ultramarines line, in bone-coloured armour.",
+    scheme: { pattern: "solid", colours: [L("Bone", BONE), T("Bone", BONE), D("Dark red", "#7c1a20"), D("Black", BLACK)] } },
+  { name: "Mentors", legion: "XIII", founding: "26th Founding",
+    bio: "A Chapter that tests experimental gear and works closely with the Adeptus Mechanicus. They have a distinctive two-tone green and white livery.",
+    scheme: { pattern: "solid", colours: [L("Dark green", "#2c5a3a"), T("White", WHITE), D("White limbs & pauldrons", WHITE), D("Black", BLACK)] } },
+  { name: "Eagle Warriors", legion: "XIII", founding: "Second Founding",
+    bio: "A Primogenitor Chapter whose lineage later produced the Marines Errant. Halved blue and white.",
+    scheme: { pattern: "halved", colours: [L("Blue", "#1d3f8f"), L2("White", WHITE), T("Gold", GOLD), D("Company colour", "#e0b52a")] } },
+  { name: "Marines Errant", legion: "XIII", founding: "23rd Founding",
+    bio: "Successors of the Eagle Warriors, fleet-based and well travelled. They are half white and half blue.",
+    scheme: { pattern: "halved", colours: [L("White", WHITE), L2("Blue", "#2a4f9a"), T("Silver", SILVER), D("Black", BLACK)] } },
+  { name: "Fire Hawks", legion: "XIII", founding: "21st 'Cursed' Founding",
+    bio: "A Cursed Founding Chapter that vanished in the warp. Rumour links them to the ghostly Legion of the Damned. Yellow armour with red flames.",
+    scheme: { pattern: "solid", colours: [L("Yellow", "#eec12a"), T("Red flames", "#c4281c"), D("Orange", "#d9541b"), D("Black", BLACK)] } },
+
+  // ---------- Salamanders (XVIII) ----------
+  { name: "Storm Giants", legion: "XVIII", founding: "26th Founding (suspected)",
+    bio: "One of very few Chapters suspected to carry Vulkan's gene-seed. They wear bone-coloured armour.",
+    scheme: { pattern: "solid", colours: [L("Bone", BONE), T("Bone", BONE), D("Green", "#2a7a3b"), D("Black", BLACK)] } },
+  { name: "Black Dragons", legion: "XVIII", founding: "21st 'Cursed' Founding",
+    bio: "Cursed Founding marines with a mutation that grows bony blades and horns from their bodies. Their gene-seed is often attributed to the Salamanders.",
+    scheme: { pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Bone horns", BONE), D("Red", RED)] } },
+
+  // ---------- Raven Guard (XIX) ----------
+  { name: "Raptors", legion: "XIX", founding: "Second Founding",
+    bio: "Pragmatic, camouflage-loving marines who fight like elite scouts and care little for pomp. They're one of the most popular 'minor' Chapters with fans.",
+    scheme: { pattern: "solid", colours: [L("Drab olive green", "#5a6440"), T("Olive green", "#5a6440"), D("Bone", BONE), D("Black", BLACK)] } },
+  { name: "Black Guard", legion: "XIX", founding: "Second Founding",
+    bio: "One of Corax's direct Second Founding successors. Little is recorded. Their modern depiction is a dark slate grey.",
+    scheme: { pattern: "solid", colours: [L("Dark slate grey", "#3e4449"), T("Black", BLACK), D("White", WHITE), D("Red lenses", RED)] } },
+  { name: "Death Spectres", legion: "XIX", founding: "Unknown",
+    bio: "Pale, silent and funereal guardians of the Mortis Gate. They're rarely seen outside their sector.",
+    scheme: { pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("White left pauldron", WHITE), D("Bone", BONE)] } },
+  { name: "Storm Hawks", legion: "XIX", founding: "Unknown",
+    bio: "A rare Codex-compliant son of Corax from the world of Zephyr. White armour with a red aquila.",
+    scheme: { pattern: "solid", colours: [L("White", WHITE), T("White", WHITE), D("Red aquila", "#a3151c"), D("Black", BLACK)] } },
+  { name: "Hawk Lords", legion: "XIX", founding: "Second Founding (suspected)",
+    bio: "Their ancestry is disputed between Raven Guard and Ultramarines. Purple armour with gold trim.",
+    scheme: { pattern: "solid", colours: [L("Purple", "#5b2a6e"), T("Gold", GOLD), D("White", WHITE), D("Black", BLACK)] } },
+  { name: "Carcharodons Astra", legion: "XIX", founding: "Unknown (suspected Raven Guard)",
+    bio: "The 'Space Sharks'. Terrifying void-raiders from the edge of the galaxy, pale and silent, marked with tribal exile tattoos. Their origin is classified, and the Raven Guard are the most likely source.",
+    scheme: { pattern: "solid", colours: [L("Pale grey", "#9aa0a5"), T("Dark grey", "#4b5055"), D("White markings", WHITE), D("Red", RED)] } },
+];
+
+window.CODEX = { LEGIONS, CHAPTERS };

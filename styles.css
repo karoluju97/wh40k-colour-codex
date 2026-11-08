@@ -1,0 +1,127 @@
+:root {
+  --bg: #121214;
+  --panel: #1b1b1f;
+  --panel2: #232328;
+  --line: #34343b;
+  --text: #e8e4da;
+  --muted: #9d988c;
+  --gold: #c9a24a;
+  --loyal: #4f8fd6;
+  --traitor: #c2413a;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.5 Inter, system-ui, sans-serif;
+  background-image: radial-gradient(ellipse at top, #1f1d19 0%, var(--bg) 60%);
+  min-height: 100vh;
+}
+a { color: var(--gold); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.top { border-bottom: 1px solid var(--line); padding: 26px 0 18px; }
+.top .wrap { display: grid; grid-template-columns: minmax(240px, 1fr) 2.2fr; gap: 28px; align-items: start; }
+h1, h2, h3 { font-family: Cinzel, Georgia, serif; letter-spacing: .04em; margin: 0; }
+h1 { font-size: 30px; color: var(--gold); }
+.brand p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+.controls { display: grid; gap: 8px; }
+#search { width: 100%; padding: 10px 14px; border-radius: var(--radius); border: 1px solid var(--line);
+  background: var(--panel); color: var(--text); font: inherit; }
+#search:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+.row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.lbl { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); min-width: 92px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 999px;
+  padding: 4px 12px; font: 500 13px Inter, sans-serif; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.chips button:hover { border-color: var(--gold); }
+.chips button.on { background: var(--gold); color: #17140e; border-color: var(--gold); }
+.chips.colour button .dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); }
+.tiny { font-size: 12px; color: var(--muted); display: inline-flex; gap: 5px; align-items: center; cursor: pointer; }
+
+/* Jump nav */
+.jump { position: sticky; top: 0; z-index: 10; background: rgba(18,18,20,.95); backdrop-filter: blur(6px); padding-bottom: 10px !important; display: flex; flex-wrap: wrap; gap: 6px; padding-top: 16px; padding-bottom: 4px; }
+.jump a { text-decoration: none; font: 600 12px Inter, sans-serif; padding: 4px 9px; border-radius: 6px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--muted); }
+.jump a:hover { color: var(--text); border-color: var(--gold); }
+.jump a.traitor { border-left: 3px solid var(--traitor); }
+.jump a.loyal { border-left: 3px solid var(--loyal); }
+
+/* Legion sections */
+.legion { margin: 26px 0 36px; scroll-margin-top: 110px; }
+.legion-head { display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.numeral { font-family: Cinzel, serif; font-size: 26px; color: var(--gold); min-width: 64px; }
+.legion-head h2 { font-size: 22px; }
+.legion-head .sub { color: var(--muted); font-size: 14px; }
+.badge { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; }
+.badge.Loyalist { background: rgba(79,143,214,.16); color: #8dbaf0; }
+.badge.Traitor { background: rgba(194,65,58,.18); color: #f08b84; }
+.badge.Expunged { background: #2b2b30; color: var(--muted); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+
+/* Cards */
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px;
+  cursor: pointer; position: relative; transition: transform .12s, border-color .12s; display: flex; flex-direction: column; gap: 10px; }
+.card:hover, .card:focus-visible { border-color: var(--gold); transform: translateY(-2px); outline: none; }
+.card.primarch { background: linear-gradient(160deg, #26231c, var(--panel) 55%); grid-column: span 2; }
+.card .top-row { display: flex; gap: 12px; align-items: center; }
+.card svg.pad { width: 58px; height: 64px; flex: none; filter: drop-shadow(0 2px 3px rgba(0,0,0,.5)); }
+.card h3 { font-size: 15.5px; line-height: 1.25; }
+.card .meta { color: var(--muted); font-size: 12.5px; }
+.card .blurb { color: #c9c4b8; font-size: 13.5px; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.card .schemes-mini { display: flex; gap: 6px; flex-wrap: wrap; }
+.swatches { display: flex; gap: 0; border-radius: 6px; overflow: hidden; height: 14px; border: 1px solid rgba(255,255,255,.08); }
+.swatches span { flex: 1; }
+.swatches span.armour, .swatches span.armour2 { flex: 2.4; }
+.fav { position: absolute; top: 8px; right: 10px; background: none; border: 0; color: #5d5a53; font-size: 18px; cursor: pointer; padding: 2px; }
+.fav.on { color: var(--gold); }
+.fav:hover { color: var(--gold); }
+.lost .pad-lost { width: 58px; height: 64px; display: grid; place-items: center; border: 2px dashed #4b4b52; border-radius: 30px 30px 14px 14px; color: #6b6b72; font-family: Cinzel, serif; font-size: 22px; flex: none; }
+
+/* Dialog */
+dialog { border: 1px solid var(--line); border-radius: 14px; background: var(--panel); color: var(--text);
+  max-width: 760px; width: calc(100% - 32px); padding: 0; }
+dialog::backdrop { background: rgba(0,0,0,.7); }
+.dlg { padding: 24px 26px 26px; }
+.dlg-head { display: flex; gap: 18px; align-items: center; margin-bottom: 14px; }
+.dlg-head svg.pad { width: 86px; height: 95px; flex: none; }
+.dlg-head h2 { font-size: 24px; }
+.dlg-head .meta { color: var(--muted); font-size: 13.5px; margin-top: 4px; }
+.close { position: absolute; top: 12px; right: 14px; background: var(--panel2); border: 1px solid var(--line); color: var(--text);
+  width: 34px; height: 34px; border-radius: 50%; font-size: 18px; cursor: pointer; }
+.dlg h4 { font: 600 12px Inter, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin: 18px 0 6px; }
+.dlg p { margin: 0 0 8px; color: #d6d1c6; }
+.scheme { background: var(--panel2); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; margin-bottom: 10px; display: flex; gap: 14px; align-items: flex-start; }
+.scheme svg.pad { width: 54px; height: 60px; flex: none; }
+.scheme .name { font-weight: 600; margin-bottom: 6px; }
+.chiplist { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { display: inline-flex; align-items: center; gap: 7px; background: #18181b; border: 1px solid var(--line); border-radius: 6px;
+  padding: 4px 8px 4px 4px; font-size: 12.5px; cursor: pointer; color: var(--text); font-family: inherit; }
+.chip:hover { border-color: var(--gold); }
+.chip i { width: 22px; height: 22px; border-radius: 4px; border: 1px solid rgba(255,255,255,.18); display: block; }
+.chip small { color: var(--muted); font-family: ui-monospace, monospace; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.links a { text-decoration: none; background: var(--panel2); border: 1px solid var(--line); padding: 6px 12px; border-radius: 8px; font-size: 13px; }
+.links a:hover { border-color: var(--gold); }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 3px 14px; font-size: 13.5px; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+
+#toast { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--gold); color: #17140e;
+  padding: 8px 16px; border-radius: 8px; font-weight: 600; opacity: 0; pointer-events: none; transition: .2s; z-index: 50; }
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+.empty { color: var(--muted); text-align: center; padding: 40px 0; }
+.foot { color: var(--muted); font-size: 12.5px; border-top: 1px solid var(--line); margin-top: 30px; padding-top: 16px; padding-bottom: 40px; }
+
+@media (max-width: 860px) {
+  .jump { position: static; }
+  .top { position: static; }
+  .top .wrap { grid-template-columns: 1fr; gap: 14px; }
+  .card.primarch { grid-column: auto; }
+  .lbl { min-width: 0; width: 100%; }
+  .legion { scroll-margin-top: 10px; }
+}
