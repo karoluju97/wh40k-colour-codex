@@ -89,9 +89,10 @@
 
   // ---------- pictures: hand-picked files on the Warhammer 40k Fandom wiki, loaded live ----------
   const imgUrl = {};
+  let imagesDone = false;
   async function loadImages() {
     const files = [...new Set([...Object.values(PLATES), ...Object.values(PRIMARCH_PICS).flat().map((p) => p.file)])];
-    const norm = (f) => f.replace(/_/g, " ").toLowerCase();
+    const norm = (f) => { const t = f.replace(/_/g, " "); return t.charAt(0).toUpperCase() + t.slice(1); };
     const byNorm = Object.fromEntries(files.map((f) => [norm(f), f]));
     for (let i = 0; i < files.length; i += 50) {
       try {
@@ -105,12 +106,13 @@
         });
       } catch (err) { console.warn("Picture lookup failed", err); }
     }
+    imagesDone = true;
     route();
   }
   const plateSrc = (e) => imgUrl[PLATES[e.name]];
   const plate = (src, alt) => src
-    ? `<div class="plate"><img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" referrerpolicy="no-referrer"></div>`
-    : `<div class="plate empty">Picture loading…</div>`;
+    ? `<div class="plate"><img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('empty');this.parentNode.textContent='N/A'"></div>`
+    : `<div class="plate empty">${imagesDone ? "N/A" : "Loading…"}</div>`;
 
   // ---------- shortlist ----------
   let favs = new Set();
@@ -123,11 +125,6 @@
   function sidebar() {
     const groups = [["Loyalist Legions", "Loyalist"], ["Traitor Legions", "Traitor"]];
     let html = "";
-    const shortlisted = [...favs].map((id) => byId[id]).filter(Boolean);
-    if (shortlisted.length) {
-      html += `<div class="side-group"><div class="side-title">★ Shortlist</div><div class="subs" style="margin-left:10px">${
-        shortlisted.map((e) => `<button data-go="${e.id}" class="${current === e.id ? "sel" : ""}">${dots(e.schemes[0] || { colours: [] })}${esc(e.kind === "legion" ? e.legion.name : e.name)}</button>`).join("")}</div></div>`;
-    }
     groups.forEach(([title, key]) => {
       html += `<div class="side-group"><div class="side-title">${title}</div>`;
       LEGIONS.filter((lg) => lg.allegiance === key).forEach((lg) => {
@@ -142,6 +139,16 @@
       html += `</div>`;
     });
     $("#sidebar").innerHTML = html;
+  }
+
+  // ---------- shortlist button & panel ----------
+  function shortlistUI() {
+    const n = favs.size, c = $("#slCount");
+    c.textContent = n; c.hidden = n === 0;
+    const items = [...favs].map((id) => byId[id]).filter(Boolean);
+    $("#slPanel").innerHTML = items.length
+      ? `<div class="sl-head">Your shortlist (${items.length})</div>` + items.map((e) => `<div class="sl-item"><button class="sl-go" data-go="${e.id}">${e.schemes[0] ? dots(e.schemes[0]) : ""}<span>${esc(e.name.split(" /")[0])}</span><span class="sub">${e.kind === "legion" ? "Legion " + e.legion.num : esc(e.legion.name.split(" /")[0])}</span></button><button class="sl-x" data-fav="${e.id}" title="Remove" aria-label="Remove ${esc(e.name)}">×</button></div>`).join("")
+      : `<div class="sl-empty">Nothing shortlisted yet. Use ☆ Shortlist on any Legion or Chapter to save it here.</div>`;
   }
 
   // ---------- views ----------
@@ -165,30 +172,22 @@
     const pics = [...(PRIMARCH_PICS[lg.primarch] || []).map((p) => ({ label: `${lg.primarch}: ${p.label}`, src: imgUrl[p.file] })),
       { label: `${lg.name.split(" /")[0]}: colour scheme`, src: plateSrc(e) }];
     return `<div class="head"><div><h1>${esc(lg.name)}</h1>
-        <div class="meta">Legion ${lg.num} · Primarch ${esc(lg.primarch)} · <span class="badge ${lg.allegiance}">${lg.allegiance}</span></div></div>
-        <div class="actions">${favBtn(e.id)}</div></div>
-      <div class="pics">${pics.map((p) => `<figure>${plate(p.src, p.label)}<figcaption>${esc(p.label)}</figcaption></figure>`).join("")}</div>
-      <div class="section-title">Colour schemes</div><div class="schemes">${lg.schemes.map(schemeBlock).join("")}</div>
-      <div class="section-title">The Primarch</div>
-      <dl class="facts"><dt>Status</dt><dd>${esc(lg.status)}</dd><dt>Homeworld</dt><dd>${esc(lg.homeworld)}</dd></dl>
-      <div class="prose"><p>${esc(lg.primarchBio)}</p></div>
-      <div class="section-title">The ${lg.allegiance === "Loyalist" ? "Legion &amp; Chapter" : "Legion"}</div>
-      <div class="prose"><p>${esc(lg.legionBio)}</p></div>
-      ${g.subs.length ? `<div class="section-title">Successor Chapters (${g.subs.length})</div><div class="tiles">${g.subs.map(tile).join("")}</div>` : ""}
-      <div class="section-title">Read more</div><div class="links">${linkBtns(lg.name)}</div>`;
+        <div class="meta">Legion ${lg.num} · Primarch ${esc(lg.primarch)} · ${esc(lg.status)} · <span class="badge ${lg.allegiance}">${lg.allegiance}</span></div></div>
+        <div class="actions">${favBtn(e.id)}${linkBtns(lg.name)}</div></div>
+      <div class="prose"><p>${esc(lg.primarchBio)}</p><p>${esc(lg.legionBio)}</p></div>
+      <div class="section-title">Colour scheme${lg.schemes.length > 1 ? "s" : ""}</div><div class="schemes">${lg.schemes.map(schemeBlock).join("")}</div>
+      <div class="section-title">Pictures</div>
+      <div class="pics">${pics.map((p) => `<figure>${plate(p.src, p.label)}<figcaption>${esc(p.label)}</figcaption></figure>`).join("")}</div>`;
   }
 
   function chapterView(e) {
     const ch = e.chapter, lg = e.legion, g = byLegion[lg.num];
-    const others = g.subs.filter((s) => s !== e).slice(0, 12);
     return `<div class="crumbs"><button data-go="${g.e.id}">${esc(lg.name)}</button> › Successor Chapter</div>
       <div class="head"><div><h1>${esc(ch.name)}</h1><div class="meta">Successor of the ${esc(lg.name)} · Founding: ${esc(ch.founding)}</div></div>
-        <div class="actions">${favBtn(e.id)}</div></div>
-      <div class="chapter-main">${plate(plateSrc(e), ch.name)}
-        <div><div class="section-title">Colour scheme</div>${schemeBlock(ch.scheme)}
-          <div class="section-title">About</div><div class="prose"><p>${esc(ch.bio)}</p></div>
-          <div class="section-title">Read more</div><div class="links">${linkBtns(ch.name)}</div></div></div>
-      ${others.length ? `<div class="section-title" style="margin-top:34px">More ${esc(lg.name.split(" /")[0])} successors</div><div class="tiles">${others.map(tile).join("")}</div>` : ""}`;
+        <div class="actions">${favBtn(e.id)}${linkBtns(ch.name)}</div></div>
+      <div class="prose"><p>${esc(ch.bio)}</p></div>
+      <div class="section-title">Colour scheme</div>${schemeBlock(ch.scheme)}
+      <div class="section-title">Picture</div><div class="pics"><figure>${plate(plateSrc(e), ch.name)}<figcaption>${esc(ch.name)}: colour scheme</figcaption></figure></div>`;
   }
 
   function route() {
@@ -200,6 +199,7 @@
     $("#view").innerHTML = !e ? welcome() : e.kind === "legion" ? legionView(e) : chapterView(e);
     document.title = e ? `${e.name} · Colour Codex` : "Colour Codex · Warhammer 40k Legions & Chapters";
     sidebar();
+    shortlistUI();
     window.scrollTo(0, 0);
     document.body.classList.remove("nav-open");
   }
@@ -240,12 +240,17 @@
   const toast = (m) => { const t = $("#toast"); t.textContent = m; t.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("show"), 1400); };
   document.addEventListener("click", (ev) => {
     if (!ev.target.closest(".search")) $("#results").hidden = true;
+    if (ev.target.closest("#slBtn")) { $("#slPanel").hidden = !$("#slPanel").hidden; return; }
+    if (!ev.target.closest(".shortlist") || ev.target.closest(".sl-go")) $("#slPanel").hidden = true;
     const fav = ev.target.closest("[data-fav]");
     if (fav) {
       const id = fav.dataset.fav;
       favs.has(id) ? favs.delete(id) : favs.add(id); saveFavs();
       toast(favs.has(id) ? "Added to shortlist" : "Removed from shortlist");
-      route(); return;
+      const keepOpen = !!fav.closest("#slPanel");
+      route();
+      if (keepOpen) $("#slPanel").hidden = false;
+      return;
     }
     const hex = ev.target.closest("[data-hex]");
     if (hex) {
