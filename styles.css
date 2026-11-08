@@ -154,3 +154,5 @@ button { font: inherit; color: inherit; }
 .head .actions { flex-wrap: wrap; }
 .pics { grid-template-columns: repeat(auto-fill, minmax(170px, 220px)); }
 @media (max-width: 900px) { .sl-btn { padding: 0 10px; font-size: 0; } .sl-btn::first-letter { font-size: 16px; } .sl-panel { width: 280px; } }
+.sl-btn .count[hidden] { display: none; }
+.brand { white-space: nowrap; width: auto; min-width: calc(var(--sidew) - 40px); font-size: 17px; }
