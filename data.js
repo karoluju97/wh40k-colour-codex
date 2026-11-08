@@ -6329,9 +6329,9 @@ const CHAPTERS = [
  },
  {
   "name": "Grey Knights",
-  "legion": "?",
+  "legion": "*",
   "founding": "Second Founding (secret)",
-  "bio": "A secret Chapter of psykers, the Chamber Militant of the Ordo Malleus, created to fight daemons. Their silver Aegis armour is warded against the warp.",
+  "bio": "A secret Chapter of psykers who fight daemons, created in the dark days after the Horus Heresy under the oversight of Malcador. They are the Chamber Militant of the Ordo Malleus.\n\nEvery Grey Knight is a psyker, and their silver Aegis armour is inscribed with wards against the warp. Their existence is hidden from most of the Imperium.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -8171,6 +8171,112 @@ const CHAPTERS = [
     }
    ]
   }
+ },
+ {
+  "name": "Adeptus Custodes",
+  "legion": "*",
+  "founding": "Created by the Emperor before the Great Crusade",
+  "bio": "The Emperor's personal guard: ten thousand golden warriors, each crafted individually and far beyond a Space Marine. For ten millennia they guarded the Golden Throne and Imperial Palace.\n\nSince the Era Indomitus they have marched out again in force. Every Custodian's armour is hand-made and unique, but all share the gleaming auramite gold.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Auramite gold",
+     "h": "#c49a3c",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Red plume & cloak",
+     "h": "#a3151c",
+     "r": "detail"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  },
+  "schemes": [
+   {
+    "label": "Shield Host (standard)",
+    "pattern": "solid",
+    "colours": [
+     {
+      "n": "Auramite gold",
+      "h": "#c49a3c",
+      "r": "armour"
+     },
+     {
+      "n": "Gold",
+      "h": "#c49a3c",
+      "r": "trim"
+     },
+     {
+      "n": "Red plume & cloak",
+      "h": "#a3151c",
+      "r": "detail"
+     },
+     {
+      "n": "Black",
+      "h": "#1b1b1e",
+      "r": "detail"
+     }
+    ]
+   },
+   {
+    "label": "Emissaries Imperatus",
+    "pattern": "solid",
+    "colours": [
+     {
+      "n": "Auramite gold",
+      "h": "#c49a3c",
+      "r": "armour"
+     },
+     {
+      "n": "Gold",
+      "h": "#c49a3c",
+      "r": "trim"
+     },
+     {
+      "n": "Red shoulder",
+      "h": "#a3151c",
+      "r": "detail"
+     },
+     {
+      "n": "Black",
+      "h": "#1b1b1e",
+      "r": "detail"
+     }
+    ]
+   },
+   {
+    "label": "Shadowkeepers",
+    "pattern": "solid",
+    "colours": [
+     {
+      "n": "Sable black",
+      "h": "#1b1b1e",
+      "r": "armour"
+     },
+     {
+      "n": "Gold",
+      "h": "#c49a3c",
+      "r": "trim"
+     },
+     {
+      "n": "Gold",
+      "h": "#c49a3c",
+      "r": "detail"
+     }
+    ]
+   }
+  ]
  }
 ];
 
@@ -8461,7 +8567,8 @@ const PLATES = {
  "Warriors Tempest": "Warriors_Tempest_Astartes.jpg",
  "White Minotaurs": "White_Minotaurs_Marine.jpg",
  "White Panthers": "White_Panthers.jpg",
- "Yellow Jackets": "Yellow_Jackets_Marine.jpg"
+ "Yellow Jackets": "Yellow_Jackets_Marine.jpg",
+ "Adeptus Custodes": "Modern_Era_Custodian.jpg"
 };
 const PRIMARCH_PICS = {
  "Lion El'Jonson": [

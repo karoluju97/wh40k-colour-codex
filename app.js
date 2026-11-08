@@ -68,7 +68,7 @@
     });
   }
   LEGIONS.forEach((lg) => lg.schemes.forEach(toPaints));
-  CHAPTERS.forEach((ch) => toPaints(ch.scheme));
+  CHAPTERS.forEach((ch) => (ch.schemes || [ch.scheme]).forEach(toPaints));
 
   // ---------- colour families (search by colour word) ----------
   function hsl(hex) {
@@ -130,10 +130,11 @@
     entries.push(e); byId[e.id] = e; byLegion[lg.num] = { e, subs: [] };
   });
   const UNKNOWN = { num: "?", name: "Unknown lineage", primarch: "Unknown", allegiance: "Loyalist", schemes: [] };
+  byLegion["*"] = { e: { kind: "group", id: "special", legion: { num: "*", name: "Special Forces", primarch: "-", allegiance: "Loyalist", schemes: [] }, name: "Special Forces", schemes: [] }, subs: [] };
   byLegion["?"] = { e: { kind: "group", id: "unknown", legion: UNKNOWN, name: UNKNOWN.name, schemes: [] }, subs: [] };
   CHAPTERS.forEach((ch) => {
     const lg = byLegion[ch.legion].e.legion;
-    const e = { kind: "chapter", id: slug(ch.name), chapter: ch, legion: lg, name: ch.name, schemes: [ch.scheme] };
+    const e = { kind: "chapter", id: slug(ch.name), chapter: ch, legion: lg, name: ch.name, schemes: ch.schemes || [ch.scheme] };
     entries.push(e); byId[e.id] = e; byLegion[ch.legion].subs.push(e);
   });
   Object.values(byLegion).forEach((g) => g.subs.sort((a, b) => a.name.localeCompare(b.name)));
@@ -181,6 +182,11 @@
   function sidebar() {
     const groups = [["Loyalist Legions", "Loyalist"], ["Traitor Legions", "Traitor"]];
     let html = "";
+    const sp = byLegion["*"].subs;
+    if (sp.length) {
+      html += `<div class="side-group"><div class="side-title">Special Forces</div><div class="subs" style="margin-left:10px">${
+        sp.map((s) => `<button data-go="${s.id}" class="${current === s.id ? "sel" : ""}">${dots(s.schemes[0])}${esc(s.name)}</button>`).join("")}</div></div>`;
+    }
     groups.forEach(([title, key]) => {
       html += `<div class="side-group"><div class="side-title">${title}</div>`;
       LEGIONS.filter((lg) => lg.allegiance === key).forEach((lg) => {
@@ -219,7 +225,7 @@
     "Emperor's Swords", "Crimson Castellans", "Astral Claws", "Relictors", "Sky Sentinels", "Angels Excelsis", "Angels of Retribution",
     "Crimson Consuls", "Marines Mordant", "Obsidian Glaives", "Star Scorpions", "Knights of Eternity", "Brazen Skulls", "Fists Exemplar",
     "Invictors", "Crimson Sabres", "Angels Resplendent"]);
-  const SPECIAL_PRIMARIS = { "Grey Knights": "No Primaris (Grey Knights)", "Legion of the Damned": "Unknown (spectral warriors)", "Deathwatch": "Firstborn & Primaris (from many Chapters)" };
+  const SPECIAL_PRIMARIS = { "Grey Knights": "No Primaris (Grey Knights)", "Adeptus Custodes": "Not Space Marines (Custodians)", "Legion of the Damned": "Unknown (spectral warriors)", "Deathwatch": "Firstborn & Primaris (from many Chapters)" };
   function primaris(e) {
     if (e.kind === "legion") return e.legion.allegiance === "Traitor" ? "No Primaris (Traitor Legion)" : "Firstborn & Primaris";
     if (SPECIAL_PRIMARIS[e.name]) return SPECIAL_PRIMARIS[e.name];
@@ -262,13 +268,13 @@
 
   function chapterView(e) {
     const ch = e.chapter, lg = e.legion, g = byLegion[lg.num];
-    const unk = lg.num === "?";
-    return `<div class="crumbs">${unk ? "Unknown lineage" : `<button data-go="${g.e.id}">${esc(lg.name)}</button>`} › ${unk ? "Chapter" : "Successor Chapter"}</div>
-      <div class="head"><div><h1>${esc(ch.name)}</h1><div class="meta">${unk ? "Gene-seed origin unknown" : `Successor of the ${esc(lg.name)}`} · Founding: ${esc(ch.founding)}</div>
+    const unk = lg.num === "?", spc = lg.num === "*";
+    return `<div class="crumbs">${spc ? "Special Forces" : unk ? "Unknown lineage" : `<button data-go="${g.e.id}">${esc(lg.name)}</button>`} › ${spc ? esc(ch.name) : unk ? "Chapter" : "Successor Chapter"}</div>
+      <div class="head"><div><h1>${esc(ch.name)}</h1><div class="meta">${spc ? esc(ch.founding) : `${unk ? "Gene-seed origin unknown" : `Successor of the ${esc(lg.name)}`} · Founding: ${esc(ch.founding)}`}</div>
         <div class="badges">${allegBadge(e)}${primBadge(e)}</div></div>
         <div class="actions">${favBtn(e.id)}${linkBtns(ch.name)}</div></div>
       <div class="prose">${ch.bio.split(/\n\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
-      <div class="section-title">Colour scheme</div><div class="section-hint">Closest Citadel paints · click one to copy its name</div><div class="schemes">${schemeBlock(ch.scheme)}</div>
+      <div class="section-title">Colour scheme${e.schemes.length > 1 ? "s" : ""}</div><div class="section-hint">Closest Citadel paints · click one to copy its name</div><div class="schemes">${e.schemes.map(schemeBlock).join("")}</div>
       <div class="section-title">Picture</div><div class="pics"><figure>${plate(plateSrc(e), ch.name)}<figcaption>${esc(ch.name)}: colour scheme</figcaption></figure></div>`;
   }
 
@@ -299,7 +305,7 @@
       .slice(0, 14);
     active = -1;
     box.innerHTML = hits.length
-      ? hits.map((e, i) => `<button data-go="${e.id}" data-i="${i}">${e.schemes[0] ? dots(e.schemes[0]) : ""}<span>${esc(e.kind === "legion" ? `${e.legion.name} (${e.legion.primarch})` : e.name)}</span><span class="sub">${e.kind === "legion" ? "Legion " + e.legion.num : (e.legion.num === "?" ? "Unknown lineage" : esc(e.legion.name.split(" /")[0]) + " successor")}</span></button>`).join("")
+      ? hits.map((e, i) => `<button data-go="${e.id}" data-i="${i}">${e.schemes[0] ? dots(e.schemes[0]) : ""}<span>${esc(e.kind === "legion" ? `${e.legion.name} (${e.legion.primarch})` : e.name)}</span><span class="sub">${e.kind === "legion" ? "Legion " + e.legion.num : (e.legion.num === "*" ? "Special Forces" : e.legion.num === "?" ? "Unknown lineage" : esc(e.legion.name.split(" /")[0]) + " successor")}</span></button>`).join("")
       : `<div class="none">No matches. Try a name, Primarch or a colour like "purple".</div>`;
     box.hidden = false;
   }
