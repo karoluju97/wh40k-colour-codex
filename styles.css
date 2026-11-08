@@ -156,3 +156,5 @@ button { font: inherit; color: inherit; }
 @media (max-width: 900px) { .sl-btn { padding: 0 10px; font-size: 0; } .sl-btn::first-letter { font-size: 16px; } .sl-panel { width: 280px; } }
 .sl-btn .count[hidden] { display: none; }
 .brand { white-space: nowrap; width: auto; min-width: calc(var(--sidew) - 40px); font-size: 17px; }
+.badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.badge.prim { background: rgba(201,162,74,.14); color: #e2c27a; }

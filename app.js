@@ -75,6 +75,8 @@
     const e = { kind: "legion", id: "legion-" + lg.num.toLowerCase(), legion: lg, name: lg.name, schemes: lg.schemes };
     entries.push(e); byId[e.id] = e; byLegion[lg.num] = { e, subs: [] };
   });
+  const UNKNOWN = { num: "?", name: "Unknown lineage", primarch: "Unknown", allegiance: "Loyalist", schemes: [] };
+  byLegion["?"] = { e: { kind: "group", id: "unknown", legion: UNKNOWN, name: UNKNOWN.name, schemes: [] }, subs: [] };
   CHAPTERS.forEach((ch) => {
     const lg = byLegion[ch.legion].e.legion;
     const e = { kind: "chapter", id: slug(ch.name), chapter: ch, legion: lg, name: ch.name, schemes: [ch.scheme] };
@@ -138,6 +140,11 @@
       });
       html += `</div>`;
     });
+    const unk = byLegion["?"].subs;
+    if (unk.length) {
+      html += `<div class="side-group"><div class="side-title">Unknown Lineage</div><div class="subs" style="margin-left:10px">${
+        unk.map((s) => `<button data-go="${s.id}" class="${current === s.id ? "sel" : ""}">${dots(s.schemes[0])}${esc(s.name)}</button>`).join("")}</div></div>`;
+    }
     $("#sidebar").innerHTML = html;
   }
 
@@ -150,6 +157,17 @@
       ? `<div class="sl-head">Your shortlist (${items.length})</div>` + items.map((e) => `<div class="sl-item"><button class="sl-go" data-go="${e.id}">${e.schemes[0] ? dots(e.schemes[0]) : ""}<span>${esc(e.name.split(" /")[0])}</span><span class="sub">${e.kind === "legion" ? "Legion " + e.legion.num : esc(e.legion.name.split(" /")[0])}</span></button><button class="sl-x" data-fav="${e.id}" title="Remove" aria-label="Remove ${esc(e.name)}">×</button></div>`).join("")
       : `<div class="sl-empty">Nothing shortlisted yet. Use ☆ Shortlist on any Legion or Chapter to save it here.</div>`;
   }
+
+  // ---------- Primaris status ----------
+  const FIRSTBORN_ONLY = new Set(["Astral Knights", "Knights of Blood", "Shadow Wolves", "Soul Drinkers", "Fire Hawks", "Iron Hounds",
+    "Emperor's Swords", "Crimson Castellans", "Astral Claws", "Relictors"]);
+  function primaris(e) {
+    if (e.kind === "legion") return e.legion.allegiance === "Traitor" ? "No Primaris (Traitor Legion)" : "Firstborn & Primaris";
+    if (/Ultima/i.test(e.chapter.founding)) return "All Primaris (Ultima Founding)";
+    if (FIRSTBORN_ONLY.has(e.name)) return "Firstborn only (lost or renegade before the Primaris)";
+    return "Firstborn & Primaris";
+  }
+  const primBadge = (e) => `<span class="badge prim">${esc(primaris(e))}</span>`;
 
   // ---------- views ----------
   function schemeBlock(s) {
@@ -172,7 +190,8 @@
     const pics = [...(PRIMARCH_PICS[lg.primarch] || []).map((p) => ({ label: `${lg.primarch}: ${p.label}`, src: imgUrl[p.file] })),
       { label: `${lg.name.split(" /")[0]}: colour scheme`, src: plateSrc(e) }];
     return `<div class="head"><div><h1>${esc(lg.name)}</h1>
-        <div class="meta">Legion ${lg.num} · Primarch ${esc(lg.primarch)} · ${esc(lg.status)} · <span class="badge ${lg.allegiance}">${lg.allegiance}</span></div></div>
+        <div class="meta">Legion ${lg.num} · Primarch ${esc(lg.primarch)} · ${esc(lg.status)}</div>
+        <div class="badges"><span class="badge ${lg.allegiance}">${lg.allegiance}</span>${primBadge(e)}</div></div>
         <div class="actions">${favBtn(e.id)}${linkBtns(lg.name)}</div></div>
       <div class="prose"><p>${esc(lg.primarchBio)}</p><p>${esc(lg.legionBio)}</p></div>
       <div class="section-title">Colour scheme${lg.schemes.length > 1 ? "s" : ""}</div><div class="schemes">${lg.schemes.map(schemeBlock).join("")}</div>
@@ -182,10 +201,12 @@
 
   function chapterView(e) {
     const ch = e.chapter, lg = e.legion, g = byLegion[lg.num];
-    return `<div class="crumbs"><button data-go="${g.e.id}">${esc(lg.name)}</button> › Successor Chapter</div>
-      <div class="head"><div><h1>${esc(ch.name)}</h1><div class="meta">Successor of the ${esc(lg.name)} · Founding: ${esc(ch.founding)}</div></div>
+    const unk = lg.num === "?";
+    return `<div class="crumbs">${unk ? "Unknown lineage" : `<button data-go="${g.e.id}">${esc(lg.name)}</button>`} › ${unk ? "Chapter" : "Successor Chapter"}</div>
+      <div class="head"><div><h1>${esc(ch.name)}</h1><div class="meta">${unk ? "Gene-seed origin unknown" : `Successor of the ${esc(lg.name)}`} · Founding: ${esc(ch.founding)}</div>
+        <div class="badges">${primBadge(e)}</div></div>
         <div class="actions">${favBtn(e.id)}${linkBtns(ch.name)}</div></div>
-      <div class="prose"><p>${esc(ch.bio)}</p></div>
+      <div class="prose">${ch.bio.split(/\n\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
       <div class="section-title">Colour scheme</div>${schemeBlock(ch.scheme)}
       <div class="section-title">Picture</div><div class="pics"><figure>${plate(plateSrc(e), ch.name)}<figcaption>${esc(ch.name)}: colour scheme</figcaption></figure></div>`;
   }
@@ -217,7 +238,7 @@
       .slice(0, 14);
     active = -1;
     box.innerHTML = hits.length
-      ? hits.map((e, i) => `<button data-go="${e.id}" data-i="${i}">${e.schemes[0] ? dots(e.schemes[0]) : ""}<span>${esc(e.kind === "legion" ? `${e.legion.name} (${e.legion.primarch})` : e.name)}</span><span class="sub">${e.kind === "legion" ? "Legion " + e.legion.num : esc(e.legion.name.split(" /")[0]) + " successor"}</span></button>`).join("")
+      ? hits.map((e, i) => `<button data-go="${e.id}" data-i="${i}">${e.schemes[0] ? dots(e.schemes[0]) : ""}<span>${esc(e.kind === "legion" ? `${e.legion.name} (${e.legion.primarch})` : e.name)}</span><span class="sub">${e.kind === "legion" ? "Legion " + e.legion.num : (e.legion.num === "?" ? "Unknown lineage" : esc(e.legion.name.split(" /")[0]) + " successor")}</span></button>`).join("")
       : `<div class="none">No matches. Try a name, Primarch or a colour like "purple".</div>`;
     box.hidden = false;
   }

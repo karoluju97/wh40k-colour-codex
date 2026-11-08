@@ -207,7 +207,7 @@ const CHAPTERS = [
   "name": "Angels of Absolution",
   "legion": "I",
   "founding": "Second Founding",
-  "bio": "One of the original Unforgiven Chapters. They believe their ancestors already atoned for the Fall of Caliban, which gives them a grim sense of humour the other Unforgiven lack.",
+  "bio": "One of the original Second Founding Unforgiven. Unlike their brothers, they believe the Emperor has already forgiven them, and they don't use the name 'Unforgiven' for themselves.\n\nThat belief causes friction on joint campaigns. Even so, they fight most often beside the Dark Angels themselves.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -238,7 +238,7 @@ const CHAPTERS = [
   "name": "Angels of Defiance",
   "legion": "I",
   "founding": "Ultima Founding",
-  "bio": "A Primaris son of the Lion, built around one belief: whoever endures, wins.",
+  "bio": "Built on the Lion's saying 'He who endures, conquers', this Primaris Chapter was raised in the Imperium's darkest hour.\n\nThey became a symbol of hope during the Indomitus Crusade and earned many commendations along the way.",
   "scheme": {
    "pattern": "quartered",
    "colours": [
@@ -264,7 +264,7 @@ const CHAPTERS = [
   "name": "Angels of Doom",
   "legion": "I",
   "founding": "Unknown",
-  "bio": "Unforgiven with a savage, tribal edge to their monastic traditions.",
+  "bio": "Unforgiven with a savage edge. Their monastic customs take on the barbaric traditions of their homeworld, Meldegod.",
   "scheme": {
    "pattern": "halved",
    "colours": [
@@ -290,7 +290,7 @@ const CHAPTERS = [
   "name": "Angels of Redemption",
   "legion": "I",
   "founding": "Second Founding",
-  "bio": "Fallen-hunters so obsessed they will abandon a battle to chase one. Most of the Imperium is wary of fighting beside them.",
+  "bio": "Nothing stops them hunting the Fallen, not even a battle in progress. At Gaitlinghive they pulled out just as the Orks' final assault hit, leaving seven militia brigades to face three million greenskins.\n\nThey were never held to account, because there were no survivors to complain. Since then, many Imperial forces quietly refuse their help.",
   "scheme": {
    "pattern": "halved",
    "colours": [
@@ -316,7 +316,7 @@ const CHAPTERS = [
   "name": "Angels of Vengeance",
   "legion": "I",
   "founding": "Second Founding",
-  "bio": "They still wear the black of the original First Legion. They are stubborn, avoid glory and are utterly devoted.",
+  "bio": "The least-known of the original Unforgiven, because they shun fame entirely and focus only on their duty. A grim, dour Chapter.\n\nEvery company wears jet black in tribute to the original Dark Angels Legion that left Terra on the Great Crusade. They have a habit of fighting battles nobody else would expect to win.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -347,7 +347,7 @@ const CHAPTERS = [
   "name": "Angels of Vigilance",
   "legion": "I",
   "founding": "Disputed (40th Millennium)",
-  "bio": "Silent sentinels who have watched the Eye of Terror for almost ten thousand years.",
+  "bio": "They have stood silent watch over the Eye of Terror for almost ten thousand years. They are believed to come from the Second Founding, and their monastic devotion suggests Dark Angels blood, though no record confirms it.\n\nTheir fortress-monastery is a huge orbital dock rather than a world.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -373,7 +373,7 @@ const CHAPTERS = [
   "name": "Blades of Vengeance",
   "legion": "I",
   "founding": "Ultima Founding",
-  "bio": "The first Primaris Chapter created from Lion El'Jonson's gene-seed.",
+  "bio": "The first Primaris Chapter created from Lion El'Jonson's gene-seed. They pair the Lion's stubborn defence with sharp, well-timed counter-attacks.\n\nThey threw their full strength into Guilliman's Indomitus Crusade, freeing dozens of worlds and burning others judged beyond saving. To them the crusade is a way to flush the Fallen out into the open.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -399,7 +399,7 @@ const CHAPTERS = [
   "name": "Bringers of Judgement",
   "legion": "I",
   "founding": "Unknown (possibly Ultima)",
-  "bio": "Primaris Unforgiven in white with gold helms, pauldrons and gauntlets.",
+  "bio": "Zealots even by Unforgiven standards. If they find rebellion on a world, they judge the whole population guilty: weakness in one citizen is weakness in all, and the punishment is death.\n\nTheir long list of atrocities has drawn the Inquisition's attention, but nothing has changed their course.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -425,7 +425,7 @@ const CHAPTERS = [
   "name": "Consecrators",
   "legion": "I",
   "founding": "Unknown",
-  "bio": "They appeared out of nowhere at full strength, carrying an unusual hoard of relic armour and weapons. Their origins are a mystery.",
+  "bio": "No record of them exists before the 40th Millennium. They arrive without warning, win, and vanish without a word.\n\nThey were founded by Supreme Grand Master Valafar to recover and guard the lost history of the First Legion. That's why they carry so many ancient relics, old armour patterns and holy weapons into battle.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -456,7 +456,7 @@ const CHAPTERS = [
   "name": "Cowled Wardens",
   "legion": "I",
   "founding": "Unknown (possibly Ultima)",
-  "bio": "Unforgiven in black and gold, with purple helms and pauldron insets.",
+  "bio": "They operate from several hollowed-out asteroids in the Sirikoid Belt rather than a single fortress-monastery. Officially they purge the vicious Jehangir xenos of the region.\n\nTheir real mission is hunting what they believe is a large network of Fallen hidden nearby. Captured Fallen are locked away in icy catacombs carved into a nameless asteroid.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -482,7 +482,7 @@ const CHAPTERS = [
   "name": "Disciples of Caliban",
   "legion": "I",
   "founding": "Unknown (37th Millennium)",
-  "bio": "Raised at a Dark Angels Supreme Grand Master's personal request, which is almost unheard of. Rumour says they exist to hunt Cypher.",
+  "bio": "Created in the late 37th Millennium after Dark Angels Supreme Grand Master Anaziel personally pressed the High Lords for a new Chapter. That is almost unheard of, and some suspect he had leverage over at least one High Lord.\n\nThey were raised from the purest gene-seed the Dark Angels held, screened far beyond normal standards. They are fleet-based and strike fast, and other Unforgiven whisper that they exist to hunt Cypher.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -508,7 +508,7 @@ const CHAPTERS = [
   "name": "Guardians of the Covenant",
   "legion": "I",
   "founding": "Unknown",
-  "bio": "Deeply devout Unforgiven who cover their armour in scripture and swear strict oaths.",
+  "bio": "Their homeworld is Mortikah VII near the Imperium's western rim, and their fortress-monastery is a huge mountain-top cathedral.\n\nMost of their wars have been fought in the Segmentum Pacificus. They have led several Imperial crusades into the Halo Stars and the Veiled Region.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -539,7 +539,7 @@ const CHAPTERS = [
   "name": "Knights of Abhorrence",
   "legion": "I",
   "founding": "Unknown",
-  "bio": "Black-armoured Unforgiven picked out with teal trim.",
+  "bio": "For their first eight centuries they fought only in the Ghoul Stars, against some of the deadliest xenos the Imperium has met.\n\nNow they patrol the outer reaches, hunting aliens and gathering word of the Fallen. They were the first to warn Azrael of strange events near the Somnium Stars after Luther's escape.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -565,7 +565,7 @@ const CHAPTERS = [
   "name": "Penitent Blades",
   "legion": "I",
   "founding": "Unknown (possibly Ultima)",
-  "bio": "Unforgiven in an unusual quartered yellow and blue livery.",
+  "bio": "Their homeworld is thousands of small landmasses floating kilometres above acidic oceans. Nobody knows how.\n\nGrowing up there made them aerial combat experts. Their 2nd Company has four oversized squads of gunship pilots, double the usual number for an Unforgiven Chapter.",
   "scheme": {
    "pattern": "quartered",
    "colours": [
@@ -591,7 +591,7 @@ const CHAPTERS = [
   "name": "Prime Absolvers",
   "legion": "I",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris successor. Its Chapter Master learned of the Fallen from Azrael himself, but treats every enemy of the Emperor as his prey.",
+  "bio": "Chapter Master Dagiel Harn learned of the Fallen from Azrael himself. A headstrong warrior, he saw no reason for his brothers to carry the guilt the other Unforgiven feel.\n\nHe set up an Inner Circle and Deathwing- and Ravenwing-style companies, but to him the Fallen are just more traitors. His Chapter hunts all of the Emperor's enemies equally.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -617,7 +617,7 @@ const CHAPTERS = [
   "name": "Star Phantoms",
   "legion": "I",
   "founding": "23rd Founding (38th Millennium)",
-  "bio": "Brutal loyalists of the Badab War. Their gene-seed is officially unknown, but often linked to the Dark Angels.",
+  "bio": "A 23rd 'Sentinel' Founding Chapter, raised to take and hold xenos-contested regions on the Imperium's borders. They often worked alone, far from any support.\n\nThey arrived late in the Badab War and helped storm the Astral Claws' homeworld, earning a reputation for ruthless efficiency.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -648,7 +648,7 @@ const CHAPTERS = [
   "name": "The Unnamed",
   "legion": "I",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris Unforgiven Chapter that goes without a name.",
+  "bio": "When Azrael told them the Dark Angels' secret, the guilt of their ancestors hit this Primaris Chapter hard.\n\nThey refused to take a name, thinking themselves unworthy, and refused a homeworld. They will roam the stars until every one of the Fallen is destroyed.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -674,7 +674,7 @@ const CHAPTERS = [
   "name": "Dark Hunters",
   "legion": "V",
   "founding": "Unknown (37th Millennium)",
-  "bio": "Codex-compliant descendants of the Khan, in navy blue.",
+  "bio": "From the Night World of Phobian, raised during the Occlusiad War of the 37th Millennium to fight a rogue sect of Tech-priests.\n\nThey're known as especially tough. In the Dellrond Campaign a single company held a cathedral's entrance against an Ork Waaagh! for five years.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -700,7 +700,7 @@ const CHAPTERS = [
   "name": "Destroyers",
   "legion": "V",
   "founding": "Second Founding",
-  "bio": "A rare Second Founding son of the White Scars. Black armour with yellow helms and shoulders.",
+  "bio": "A rare Second Founding son of the White Scars. They share the Khan's battle-lust and lightning warfare.\n\nTheir victories are many, but questions hang over the stability of their gene-seed and the savagery they show in battle.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -726,7 +726,7 @@ const CHAPTERS = [
   "name": "Griffon Lords",
   "legion": "V",
   "founding": "Unknown",
-  "bio": "Their lineage is disputed between the White Scars and the Ultramarines. Tan armour with cerulean blue shoulders.",
+  "bio": "A rare case where a Chapter disagrees with its own records. The Administratum lists them as White Scars descendants, but they insist they are sons of Roboute Guilliman.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -752,7 +752,7 @@ const CHAPTERS = [
   "name": "Iron Talons",
   "legion": "V",
   "founding": "Unknown",
-  "bio": "White Scars successors in black armour with bare silver arms.",
+  "bio": "Sons of the Khan who belong to the Astartes Praeses, twenty Chapters created to guard the regions around the Eye of Terror against Chaos.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -783,7 +783,7 @@ const CHAPTERS = [
   "name": "Mantis Warriors",
   "legion": "V",
   "founding": "Unknown (mid-34th Millennium)",
-  "bio": "Founded to help guard the Maelstrom. They backed the wrong side in the Badab War and are still seen as traitors by many, despite their pardon.",
+  "bio": "Raised, records suggest, in the mid-34th Millennium to help the White Scars watch the Maelstrom. They joined the Astral Claws, Charnel Guard and Lamenters as the Maelstrom Warders, guarding the Endymion Cluster.\n\nWhen the Astral Claws rebelled in the Badab War, the Mantis Warriors sided with them. They were pardoned afterwards, but many still regard them as traitors.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -809,7 +809,7 @@ const CHAPTERS = [
   "name": "Marauders",
   "legion": "V",
   "founding": "Second Founding",
-  "bio": "A Second Founding son of the Khan and the parent Chapter of the Mantis Warriors.",
+  "bio": "Parent Chapter of the Mantis Warriors. They are isolationists who fight alongside others readily enough but share only what they must.\n\nThey are known as fine marksmen. They lay ambushes, smash the enemy with massed fire, then sweep in to finish the survivors.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -835,7 +835,7 @@ const CHAPTERS = [
   "name": "Rampagers",
   "legion": "V",
   "founding": "Second Founding",
-  "bio": "Like their forefathers, they use ritual facial scars to record rank and deeds.",
+  "bio": "Like the White Scars, they cut ritual scars into their faces to mark rank and deeds, in a long ceremony called 'the Blooding'. The blood drawn is mixed into the drinks at the feast that follows.\n\nThey like to claim conquered feral worlds as new recruiting grounds, as long as the people pass tests for corruption.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -861,7 +861,7 @@ const CHAPTERS = [
   "name": "Solar Hawks",
   "legion": "V",
   "founding": "Unknown (c. 35th Millennium)",
-  "bio": "A rare White Scars successor. They often paint their left arm white to honour their parent Chapter.",
+  "bio": "A rare White Scars successor dating back at least to the 35th Millennium. They are aggressive and noble, and honour their forebears by painting a shoulder or gauntlet white.\n\nAs the name suggests, they field unusually large numbers of gunships, sending whole wings of Stormtalons and Stormravens into battle.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -892,7 +892,7 @@ const CHAPTERS = [
   "name": "Sons of Jaghatai",
   "legion": "V",
   "founding": "Unknown",
-  "bio": "Codex-compliant heirs of the Khan in deep purple with bone markings.",
+  "bio": "A Codex-compliant Chapter whose name points to the Khan's bloodline, though no official record confirms it. Their heraldry carries a crescent moon.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -918,7 +918,7 @@ const CHAPTERS = [
   "name": "Storm Lords",
   "legion": "V",
   "founding": "Second Founding",
-  "bio": "A rare Second Founding successor, split down the middle in red and white.",
+  "bio": "A rare Second Founding son of the Khan with a fierce rivalry against the White Scars themselves. They often take reckless risks to win more glory than their forebears.\n\nThey share the Khan's battle-lust and fast, aggressive style of war.",
   "scheme": {
    "pattern": "halved",
    "colours": [
@@ -944,7 +944,7 @@ const CHAPTERS = [
   "name": "Storm Reapers",
   "legion": "V",
   "founding": "Ultima Founding",
-  "bio": "The first Primaris Chapter made from the Khan's gene-seed, and some of the most battle-hungry warriors in the Imperium.",
+  "bio": "The first Primaris Chapter made from Jaghatai Khan's gene-seed, and among the most battle-hungry warriors in the Imperium. They are wise and noble, but on the attack they fight with the Khan's own fire.\n\nThey made the savage feral world of Jagun their home, and were commended for spearheading the Absolutis Crusade.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -970,7 +970,7 @@ const CHAPTERS = [
   "name": "Wolfspear",
   "legion": "VI",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris Chapter of Russ's line, given to the Space Wolves by Guilliman. Many on Fenris still don't trust them.",
+  "bio": "Like the Space Wolves, they ignore the Codex and use Fenrisian ranks and customs.\n\nThey hunt in packs. Stealthy killers take out the enemy vanguard, fast vehicles encircle cities, and their Rune Priests and Iron Priests flood enemy vox-nets with howling terror.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -996,7 +996,7 @@ const CHAPTERS = [
   "name": "Astral Knights",
   "legion": "VII",
   "founding": "Unknown",
-  "bio": "Imperial Fists successors who gave their lives to stop an Ork Waaagh! from reaching a vital Imperial world.",
+  "bio": "In 926.M41 they gave almost the entire Chapter to destroy the World Engine, a planet-sized Necron weapon able to scour worlds clean of life.\n\nThey were struck from the rolls soon after. The Sable Swords were created to replace them and took over their abandoned fortress-monastery.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1022,7 +1022,7 @@ const CHAPTERS = [
   "name": "Black Templars",
   "legion": "VII",
   "founding": "Second Founding",
-  "bio": "Zealous crusaders founded by Sigismund, Dorn's champion. A vast fleet-based crusading force that hates psykers and never stops moving.",
+  "bio": "Their origin goes back to the Imperial Fists' defence of Terra. Since the Heresy they have waged the longest crusade in Imperial history to prove their loyalty.\n\nThey ignore the Codex, are organised into crusades rather than companies, and, unusually for Space Marines, worship the Emperor as a god.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1053,7 +1053,7 @@ const CHAPTERS = [
   "name": "Brazen Annihilators",
   "legion": "VII",
   "founding": "Unknown",
-  "bio": "Imperial Fists descendants in dark copper armour with white trim.",
+  "bio": "Even among Dorn's sons they lean heavily on artillery. By the time their infantry charge in, the enemy positions are usually smoking craters.\n\nTheir bombardments, from orbit or from the ground, have been legendary among the Space Marines for thousands of years.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1079,7 +1079,7 @@ const CHAPTERS = [
   "name": "Celestial Lions",
   "legion": "VII",
   "founding": "Unknown (suspected 23rd)",
-  "bio": "Proud warriors in gold and azure, almost wiped out on Armageddon after an Inquisitorial betrayal.",
+  "bio": "Possibly raised in the 23rd Founding, they later became one of the three 'Sentinels of the Veil' guarding Elara's Veil, alongside the Emperor's Spears and the now-extinct Star Scorpions.\n\nAt Armageddon they were almost wiped out after the Inquisition steered them into hopeless fights, a loss that still angers many in the Imperium.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1105,7 +1105,7 @@ const CHAPTERS = [
   "name": "Crimson Fists",
   "legion": "VII",
   "founding": "Second Founding",
-  "bio": "Nearly destroyed when Orks overran Rynn's World and a misfire levelled their fortress. Pedro Kantor rebuilt them from the ashes. Each brother's left hand is painted crimson.",
+  "bio": "Almost wiped out in 989.M41 when Waaagh! Snagrod hit Rynn's World and a misfired missile destroyed their fortress-monastery.\n\nThey fought on regardless and are now legendary for their stoicism. Under Pedro Kantor they have slowly rebuilt, and the survivors are counted among the finest warriors in the Imperium.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1136,7 +1136,7 @@ const CHAPTERS = [
   "name": "Death Strike",
   "legion": "VII",
   "founding": "Unknown",
-  "bio": "Codex-compliant Imperial Fists successors in dark blue.",
+  "bio": "A Codex-compliant Chapter of Dorn's line from the world of Nihilas. They are one of several Imperial Fists successors that compete in the Feast of Blades.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1167,7 +1167,7 @@ const CHAPTERS = [
   "name": "Emperor's Warbringers",
   "legion": "VII",
   "founding": "Unknown",
-  "bio": "Unlike most Chapters, they happily use camouflage.",
+  "bio": "A Codex-compliant son of Dorn with a reputation for especially brutal fighting. Unusually, they use camouflage on both armour and vehicles.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1193,7 +1193,7 @@ const CHAPTERS = [
   "name": "Excoriators",
   "legion": "VII",
   "founding": "Second Founding",
-  "bio": "Sons of Dorn who leave every scar and dent on their armour as a lesson in pain and failure.",
+  "bio": "Raised in the Second Founding to honour a group of Imperial Fists who held part of the Palace during the Siege of Terra. They are also counted among the Astartes Praeses guarding the Eye of Terror.\n\nThey see pain as a teacher. Every dent and scar on their armour is kept as a lesson.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1219,7 +1219,7 @@ const CHAPTERS = [
   "name": "Executioners",
   "legion": "VII",
   "founding": "3rd Founding",
-  "bio": "Headhunters who sided with the rebels in the Badab War and were later pardoned. Their original livery was blue and grey camouflage.",
+  "bio": "A 3rd Founding son of Dorn that ended up on the rebel side of the Badab War, largely through no fault of its own. They fought honourably throughout.\n\nThe High Lords let them continue after a long penitent crusade. They are infamous for taking the heads of fallen enemies.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1245,7 +1245,7 @@ const CHAPTERS = [
   "name": "Exorcists",
   "legion": "VII",
   "founding": "13th 'Dark' Founding",
-  "bio": "A very unusual Chapter. Every recruit is deliberately possessed by a daemon, which is then cast out, to harden him against the warp.",
+  "bio": "Raised in the secretive 13th 'Dark' Founding as an Inquisition experiment. Their creation is sealed by the Ordo Malleus, though most believe they carry Dorn's gene-seed.\n\nEvery recruit is deliberately possessed by a daemon, which is then cast out. The ordeal leaves them deeply resistant to the warp and expert daemon hunters.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1271,7 +1271,7 @@ const CHAPTERS = [
   "name": "Fire Lords",
   "legion": "VII",
   "founding": "Unknown",
-  "bio": "Red armour with yellow helms, greaves and vambraces. They joined the Iron Crusade beside the Iron Hands.",
+  "bio": "They go to war carrying flamers, opening with incendiary missiles and charging in before the fires have died down.\n\nTheir homeworld is the volcanic Mundus Pyra on the Eastern Fringe. Their flame rituals remind many of the Salamanders, and their true lineage has never been confirmed.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1297,7 +1297,7 @@ const CHAPTERS = [
   "name": "Hammers of Dorn",
   "legion": "VII",
   "founding": "Unknown (41st Millennium)",
-  "bio": "Strict followers of the Codex, which has made them fierce rivals of the Ultramarines' line.",
+  "bio": "Strict followers of the Codex, which has made them fierce rivals of the Ultramarines and their successors.\n\nThey are a young Chapter, probably from the early 41st Millennium, but have already fought hundreds of campaigns, including the Achilus Crusade against the Word Bearers.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1323,7 +1323,7 @@ const CHAPTERS = [
   "name": "Honoured Sons",
   "legion": "VII",
   "founding": "Unknown",
-  "bio": "Little is known of them beyond their forest green armour and white shoulders.",
+  "bio": "Almost nothing is recorded of them except their homeworld, Jonol, on the Eastern Fringe.\n\nThey believe they are sons of Rogal Dorn. Nothing disproves it, but the Imperial Fists have never officially recognised them.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1349,7 +1349,7 @@ const CHAPTERS = [
   "name": "Hospitallers",
   "legion": "VII",
   "founding": "24th Founding",
-  "bio": "A young, fleet-based Imperial Fists successor in white and yellow.",
+  "bio": "A young, fleet-based son of Dorn that rejects the Codex and, unusually, worships the Emperor as a god, working closely with the Ecclesiarchy.\n\nThey have held a grudge against the Iron Hands ever since a clash over the Knight World of Fabris Callivant.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1380,7 +1380,7 @@ const CHAPTERS = [
   "name": "Invaders",
   "legion": "VII",
   "founding": "Unknown",
-  "bio": "Codex-compliant sons of Dorn in green armour.",
+  "bio": "They embody Dorn's most stubborn streak and refuse to accept defeat. They throw themselves into battle without hesitation and often win against the odds, usually at a heavy cost.\n\nThey are specialists in planetary subjugation campaigns.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1406,7 +1406,7 @@ const CHAPTERS = [
   "name": "Iron Knights",
   "legion": "VII",
   "founding": "Unknown (32nd Millennium)",
-  "bio": "Imperial Fists successors in gleaming blue-grey armour.",
+  "bio": "A crusading Imperial Fists successor from Brycantia, founded in the 32nd Millennium. Part of the Chapter once betrayed them and became the Chaos warband the Iron Brethren.\n\nThey are the only Chapter to win the Feast of Blades, the Imperial Fists successors' centennial tournament, twice in a row.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1479,7 +1479,7 @@ const CHAPTERS = [
   "name": "Shadow Wolves",
   "legion": "VII",
   "founding": "Unknown",
-  "bio": "A lost Chapter possibly of Dorn's line, in silver armour with dark purple shoulders.",
+  "bio": "A zealous Chapter, possibly of Dorn's line, that served for thousands of years until a Tyranid splinter fleet overran their homeworld of Varadon in 987.M41.\n\nThey are officially extinct, yet a Shadow Wolves strike force was seen fighting on Cadia during the 13th Black Crusade.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1531,7 +1531,7 @@ const CHAPTERS = [
   "name": "Sons of Dorn",
   "legion": "VII",
   "founding": "Unknown (34th Millennium)",
-  "bio": "Black armour with white faceplates, trim and gauntlets.",
+  "bio": "A Codex-compliant Imperial Fists successor from the feudal world of Archea, raised in the 34th Millennium.\n\nIn 999.M41, while most of the Chapter was fighting the 13th Black Crusade, a Tyranid splinter fleet ravaged their homeworld.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1557,7 +1557,7 @@ const CHAPTERS = [
   "name": "Sons of the Phoenix",
   "legion": "VII",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris Chapter of Dorn's line in off-white armour, a symbol of their purity.",
+  "bio": "An all-Primaris Chapter of Dorn's line, ritualistic and devout, that prides itself on plunging into the flames of battle.\n\nThey are always on crusade, led by their Chaplains. Their crusades are so spectacular that crowds of Ecclesiarchy priests follow in their wake.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1583,7 +1583,7 @@ const CHAPTERS = [
   "name": "Soul Drinkers",
   "legion": "VII",
   "founding": "Second Founding",
-  "bio": "A proud Chapter that broke with the Imperium and was declared Excommunicate Traitoris.",
+  "bio": "Declared renegades for mutation and suspected Chaos taint, yet they always saw themselves as loyal to the Emperor, if not to His Imperium.\n\nThey believed they were sons of Dorn, until the Angels Sanguine studied their gene-seed and found its true origin was unknown. Their story is told in a full Black Library novel series.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1609,7 +1609,7 @@ const CHAPTERS = [
   "name": "Subjugators",
   "legion": "VII",
   "founding": "23rd or 24th Founding",
-  "bio": "A young Imperial Fists successor in mid-green armour.",
+  "bio": "One of the Astartes Praeses guarding the Eye of Terror, from the world of Xenax. Almost as zealous as the Black Templars.\n\nThey are infamous for brutal, unsubtle methods. More than once they have 'liberated' an Imperial world at the cost of most of the people living on it.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1635,7 +1635,7 @@ const CHAPTERS = [
   "name": "White Templars",
   "legion": "VII",
   "founding": "Unknown",
-  "bio": "Once thought to come from Dorn's line. White armour with black details.",
+  "bio": "Stoic, relentless warriors from the world of Sanctum. They were long thought to be sons of Dorn, until Administratum gene-testing cast serious doubt on it.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1661,7 +1661,7 @@ const CHAPTERS = [
   "name": "Absolvers",
   "legion": "IX",
   "founding": "Unknown (34th Millennium)",
-  "bio": "Blood Angels successors who follow the Codex almost dogmatically.",
+  "bio": "Dour, enigmatic Blood Angels successors from the 34th Millennium who follow the Codex almost dogmatically.\n\nThe Great Rift trapped them in the Gilead System of the Imperium Nihilus. They have greatly stepped up recruitment to keep defending its people.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1687,7 +1687,7 @@ const CHAPTERS = [
   "name": "Angels Encarmine",
   "legion": "IX",
   "founding": "Second Founding",
-  "bio": "The most aloof of the Sanguinary Brotherhood, and openly dismissive of the other Chapters.",
+  "bio": "The most aloof of the Sanguinary Brotherhood, with a contempt for weakness that outdoes even the Blood Angels.\n\nBlood Angels archivists call them the most active Chapter in existence. Their restless former Chapter Master, Zargo, could never stop leading them from one campaign to the next.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1713,7 +1713,7 @@ const CHAPTERS = [
   "name": "Angels Penitent",
   "legion": "IX",
   "founding": "9th Founding",
-  "bio": "Formerly the Angels Resplendent, artisans in orange armour. They took a new name and black livery after the mysterious 'Undying Martyr' arrived.",
+  "bio": "As the Angels Resplendent, they were artisans in red and gold who made nobility their creed. Alone among Sanguinius's heirs, not one of them had ever fallen to the Black Rage.\n\nThat changed with the arrival of the mysterious 'Undying Martyr'. The Chapter took a new name and switched to black armour streaked with thorny vines.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1744,7 +1744,7 @@ const CHAPTERS = [
   "name": "Angels Sanguine",
   "legion": "IX",
   "founding": "Second Founding",
-  "bio": "Masked warriors with a glorious record against the horrors of the Eye of Terror.",
+  "bio": "A Second Founding Chapter with a glorious record against the horrors of the Eye of Terror, held up across the Imperium as the finest example of Sanguinius's bloodline.\n\nThey hide their faces behind masks. Rumour says it's because they look so much like their Primarch.",
   "scheme": {
    "pattern": "halved",
    "colours": [
@@ -1770,7 +1770,7 @@ const CHAPTERS = [
   "name": "Angels Vermillion",
   "legion": "IX",
   "founding": "Second Founding",
-  "bio": "The only Blood Angels successor that shuns its brother Chapters and bears the curse alone.",
+  "bio": "The only Blood Angels successor that cuts itself off from the others, bearing its curse alone. Little is recorded of them, but every mention shows an exemplary battle record.\n\nSome on the Blood Angels council want closer ties. Dante has always refused, for reasons he keeps to himself.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1796,7 +1796,7 @@ const CHAPTERS = [
   "name": "Atlantian Spears",
   "legion": "IX",
   "founding": "Unknown",
-  "bio": "Blood Angels successors who keep themselves apart from the Sanguinary Brotherhood.",
+  "bio": "For thousands of years they have pacified the Enclave of Alkina and the Sanctuary of Konstantyah in the Segmentum Tempestus. An unusual number of their Librarians have the gift of foresight.\n\nWhen Dante called for help against the Tyranids at Baal, they heard the call and did nothing, which has left them isolated from the Sanguinary Brotherhood.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1822,7 +1822,7 @@ const CHAPTERS = [
   "name": "Blood Dragons",
   "legion": "IX",
   "founding": "Unknown",
-  "bio": "A name many Imperial worlds fear more than they celebrate.",
+  "bio": "Many Imperial worlds fear their arrival rather than celebrate it. The Blood Dragons care little for civilians and want only the total extermination of the Emperor's enemies, trusting Him to sort the innocent from the guilty.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1848,7 +1848,7 @@ const CHAPTERS = [
   "name": "Blood Drinkers",
   "legion": "IX",
   "founding": "Second Founding",
-  "bio": "Named for a mutated gene-seed organ that gives them a craving for blood. They follow the Codex closely.",
+  "bio": "Their grim name comes from a mutated gene-seed organ that gives them a craving for blood. Despite it, they are counted among the most honourable Chapters in the Imperium.\n\nTheir close allies include other Chapters above reproach, such as the Crimson Fists, Novamarines and Howling Griffons.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1874,7 +1874,7 @@ const CHAPTERS = [
   "name": "Blood Scythes",
   "legion": "IX",
   "founding": "Ultima Founding",
-  "bio": "A Primaris Chapter that first fought in the Red Scar after the Devastation of Baal.",
+  "bio": "A Primaris Chapter whose first wars were in the Red Scar after the Devastation of Baal.\n\nThey took to the Blood Angels' traditions quickly and uphold Sanguinius's codes with the zeal of new converts.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1900,7 +1900,7 @@ const CHAPTERS = [
   "name": "Blood Swords",
   "legion": "IX",
   "founding": "Unknown",
-  "bio": "Codex-compliant Chapter of Sanguinius's line in crimson.",
+  "bio": "A Codex-compliant Blood Angels successor. For a time their Chapter Master, Daggan, was a venerable Dreadnought.\n\nThey patrol the space around the Eye of Terror in a joint containment fleet with the Star Dragons, and fought aboard the space hulk Accursed Eternity.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1926,7 +1926,7 @@ const CHAPTERS = [
   "name": "Carmine Blades",
   "legion": "IX",
   "founding": "Unknown",
-  "bio": "Long mistaken for Ultramarines descendants, until a meeting with Chaplain Astorath revealed their true bloodline.",
+  "bio": "For a long time they passed, perhaps by accident, as Ultramarines descendants. A chance meeting with Chaplain Astorath the Grim revealed the truth.\n\nAt last they had names for the strange urges they had hidden for so long: the Red Thirst and the Black Rage.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1952,7 +1952,7 @@ const CHAPTERS = [
   "name": "Cruor Blades",
   "legion": "IX",
   "founding": "Unknown",
-  "bio": "Wracked with guilt for failing to reach Baal before the Tyranids besieged it.",
+  "bio": "Consumed by guilt for failing to reach Baal before the Tyranids besieged it. They are now on a self-imposed penitent crusade.\n\nThey sweep the Red Scar of Tyranids and push into the Imperium Nihilus, spreading word of Dante's appointment as its regent.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -1983,7 +1983,7 @@ const CHAPTERS = [
   "name": "Flesh Eaters",
   "legion": "IX",
   "founding": "Unknown",
-  "bio": "A Blood Angels successor whose name fits the gene-line's curse.",
+  "bio": "Savage and warlike. There is no evidence they actually eat flesh, though the rumours have lasted for thousands of years and the Chapter simply ignores them.\n\nThey were already active by the end of the 33rd Millennium, when they joined the Pentarchy of Blood.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2009,7 +2009,7 @@ const CHAPTERS = [
   "name": "Flesh Tearers",
   "legion": "IX",
   "founding": "Second Founding",
-  "bio": "The most savage of Sanguinius's heirs, always on the edge of the Black Rage. Once reduced to just four companies, they are led by Gabriel Seth.",
+  "bio": "The smallest of the Second Founding Blood Angels successors, once down to just four companies. They suffer the gene-seed flaws worse than most, which makes them savage, bad-tempered fighters.\n\nTheir brutality has brought Inquisition charges of heresy, though they are currently cleared. They are led by the grim Gabriel Seth.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2035,7 +2035,7 @@ const CHAPTERS = [
   "name": "Knights of Blood",
   "legion": "IX",
   "founding": "Unknown",
-  "bio": "Declared renegades after their bloodlust became too much even for the Inquisition.",
+  "bio": "Declared renegades after the destruction they caused to friend and foe alike, though they still saw themselves as loyal to the Emperor.\n\nThey returned for the Battle of Baal and were slaughtered to the last man defending Baal Prime beside the Flesh Tearers.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2061,7 +2061,7 @@ const CHAPTERS = [
   "name": "Lamenters",
   "legion": "IX",
   "founding": "21st 'Cursed' Founding",
-  "bio": "Maybe the unluckiest Chapter in the galaxy. They were dragged onto the wrong side of the Badab War, then nearly wiped out by Tyranids during their penance.",
+  "bio": "A Cursed Founding Chapter that seems doomed: their victories always turn to ashes. They may have found a cure for the Black Rage and Red Thirst, a secret that could die with them.\n\nThey were dragged onto the rebel side of the Badab War, then nearly wiped out by Tyranids during their penance.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2092,7 +2092,7 @@ const CHAPTERS = [
   "name": "Sable Knights",
   "legion": "IX",
   "founding": "Unknown",
-  "bio": "Black legs and torso as a reminder that the Black Rage lives in all of them.",
+  "bio": "Determined to make the most of their time before the Black Rage takes them. They are fleet-based and race from war to war.\n\nThey favour armoured spearheads and massed transports to hit the enemy as quickly and hard as possible.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2118,7 +2118,7 @@ const CHAPTERS = [
   "name": "Sons of Sanguinius",
   "legion": "IX",
   "founding": "Second Founding",
-  "bio": "One of the original Second Founding Chapters of the Blood Angels.",
+  "bio": "A dark, brooding Second Founding Chapter that still grieves for its slain Primarch.\n\nThey are brutal and zealous, and often show a disturbing disregard for the lives of Imperial civilians.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2165,7 +2165,7 @@ const CHAPTERS = [
   "name": "Brazen Claws",
   "legion": "X",
   "founding": "Second Founding",
-  "bio": "Stoic, relentless sons of Ferrus Manus. They fought against the 13th Black Crusade.",
+  "bio": "Stoic and relentless sons of Ferrus Manus. Daemons tore their homeworld apart long ago, and they have been fleet-based ever since.\n\nThey recently returned from a reckless twenty-year Crusade of Vengeance inside the Eye of Terror.",
   "scheme": {
    "pattern": "quartered",
    "colours": [
@@ -2191,7 +2191,7 @@ const CHAPTERS = [
   "name": "Iron Fists",
   "legion": "X",
   "founding": "Unknown",
-  "bio": "They cross their homeworld in huge mobile fortresses, as their parent Chapter does.",
+  "bio": "They cross their homeworld in Land-Behemoths, huge mobile fortresses, just as their Iron Hands forebears do. They revere Ferrus Manus and keep many Iron Hands traditions.\n\nSome older sources listed them as Imperial Fists successors, but their Iron Hands lineage is now confirmed.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2217,7 +2217,7 @@ const CHAPTERS = [
   "name": "Iron Lords",
   "legion": "X",
   "founding": "23rd Founding",
-  "bio": "Stern xenos-haters who have fought Tyranids, T'au and the Barghesi.",
+  "bio": "Stern xenos-haters from the 23rd Founding. Since the 38th Millennium they have held the blockade of the Grendl Stars, keeping the alien Barghesi penned in.\n\nThey have also fought Tyranids and the T'au, and lately the swarms of Hive Fleet Kraken have pushed them hard.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2248,7 +2248,7 @@ const CHAPTERS = [
   "name": "Knights of Byzantium",
   "legion": "X",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris Chapter of the Iron Hands line in purple and bronze.",
+  "bio": "An all-Primaris son of Ferrus Manus that brings as much firepower as possible to every fight.\n\nLike the Iron Hands, they field many Dreadnoughts and revere them deeply.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2274,7 +2274,7 @@ const CHAPTERS = [
   "name": "Red Talons",
   "legion": "X",
   "founding": "Second Founding",
-  "bio": "A Second Founding successor of the Iron Hands.",
+  "bio": "Formed from the Iron Hands' Morragul Clan, made up of outcasts and the most unstable warriors of the Legion, under the bloody-handed Iron Lord Autek Mor.\n\nSince the Great Scouring they have been known for bold warfare and an endless vendetta against the Traitor Legions. The High Lords have sent them to hunt down traitors many times.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2305,7 +2305,7 @@ const CHAPTERS = [
   "name": "Sons of Medusa",
   "legion": "X",
   "founding": "Moirae Schism (ratified M37)",
-  "bio": "Formed from Iron Hands who lost the Moirae Schism, a dispute over machine worship. They were exiled, and later proved their loyalty in the Badab War.",
+  "bio": "Ratified as a Chapter in 011.M37, made up of Iron Hands who lost the Moirae Schism. They are ruthlessly efficient and look with disgust on anyone lacking their strength of will.\n\nTheir long record of battle honours includes loyal service in the Badab War.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2331,7 +2331,7 @@ const CHAPTERS = [
   "name": "Star Dragons",
   "legion": "X",
   "founding": "Unknown",
-  "bio": "Codex-compliant Chapter from Draconith, linked to the Iron Hands.",
+  "bio": "From the world of Draconith. They inlay their ritual scars with circuitry that makes them glow like trapped stars.\n\nThey may be sons of Ferrus Manus, but they show little of the Iron Hands' cold logic and fight on furious passion instead.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2357,7 +2357,7 @@ const CHAPTERS = [
   "name": "Steel Confessors",
   "legion": "X",
   "founding": "Unknown",
-  "bio": "An Iron Hands successor described as crippled after heavy losses.",
+  "bio": "Possibly founded in secret in the 36th Millennium by the Adeptus Mechanicus for its own use, from Iron Hands gene-seed.\n\nWhen the Inquisition found out, the Chapter was forced into ordinary service. It is often called the 'crippled' Steel Confessors after heavy losses.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2409,7 +2409,7 @@ const CHAPTERS = [
   "name": "Angels Revenant",
   "legion": "XIII",
   "founding": "8th Founding",
-  "bio": "Codex-compliant Chapter of the 8th Founding in cobalt blue.",
+  "bio": "An 8th Founding Chapter raised in 598.M35, during the dark years of the Nova Terra Interregnum.\n\nIn 991.M41 the Necron Maynarkh Dynasty fell on their homeworld in the Orpheus Sector. Only a few hundred survived.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2435,7 +2435,7 @@ const CHAPTERS = [
   "name": "Aurora Chapter",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "Nearly destroyed in the 13th Black Crusade, they are rebuilding. They field ancient relic vehicles built on their forge homeworld.",
+  "bio": "Their forge homeworld, Firestorm, rivals a Forge World, so they never lack vehicles or ammunition. Their name is a byword for armoured assault across the Ultima Segmentum.\n\nNearly destroyed in the 13th Black Crusade, they are rebuilding, still fielding relic vehicles that date back to the Second Founding.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2461,7 +2461,7 @@ const CHAPTERS = [
   "name": "Avenging Sons",
   "legion": "XIII",
   "founding": "19th Founding",
-  "bio": "One of the nine Shield Chapters that guard Ultramar.",
+  "bio": "A 19th Founding Chapter from the mid-36th Millennium, and one of the nine Shield Chapters Guilliman picked to defend and expand Ultramar.\n\nThey keep the Ultramarines' martial traditions and have a stoic faith in the Codex.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2487,7 +2487,7 @@ const CHAPTERS = [
   "name": "Black Consuls",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "A Primogenitor Chapter of the Ultramarines in black and gold.",
+  "bio": "The least compromising of the Ultramarines' Primogenitors, allowing no deviation from the Codex. They are also counted among the Astartes Praeses watching the Eye of Terror.\n\nStern and unbending, with a long, rich record of victories.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2518,7 +2518,7 @@ const CHAPTERS = [
   "name": "Brazen Consuls",
   "legion": "XIII",
   "founding": "Unknown",
-  "bio": "Ultramarines successors in brown armour with black helms.",
+  "bio": "From the rich world of Aventinium. They recruit only from its nobility, who train their sons for the Chapter from birth.\n\nAspirants arrive as expert fencers and marksmen, as at home with strategy and survival as with banquet-hall etiquette.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2544,7 +2544,7 @@ const CHAPTERS = [
   "name": "Castellans of the Rift",
   "legion": "XIII",
   "founding": "Ultima Founding",
-  "bio": "Charged by Guilliman to hold the Nachmund Gauntlet, the only stable route through the Great Rift.",
+  "bio": "Guilliman himself gave them the job of holding the Nachmund Gauntlet, the one stable route through the Great Rift.\n\nThey raid the Fallen Knight World of Dharrovar and fight at both ends of the Gauntlet against renegades, traitors and xenos, at heavy cost.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2575,7 +2575,7 @@ const CHAPTERS = [
   "name": "Dark Sons",
   "legion": "XIII",
   "founding": "Unknown",
-  "bio": "Ultramarines successors from Darkhold in quartered green and white.",
+  "bio": "Pride and arrogance have soured their dealings with other Imperial forces. But the arrogance is earned: they fight with remarkable skill and have won many battles against the odds.",
   "scheme": {
    "pattern": "quartered",
    "colours": [
@@ -2601,7 +2601,7 @@ const CHAPTERS = [
   "name": "Doom Eagles",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "Fatalists who consider themselves already dead. Silver armour with red details.",
+  "bio": "From Gathis II, where their fortress-monastery, the Eyrie, sits on the Ghostmountain. They are one of the nine Shield Chapters of Ultramar.\n\nThey favour stealth and speed, and every one of them accepts that he is, in effect, already dead.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2627,7 +2627,7 @@ const CHAPTERS = [
   "name": "Doom Legion",
   "legion": "XIII",
   "founding": "Unknown",
-  "bio": "Ultramarines descendants in metallic grey with dark green.",
+  "bio": "They garrison the Faithful's Deliverance, a pre-Heresy star fortress overlooking the Elusian Maze asteroid fields. Few Chapters can match its firepower.\n\nThe wider Imperium has all but forgotten them, but they keep fighting what crawls out of the Maze.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2653,7 +2653,7 @@ const CHAPTERS = [
   "name": "Eagle Warriors",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "A fleet-based Primogenitor Chapter with no homeworld, and the forebears of the Marines Errant.",
+  "bio": "Fleet-based, with no homeworld, founded during the chaos of the Great Scouring. They fight an endless crusade to protect the systems Guilliman freed during the Great Crusade.\n\nThe Great Rift has put many of those worlds in danger, and they keep sending strike forces to defend them.",
   "scheme": {
    "pattern": "halved",
    "colours": [
@@ -2679,7 +2679,7 @@ const CHAPTERS = [
   "name": "Emperor's Spears",
   "legion": "XIII",
   "founding": "25th Founding",
-  "bio": "A wild, saga-telling Chapter of Guilliman's line that guards the Elara's Veil nebula.",
+  "bio": "A 25th 'Bastion' Founding Chapter from the feral ocean world of Nemeton. With the Celestial Lions and Star Scorpions, they formed the Sentinels of the Veil, guarding the twenty worlds of Elara's Veil.\n\nThey are a wild, saga-loving Chapter.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2705,7 +2705,7 @@ const CHAPTERS = [
   "name": "Fire Angels",
   "legion": "XIII",
   "founding": "25th Founding",
-  "bio": "Ultramarines successors of the 25th Founding, originally in white and red.",
+  "bio": "A 25th Founding Chapter from Lorin Alpha, best known for its part in the Badab War. They are not the first Chapter to carry the name.\n\nThey have no special ties to the other Ultramarines successors and prefer to forge their own path.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2731,7 +2731,7 @@ const CHAPTERS = [
   "name": "Fire Hawks",
   "legion": "XIII",
   "founding": "21st 'Cursed' Founding",
-  "bio": "A Cursed Founding Chapter that once vanished in the warp. It was originally yellow with red flames.",
+  "bio": "A Cursed Founding Chapter that claims Ultramarines descent. Defects in its archived gene-seed say otherwise, and Guilliman's sons have never acknowledged them.\n\nThey are one of the few Chapters to have been lost entirely, swallowed by the warp, and rumour links them to the ghostly Legion of the Damned.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2757,7 +2757,7 @@ const CHAPTERS = [
   "name": "Fulminators",
   "legion": "XIII",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris Chapter that wears blue in honour of the Ultramarines.",
+  "bio": "Among the very first Primaris Space Marines. Their aspirants were chosen at the end of the Great Scouring and slept in stasis beneath Mars for nearly 8,000 years.\n\nThey were finally awakened for the Ultima Founding and raised as a Chapter of Guilliman's line.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2783,7 +2783,7 @@ const CHAPTERS = [
   "name": "Genesis Chapter",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "The first of the Ultramarines' Primogenitor Chapters, and close to them in custom and markings.",
+  "bio": "The first of the Ultramarines' Primogenitors to be raised, hence the name. They are fiercely loyal and will always fight at the Ultramarines' side.\n\nTheir homeworld, Newfound, lies just north-west of Ultramar.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2835,7 +2835,7 @@ const CHAPTERS = [
   "name": "Howling Griffons",
   "legion": "XIII",
   "founding": "Unknown (33rd Millennium)",
-  "bio": "Fought in the Badab War and the 13th Black Crusade. Bold quartered heraldry.",
+  "bio": "A Chapter raised in the 33rd Millennium that fought in the Badab War and defended Amistel Majoris against Plague Marines in the 13th Black Crusade.\n\nThey take their oaths extremely seriously. Each one binds the warrior until the deed is done or he dies trying, and more oaths are added before every battle.",
   "scheme": {
    "pattern": "quartered",
    "colours": [
@@ -2861,7 +2861,7 @@ const CHAPTERS = [
   "name": "Imperius Reavers",
   "legion": "XIII",
   "founding": "4th Founding",
-  "bio": "Guardians of the hive world Praedis Zeta, at the far edge of Ultramar.",
+  "bio": "Guardians of the hive world Praedis Zeta, at the far edge of Ultramar, under constant threat from xenos and daemons.\n\nThey are expert xenos hunters. Their 2nd Company, 'The Stormbringers', are veterans of the First Tyrannic War and specialise in rooting out Genestealer cults.",
   "scheme": {
    "pattern": "halved",
    "colours": [
@@ -2882,7 +2882,7 @@ const CHAPTERS = [
   "name": "Iron Hawks",
   "legion": "XIII",
   "founding": "Unknown",
-  "bio": "Ultramarines successors in dark steel with stark white faceplates.",
+  "bio": "Their gene-seed is pure and complete, but they are rebuilding after a long, punishing campaign.\n\nStrict followers of the Codex, they are known for brutal high-speed Thunderhawk assaults. They revere Guilliman above all but the Emperor and despise anyone who turns from him.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2913,7 +2913,7 @@ const CHAPTERS = [
   "name": "Iron Hounds",
   "legion": "XIII",
   "founding": "Unknown (4th Founding suspected)",
-  "bio": "Relentless hunters, believed lost fighting Nurgle's forces in the Scourge Stars.",
+  "bio": "Relentless hunters from the world of Orinus who chase their enemies until the last one is dead. They trace their history to the 4th Founding.\n\nLoyal allies of Ultramar who fought at Damnos and in the Plague Wars. They are believed lost fighting Nurgle's forces in the Scourge Stars.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2939,7 +2939,7 @@ const CHAPTERS = [
   "name": "Iron Snakes",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "Spear-wielding seafarers from Ithaka who fight in small squads outside the Codex.",
+  "bio": "From the frozen ocean world of Ithaka, named for the giant sea serpents they hunt with Sea Lances as a rite of passage.\n\nThey don't follow the Codex: they fight in small, close-knit squads and guard the nearby Reef Stars.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2965,7 +2965,7 @@ const CHAPTERS = [
   "name": "Libators",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "They offer their enemies' blood to the Primarch and the Emperor. Among the most brutal of Guilliman's sons.",
+  "bio": "Named for their practice of spilling their enemies' blood as an offering to Guilliman and the Emperor.\n\nThey have been censured several times for how they treat captured enemy commanders, whom they see as the worthiest offerings of all.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -2991,7 +2991,7 @@ const CHAPTERS = [
   "name": "Marines Errant",
   "legion": "XIII",
   "founding": "23rd Founding",
-  "bio": "A fleet-based Chapter descended from the Eagle Warriors.",
+  "bio": "A fleet-based 23rd Founding Chapter descended from the Eagle Warriors, raised to fill gaps left by lost Chapters.\n\nTrue to their name, they have roamed the whole Imperium and well beyond its borders.",
   "scheme": {
    "pattern": "halved",
    "colours": [
@@ -3017,7 +3017,7 @@ const CHAPTERS = [
   "name": "Mentors",
   "legion": "XIII",
   "founding": "26th Founding",
-  "bio": "They test new wargear and tactics, working closely with the Adeptus Mechanicus.",
+  "bio": "Raised in 738.M41, one of the youngest Chapters in the Imperium. They test new wargear and tactics.\n\nThey have become reclusive and suspicious, trusting neither other Chapters nor the Imperial government, and prefer to fight alone and unobserved.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3043,7 +3043,7 @@ const CHAPTERS = [
   "name": "Mortifactors",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "A morbid Primogenitor Chapter whose death rites border on heresy.",
+  "bio": "They recruit from Posul, a frozen, sunless feral world of warring cannibal tribes, taking only its most vicious warriors.\n\nThe result is a dark, brooding Chapter that venerates its dead. Its morbid rites and bone-decorated armour sit close to the edge of heresy.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3069,7 +3069,7 @@ const CHAPTERS = [
   "name": "Nemesis Chapter",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "Codex-compliant Primogenitor Chapter in dark green.",
+  "bio": "Descended from Ultramarines companies that fought beside the then-loyal Night Lords in a brutal purge during the Great Crusade.\n\nLike those forebears, they specialise in Exterminatus: wiping out whole worlds when nothing else will do.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3095,7 +3095,7 @@ const CHAPTERS = [
   "name": "Novamarines",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "Proud, hard-line followers of the Codex. Their quartered livery comes from their first Master's personal heraldry.",
+  "bio": "A proud Primogenitor Chapter that treats the Codex Astartes as divine law, and has drawn blood against those who stray too far from it.\n\nThey are one of the nine Shield Chapters Guilliman chose to defend and expand Ultramar.",
   "scheme": {
    "pattern": "quartered",
    "colours": [
@@ -3116,7 +3116,7 @@ const CHAPTERS = [
   "name": "Obsidian Jaguars",
   "legion": "XIII",
   "founding": "Unknown",
-  "bio": "Their homeworld of Ceibhal was recently overrun by Orks.",
+  "bio": "Goff Orks overran their homeworld of Ceibhal during the Era Indomitus.\n\nMost of the Chapter regrouped under Chapter Master Ahluic Xotzin and fought on through the Indomitus Crusade and the Octarius War.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3142,7 +3142,7 @@ const CHAPTERS = [
   "name": "Patriarchs of Ulixis",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "Famed blades and marksmen, whose veterans are often loaned out as honour guards.",
+  "bio": "A Primogenitor Chapter famed for its swordsmanship and marksmanship.\n\nTheir veterans are often lent out as honour guards to other Chapters and Imperial dignitaries, and some now serve in Guilliman's own Victrix Guard.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3168,7 +3168,7 @@ const CHAPTERS = [
   "name": "Praetors of Orpheus",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "A Primogenitor Chapter known for its understanding of Imperial science.",
+  "bio": "Their grasp of Imperial technology is second only to the Adeptus Mechanicus. Many suspect the two are more closely tied than either admits.\n\nAn unusually large number of their warriors carry bionic augmentations.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3194,7 +3194,7 @@ const CHAPTERS = [
   "name": "Rainbow Warriors",
   "legion": "XIII",
   "founding": "Unknown",
-  "bio": "Ultramarines successors from the world of Prism, with a rainbow stripe down their helms.",
+  "bio": "Ultramarines successors from the world of Prism. Their current status is unknown, and Imperial star charts simply mark their homeworld as 'record deleted'.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3225,7 +3225,7 @@ const CHAPTERS = [
   "name": "Scythes of the Emperor",
   "legion": "XIII",
   "founding": "3rd Founding",
-  "bio": "A Shield Chapter of Ultramar that lost its homeworld to Hive Fleet Behemoth and has hated Tyranids ever since.",
+  "bio": "Their roots go back to an Ultramarines company that guarded the mysterious xenos Pharos device on Sotha. Hive Fleet Behemoth later destroyed Sotha, leaving the Chapter with a lasting hatred of Tyranids.\n\nThey are now one of the nine Shield Chapters of Ultramar.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3277,7 +3277,7 @@ const CHAPTERS = [
   "name": "Silver Skulls",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "Superstitious warriors who won't go to war until their Prognosticators read the omens.",
+  "bio": "Superstitious warriors who won't go to war until their Prognosticators have read the omens. One of the nine Shield Chapters of Ultramar.\n\nThey fought beside the other Primogenitors so often they treat them as kin, though for a long time they doubted their own lineage.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3303,7 +3303,7 @@ const CHAPTERS = [
   "name": "Silver Templars",
   "legion": "XIII",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris Chapter of famed duellists who often fight beside the Adepta Sororitas.",
+  "bio": "Among the first Primaris Chapters of the Ultima Founding, from the world of Novaris.\n\nThey fought beside the Ultramarines in the Plague Wars and have a reputation as cold, utterly focused warriors and superb duellists.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3329,7 +3329,7 @@ const CHAPTERS = [
   "name": "Sons of Guilliman",
   "legion": "XIII",
   "founding": "Unknown (33rd Millennium)",
-  "bio": "Named for the Primarch himself. Some of their former brothers became the renegade Adharon's Reavers.",
+  "bio": "From the death world of Praesidia. They carry a chequered past: some of their former brothers became the renegade warband Adharon's Reavers.\n\nTheir rash, borderline Codex-breaking conduct worries some, but they fight all the harder to live up to their famous name.",
   "scheme": {
    "pattern": "quartered",
    "colours": [
@@ -3355,7 +3355,7 @@ const CHAPTERS = [
   "name": "Sons of Orar",
   "legion": "XIII",
   "founding": "Unknown",
-  "bio": "Codex-compliant Ultramarines successors from the world of Armato.",
+  "bio": "They revere Orar, an Ultramarines captain famed in the years after the Heresy, and strive to live up to his example.\n\nTheir long honour roll is best known for leading a massive Imperial assault on an Aeldari Craftworld.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3386,7 +3386,7 @@ const CHAPTERS = [
   "name": "Tome Keepers",
   "legion": "XIII",
   "founding": "4th Founding",
-  "bio": "A scholarly Chapter from the desert world of Istrouma.",
+  "bio": "A 4th Founding Chapter from the desert world of Istrouma, raised shortly after 546.M32.\n\nThey wage war with knowledge as much as weapons, believing that only understanding the enemy completely brings true victory. Every battle is meticulously planned.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3412,7 +3412,7 @@ const CHAPTERS = [
   "name": "Void Tridents",
   "legion": "XIII",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris Chapter guarding the enlarged Realm of Ultramar, in ocean blue and copper.",
+  "bio": "An all-Primaris Chapter recruited from the ocean world of Talassar in Ultramar, with a culture built on naval tradition.\n\nThey are masters of ship-to-ship fighting, boarding actions, low-gravity war and drop assaults.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3438,7 +3438,7 @@ const CHAPTERS = [
   "name": "White Consuls",
   "legion": "XIII",
   "founding": "Second Founding",
-  "bio": "The Ultramarines in reverse: white armour with blue heraldry. Unusually, they have two Chapter Masters at once.",
+  "bio": "They value wise rule as much as martial skill: battle-brothers must serve as consuls governing Imperial worlds to rise in rank, and the Chapter has two Chapter Masters at once.\n\nIn the 13th Black Crusade their homeworld, Sabatine, was overrun by the Death Guard's Lords of Silence.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3464,7 +3464,7 @@ const CHAPTERS = [
   "name": "Black Dragons",
   "legion": "XVIII",
   "founding": "21st 'Cursed' Founding",
-  "bio": "A Cursed Founding Chapter whose warriors grow bony blades and horns. Long rumoured to carry Salamanders gene-seed.",
+  "bio": "A Cursed Founding Chapter whose mutation makes some warriors grow blades of bone from their heads and forearms. The Inquisition has censured them for it.\n\nAfflicted warriors sharpen the growths, sheath them in adamantium and fight in jump-pack assault squads. They are long rumoured to carry Salamanders gene-seed.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3490,7 +3490,7 @@ const CHAPTERS = [
   "name": "Black Vipers",
   "legion": "XVIII",
   "founding": "Ultima Founding",
-  "bio": "A Primaris successor of the Salamanders in black and red.",
+  "bio": "An all-Primaris Salamanders successor made by Cawl. The Salamanders only discovered them by accident, years after their founding.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3516,7 +3516,7 @@ const CHAPTERS = [
   "name": "Covenant of Fire",
   "legion": "XVIII",
   "founding": "Ultima Founding",
-  "bio": "A Primaris successor of Vulkan's line in flame orange and black.",
+  "bio": "An all-Primaris successor of the Salamanders made by Belisarius Cawl, largely without the Salamanders' knowledge.\n\nOnce they found out, the Salamanders sent Chaplains to teach them the Promethean Cult. The Covenant hungers for knowledge of the Imperium they fight for.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3542,7 +3542,7 @@ const CHAPTERS = [
   "name": "Dark Krakens",
   "legion": "XVIII",
   "founding": "Ultima Founding",
-  "bio": "A Primaris successor of the Salamanders in black and purple.",
+  "bio": "An all-Primaris Salamanders successor made by Cawl. Many of its veterans fought as Greyshields in the early years of the Indomitus Crusade.\n\nLike the other Cawl-made sons of Vulkan, they were later visited by Salamanders Chaplains to learn the Promethean Cult.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3573,7 +3573,7 @@ const CHAPTERS = [
   "name": "Dragonspears",
   "legion": "XVIII",
   "founding": "Ultima Founding",
-  "bio": "A Primaris successor of the Salamanders in bright light green.",
+  "bio": "A fleet-based, all-Primaris Salamanders successor made by Cawl.\n\nThey made their name fighting alongside the Space Wolves against Orks at the Gnarion Reef and are now expert greenskin hunters.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3604,7 +3604,7 @@ const CHAPTERS = [
   "name": "Storm Giants",
   "legion": "XVIII",
   "founding": "Unknown",
-  "bio": "One of the few Chapters thought to carry Vulkan's gene-seed. Veterans of the Third War for Armageddon.",
+  "bio": "Unusually strong even for Space Marines, possibly through a mutated gene-seed organ. They have refused every request to have it studied.\n\nVeterans of the Third War for Armageddon. Their origins are unclear, but their build and manner suggest Vulkan's line.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3630,7 +3630,7 @@ const CHAPTERS = [
   "name": "Black Guard",
   "legion": "XIX",
   "founding": "Second Founding",
-  "bio": "A rare Second Founding son of Corax who believes in overwhelming firepower at exactly the right moment.",
+  "bio": "Founded from veterans of Corax's honour guard, led by Gherith Arendi, who was thought killed at Isstvan V.\n\nThey believe in overwhelming firepower at the right moment: no half-measures, and craters wherever they win.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3661,7 +3661,7 @@ const CHAPTERS = [
   "name": "Carcharodons Astra",
   "legion": "XIX",
   "founding": "Unknown",
-  "bio": "The 'Space Sharks'. Silent void-raiders from the galaxy's edge, marked with tribal exile tattoos. Most likely of Raven Guard stock.",
+  "bio": "The 'Space Sharks'. Silent, pale void-raiders from the dark beyond the galaxy's edge, marked with tribal exile tattoos. Their founding is classified, and the Raven Guard are the most likely source.\n\nThey came back from the void to punish the rebels in the Badab War, and have since reappeared to fight in the Era Indomitus.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3713,7 +3713,7 @@ const CHAPTERS = [
   "name": "Death Eagles",
   "legion": "XIX",
   "founding": "Unknown",
-  "bio": "Suspected sons of Corax in black, with bone helms and white shoulder insets.",
+  "bio": "Suspected Raven Guard descendants, though some think their true origins lie with loyalist Emperor's Children who survived the Heresy uncorrupted. Nobody really knows.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3744,7 +3744,7 @@ const CHAPTERS = [
   "name": "Death Spectres",
   "legion": "XIX",
   "founding": "13th 'Dark' Founding",
-  "bio": "Pale, silent guardians of the Mortis Gate.",
+  "bio": "One of only two known Chapters from the secretive 13th 'Dark' Founding, alongside the Exorcists. They carry the Raven Guard's gene-seed quirks.\n\nThey keep a silent, thankless vigil beyond the Imperium's borders over the Mortis Gate.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3827,7 +3827,7 @@ const CHAPTERS = [
   "name": "Iron Ravens",
   "legion": "XIX",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris Chapter of Corax's line in silver, blue and red.",
+  "bio": "An all-Primaris son of Corax specialising in sudden drop-pod assaults.\n\nTheir scouts spend months gathering intelligence on the ground, so that when the main force lands, the war is won in one decisive strike.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3853,7 +3853,7 @@ const CHAPTERS = [
   "name": "Knights of the Raven",
   "legion": "XIX",
   "founding": "Unknown (38th Millennium)",
-  "bio": "A secretive son of Corax in burnished silver.",
+  "bio": "A secretive 38th Millennium son of Corax. Little about them is known even to the Deathwatch or Inquisition.\n\nThey speak to allies only when they must and use their own cryptic battle-tongue among themselves.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3879,7 +3879,7 @@ const CHAPTERS = [
   "name": "Necropolis Hawks",
   "legion": "XIX",
   "founding": "Ultima Founding",
-  "bio": "Primaris city-fighting specialists, stoic and efficient at close quarters.",
+  "bio": "City-fighting specialists, veterans of a dozen brutal urban wars. They wear tactical markings on their backpacks so allies can spot them in smoke and dust.\n\nThey are a young Chapter already known for pragmatic brutality and relentless, measured aggression.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3910,7 +3910,7 @@ const CHAPTERS = [
   "name": "Raptors",
   "legion": "XIX",
   "founding": "Second Founding",
-  "bio": "Practical, camouflage-loving marines who care little for pomp. One of the most popular 'minor' Chapters with fans.",
+  "bio": "They have fought in the Badab War, the Third War for Armageddon and the Taros Campaign, and have come close to extinction several times. Each time they adapted and recovered.\n\nThey distrust glory and honour for its own sake and fight as practical, camouflaged professionals.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3936,7 +3936,7 @@ const CHAPTERS = [
   "name": "Raven's Watch",
   "legion": "XIX",
   "founding": "Unknown",
-  "bio": "A rare Raven Guard successor in black with sky-blue and orange accents.",
+  "bio": "A rare Raven Guard successor that defended the world of Kitab against Hive Fleet Eumenides in 990.M41 and fought covertly in the Third War for Armageddon.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3967,7 +3967,7 @@ const CHAPTERS = [
   "name": "Revilers",
   "legion": "XIX",
   "founding": "Second Founding",
-  "bio": "A rare Second Founding son of Corax, drawn heavily from the Legion's veterans.",
+  "bio": "Built largely from the few Raven Guard veterans who survived Isstvan V. They are experts in stealth and ambush.\n\nThey wage an endless shadow war against the Alpha Legion and have thwarted many of its schemes.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -3998,7 +3998,7 @@ const CHAPTERS = [
   "name": "Rift Stalkers",
   "legion": "XIX",
   "founding": "Ultima Founding",
-  "bio": "An all-Primaris Chapter of Corax's line, in white: the opposite of the Raven Guard's black.",
+  "bio": "A fleet-based, all-Primaris son of Corax that patrols the Great Rift, hunting what crawls out of it.\n\nThey also search for a way to reconnect with the countless worlds cut off from Terra in the Imperium Nihilus.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -4050,7 +4050,7 @@ const CHAPTERS = [
   "name": "Storm Wings",
   "legion": "XIX",
   "founding": "Unknown",
-  "bio": "A rare Raven Guard successor from the world of Eyrie.",
+  "bio": "From the world of Eyrie. They embrace failure as a source of strength.\n\nThey keep a chain of heavy iron links shaped like locked talons, each link recording one of the Chapter's failures.",
   "scheme": {
    "pattern": "solid",
    "colours": [
@@ -4067,6 +4067,540 @@ const CHAPTERS = [
     {
      "n": "Red",
      "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Blood Ravens",
+  "legion": "?",
+  "founding": "Unknown (believed early)",
+  "bio": "A Chapter of mysterious origin, tied to a dark secret from the Horus Heresy. They are obsessed with knowledge and relics, and an unusually high number of their recruits become Librarians.\n\nThey are the stars of the Dawn of War video games, famously led by Gabriel Angelos.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark red",
+     "h": "#7a1418",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Weathered cream shoulders",
+     "h": "#d8ccaa",
+     "r": "detail"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Minotaurs",
+  "legion": "?",
+  "founding": "21st 'Cursed' Founding",
+  "bio": "Their gene-seed is called 'chimeric' and their history before about a thousand years ago is sealed by edicts even Inquisitors struggle to get past. Many suspect they serve the High Lords of Terra directly.\n\nXenophobic and hard to work with, they were the High Lords' hammer against the rebels in the Badab War. Originally they wore yellow with red.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Bronze",
+     "h": "#a87a3c",
+     "r": "armour"
+    },
+    {
+     "n": "Bronze",
+     "h": "#a87a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Red Scorpions",
+  "legion": "?",
+  "founding": "Unknown (before the 35th Millennium)",
+  "bio": "Fleet-based puritans who follow every line of the Codex Astartes, more strictly than even the Ultramarines, and believe in the Emperor's divinity without question.\n\nThey are obsessed with genetic purity, test their gene-seed constantly, and hold their Apothecaries in unusually high regard. They fought for the loyalists in the Badab War.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Charcoal grey",
+     "h": "#3d4044",
+     "r": "armour"
+    },
+    {
+     "n": "Mustard yellow",
+     "h": "#d9a92a",
+     "r": "trim"
+    },
+    {
+     "n": "Mustard yellow helm stripe",
+     "h": "#d9a92a",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Marines Malevolent",
+  "legion": "?",
+  "founding": "Unknown (32nd Millennium)",
+  "bio": "Loyal to the Emperor but brutally callous toward His people: civilian lives mean nothing if the mission gets done.\n\nThat attitude has put them at odds with the Salamanders, the Inquisition and many others.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Sunburst yellow",
+     "h": "#f0b81c",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black torso & pack",
+     "h": "#1b1b1e",
+     "r": "detail"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Relictors",
+  "legion": "?",
+  "founding": "36th Millennium",
+  "bio": "Once one of the Astartes Praeses guarding the Eye of Terror, possibly made from mixed Ultramarines and Dark Angels gene-seed. They were originally named the Fire Claws.\n\nThey believed Chaos artefacts could be turned against Chaos itself. That made them renegades, and they withdrew into the Eye of Terror.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark grey",
+     "h": "#4a4f55",
+     "r": "armour"
+    },
+    {
+     "n": "Dark grey",
+     "h": "#4a4f55",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders",
+     "h": "#1b1b1e",
+     "r": "detail"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Storm Wardens",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Stoic defenders from the Forbidden World of Sacris in the Calixis Sector, guarding frontier worlds in the warp-storm-wracked Halo Stars.\n\nThey are best known from the Deathwatch roleplaying game.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Blue",
+     "h": "#24489a",
+     "r": "armour"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "trim"
+    },
+    {
+     "n": "Silver shoulders & fists",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Red Hunters",
+  "legion": "?",
+  "founding": "Unknown (possibly Second Founding)",
+  "bio": "Closely tied to the Inquisition, and at times the whole Chapter has served under an Inquisitor Lord.\n\nThey may have been founded straight after the Horus Heresy to hunt down the Traitor Legions.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    },
+    {
+     "n": "Green lenses",
+     "h": "#4ca85a",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Astral Claws",
+  "legion": "?",
+  "founding": "10th Founding (35th Millennium)",
+  "bio": "Founded to guard the Maelstrom, they led the Maelstrom Warders for centuries. Under Lufgt Huron they rebelled and started the Badab War.\n\nWhen the rebellion failed, the survivors fled into the Maelstrom and became the Red Corsairs, one of the most infamous renegade warbands.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Metallic silver",
+     "h": "#a9adb1",
+     "r": "armour"
+    },
+    {
+     "n": "Blue",
+     "h": "#24489a",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Brazen Minotaurs",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "From the jungle world of Tauron, protectors of the Sargassion Reach. They are blunt and direct.\n\nBeating an enemy is not enough for them: they wipe it out completely so it can never strike again.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Bronze",
+     "h": "#a87a3c",
+     "r": "armour"
+    },
+    {
+     "n": "Bronze",
+     "h": "#a87a3c",
+     "r": "trim"
+    },
+    {
+     "n": "White insets",
+     "h": "#ecebe6",
+     "r": "detail"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Marines Exemplar",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "One of the Astartes Praeses guarding the Eye of Terror. In the 13th Black Crusade, Chapter Master Maxim Absolon's forces were scattered across several worlds following Logan Grimnar's battle plan.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Dark red",
+     "h": "#7a1015",
+     "r": "trim"
+    },
+    {
+     "n": "Dark red arms & shoulders",
+     "h": "#7a1015",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Celebrants",
+  "legion": "?",
+  "founding": "Unknown (36th Millennium)",
+  "bio": "Known for their unique fade from yellow legs to an orange torso and red helm and arms.\n\nThe Alpha Legion fooled them into abandoning Phaethon IV to guard the shrine world Nedicta Secundus, as part of a scheme to trap the Crimson Consuls.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#b0201c",
+     "r": "armour"
+    },
+    {
+     "n": "Orange",
+     "h": "#d9701f",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow lower legs",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Night Watch",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Astartes Praeses from the world of Silence, just north of the Eye of Terror. They fielded eleven companies in the 13th Black Crusade, which suggests they don't follow the Codex.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Cobalt blue helm & shoulders",
+     "h": "#1f3a8a",
+     "r": "detail"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Emperor's Swords",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "An unlucky name. The first Emperor's Swords were destroyed after three centuries of Alpha Legion infiltration of their homeworld.\n\nA second Chapter took the name and settled on Bellicas, only to be wiped out when Necrons woke beneath it in 970.M41.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Metallic silver",
+     "h": "#a9adb1",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Red shoulders",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Doom Warriors",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A flaw in their gene-seed means they can never truly sleep, which makes them a moody, morose Chapter.\n\nThey channel it into Exterminatus campaigns, where their unbalanced natures are put to destructive use.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "armour"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "trim"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Silver Guard",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "They fought in the Sabbat Worlds Crusade, the great war to free the Sabbat Worlds from Chaos told in the Gaunt's Ghosts novels.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark purple",
+     "h": "#3f1f52",
+     "r": "armour"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "trim"
+    },
+    {
+     "n": "Silver helm & arms",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels of Fire",
+  "legion": "?",
+  "founding": "Unknown (36th Millennium)",
+  "bio": "A 36th Millennium Chapter of unknown lineage in red armour decorated with stylised orange flames.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Orange flames",
+     "h": "#e0701f",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crimson Castellans",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "They tore themselves apart in civil war when part of the Chapter turned to Chaos.\n\nIn 993.M41 Hive Fleet Jormungandr fell on both sides fighting on Sephrax and all but destroyed them. Their homeworld was later abandoned to a mysterious plague.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Black pack",
+     "h": "#1b1b1e",
+     "r": "detail"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Knights of the Chalice",
+  "legion": "IX",
+  "founding": "Ultima Founding",
+  "bio": "An all-Primaris Blood Angels successor famed for aggressive orbital assaults.\n\nThey drop masses of Inceptors to clear beachheads while Reivers sow confusion, conquering planets at speed.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Bright red",
+     "h": "#b81d1d",
+     "r": "armour"
+    },
+    {
+     "n": "Bright red",
+     "h": "#b81d1d",
+     "r": "trim"
+    },
+    {
+     "n": "Black helm",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Iron Champions",
+  "legion": "VII",
+  "founding": "Unknown (36th Millennium)",
+  "bio": "Created from the Executioners' gene-seed as a reward for the Executioners' part in crushing the Plague of Unbelief.\n\nThey paint a fearsome skull on their helms to strike fear into the enemy.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Slate grey",
+     "h": "#6a7076",
+     "r": "trim"
+    },
+    {
+     "n": "Slate grey shoulders",
+     "h": "#6a7076",
+     "r": "detail"
+    },
+    {
+     "n": "Bone skull",
+     "h": "#d9cca6",
      "r": "detail"
     }
    ]
@@ -4238,7 +4772,26 @@ const PLATES = {
  "Revilers": "Revilers_Astartes.jpg",
  "Rift Stalkers": "RiftStalkersDonatello.jpg",
  "Storm Hawks": "Storm_Hawks_Marine.jpg",
- "Storm Wings": "Storm_Wings_Chapter_Colours.jpg"
+ "Storm Wings": "Storm_Wings_Chapter_Colours.jpg",
+ "Blood Ravens": "Blood_Ravens_Updated.jpg",
+ "Minotaurs": "Mark_VII_Brother.jpg",
+ "Red Scorpions": "Brother_Gez_Tact_Marine.jpg",
+ "Marines Malevolent": "Marines_Malevolent_Astartes.jpg",
+ "Relictors": "RelictorsChapterColourScheme.jpg",
+ "Storm Wardens": "Storm_Wardens_Astartes.jpg",
+ "Red Hunters": "Red_Hunters_Tact_Marine.jpg",
+ "Astral Claws": "Veteran_Brother_Sternguard_Mark_IV.jpg",
+ "Brazen Minotaurs": "BM_Colour_Scheme.jpg",
+ "Marines Exemplar": "Marines_Exemplar_Updated.jpg",
+ "Celebrants": "Celebrants_Astartes.jpg",
+ "Night Watch": "Night_Watch_2nd_Co.jpg",
+ "Emperor's Swords": "Emperor's_Swords_Astartes.jpg",
+ "Doom Warriors": "Doom_Warriors_Colour_Scheme.jpg",
+ "Silver Guard": "Silver_Guard_Astartes.jpg",
+ "Angels of Fire": "Angels_Fire_Firstborn_Astartes.png",
+ "Crimson Castellans": "Crimson_Castellans_Astartes.jpg",
+ "Knights of the Chalice": "KnightsoftheChalicePrimaris.png",
+ "Iron Champions": "Iron_Champions_Marine.jpg"
 };
 const PRIMARCH_PICS = {
  "Lion El'Jonson": [
