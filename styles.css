@@ -175,3 +175,19 @@ button { font: inherit; color: inherit; }
 .schemes { grid-template-columns: repeat(auto-fit, minmax(250px, 290px)); justify-content: center; max-width: none; }
 .schemes { display: flex; flex-wrap: wrap; justify-content: center; }
 .schemes .scheme { flex: 0 1 280px; }
+/* Centred content column that uses the available width */
+.view > * { max-width: 1240px; margin-left: auto; margin-right: auto; }
+.view .head, .view .prose, .view .crumbs, .view .section-title, .view .section-hint { max-width: 1240px; }
+.prose p { max-width: none; font-size: 15.5px; line-height: 1.65; }
+.view .section-title, .view .section-hint { text-align: center; }
+.view .prose { text-align: center; }
+.view .crumbs { text-align: center; }
+.head { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+.head .badges { justify-content: center; }
+.head .actions { margin-left: 0; justify-content: center; }
+.pics { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.pics figure { flex: 0 1 220px; }
+.pics figcaption { text-align: center; }
+.schemes { max-width: 1240px; margin-left: auto; margin-right: auto; }
+.welcome { max-width: 640px; }
+.view .prose { max-width: 1000px; }
