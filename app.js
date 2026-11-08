@@ -115,6 +115,67 @@
       ...e.schemes.flatMap((s) => [s.label || "", ...s.colours.map((c) => c.n + " " + family(c))])].join(" ").toLowerCase();
   });
 
+
+  // ---------- images (loaded live from the Warhammer 40k Fandom wiki; nothing is stored in this repo) ----------
+  const API = "https://warhammer40k.fandom.com/api.php";
+  const PRIMARCH_TITLE = { "Horus Lupercal": "Horus", "Lorgar Aurelian": "Lorgar", "Alpharius Omegon": "Alpharius" };
+  const fandomTitle = (e) => e.kind === "legion" && !e.legion.lost
+    ? (PRIMARCH_TITLE[e.legion.primarch] || e.legion.primarch)
+    : (WIKI_NAME[e.name] || e.name);
+  const leadImg = {};            // entry id -> thumbnail url
+  const galleryCache = {};       // page title -> [{thumb, full, page}]
+  async function api(params) {
+    const url = API + "?" + new URLSearchParams({ format: "json", origin: "*", redirects: "1", ...params });
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(r.status);
+    return r.json();
+  }
+  async function loadLeadImages() {
+    const want = entries.filter((e) => !e.legion.lost || e.kind !== "legion");
+    const titleToIds = {};
+    want.forEach((e) => { const t = fandomTitle(e); (titleToIds[t] = titleToIds[t] || []).push(e.id); });
+    const titles = Object.keys(titleToIds);
+    for (let i = 0; i < titles.length; i += 50) {
+      const batch = titles.slice(i, i + 50);
+      try {
+        const j = await api({ action: "query", prop: "pageimages", piprop: "thumbnail", pithumbsize: "600", titles: batch.join("|") });
+        const back = {};
+        (j.query.normalized || []).forEach((n) => (back[n.to] = n.from));
+        (j.query.redirects || []).forEach((n) => (back[n.to] = back[n.from] || n.from));
+        Object.values(j.query.pages || {}).forEach((pg) => {
+          if (!pg.thumbnail) return;
+          const orig = back[pg.title] || pg.title;
+          (titleToIds[orig] || titleToIds[pg.title] || []).forEach((id) => (leadImg[id] = pg.thumbnail.source));
+        });
+      } catch (err) { console.warn("Image lookup failed", err); }
+    }
+    render();
+  }
+  async function loadGallery(title) {
+    if (galleryCache[title]) return galleryCache[title];
+    const j = await api({ action: "query", generator: "images", titles: title, gimlimit: "60", prop: "imageinfo", iiprop: "url|size|mime", iiurlwidth: "420" });
+    const skip = /icon|logo|stub|placeholder|wiki|button|banner|aquila_|_sp\./i;
+    const out = Object.values((j.query && j.query.pages) || {})
+      .map((pg) => ({ name: pg.title, ii: (pg.imageinfo || [])[0] }))
+      .filter((x) => x.ii && /image\/(jpeg|png|webp)/.test(x.ii.mime) && x.ii.width >= 180 && !skip.test(x.name))
+      .slice(0, 18)
+      .map((x) => ({ thumb: x.ii.thumburl || x.ii.url, full: x.ii.url, page: x.ii.descriptionurl, name: x.name.replace(/^File:/, "").replace(/\.\w+$/, "") }));
+    galleryCache[title] = out;
+    return out;
+  }
+  async function fillGallery(el, titles) {
+    try {
+      const lists = await Promise.all(titles.map((t) => loadGallery(t).catch(() => [])));
+      const seen = new Set();
+      const imgs = lists.flat().filter((x) => !seen.has(x.full) && seen.add(x.full));
+      el.innerHTML = imgs.length
+        ? imgs.map((x) => `<a href="${esc(x.full)}" target="_blank" rel="noopener" title="${esc(x.name)}"><img src="${esc(x.thumb)}" alt="${esc(x.name)}" loading="lazy" referrerpolicy="no-referrer"></a>`).join("")
+        : `<p class="muted">No pictures found on the wiki page. Try the links below.</p>`;
+    } catch (_) {
+      el.innerHTML = `<p class="muted">Couldn't reach the wiki for pictures right now. Try the links below.</p>`;
+    }
+  }
+
   // ---------- state ----------
   const state = { q: "", type: "all", alleg: "all", colours: new Set(), anyColour: false };
   let favs = new Set();
@@ -147,7 +208,8 @@
     const title = isLeg ? `${esc(lg.primarch)} &amp; the ${esc(lg.name)}` : esc(e.name);
     const meta = isLeg ? `${lg.allegiance} · ${esc(lg.status)}` : `Successor of the ${esc(lg.name)} · Founding: ${esc(e.chapter.founding)}`;
     const blurb = isLeg ? lg.legionBio : e.chapter.bio;
-    return `<article class="card ${isLeg ? "primarch" : ""}" tabindex="0" data-id="${e.id}">${fav}
+    const hero = leadImg[e.id] ? `<div class="hero"><img src="${esc(leadImg[e.id])}" alt="" loading="lazy" referrerpolicy="no-referrer"></div>` : "";
+    return `<article class="card ${isLeg ? "primarch" : ""}" tabindex="0" data-id="${e.id}">${fav}${hero}
       <div class="top-row">${pad(e.schemes[0])}<div><h3>${title}</h3><div class="meta">${meta}</div></div></div>
       <p class="blurb">${esc(blurb)}</p>
       <div class="schemes-mini" style="flex-direction:column">${e.schemes.map(bar).join("")}</div>
@@ -199,6 +261,7 @@
         <dl class="facts"><dt>Primarch</dt><dd>${esc(lg.primarch)}</dd><dt>Status</dt><dd>${esc(lg.status)}</dd><dt>Homeworld</dt><dd>${esc(lg.homeworld)}</dd></dl>
         <h4>The Primarch</h4><p>${esc(lg.primarchBio)}</p>
         <h4>The Legion${lg.allegiance === "Loyalist" ? " &amp; Chapter" : ""}</h4><p>${esc(lg.legionBio)}</p>
+        ${lg.lost ? "" : `<h4>Pictures from the wiki</h4><div class="gallery" data-gallery="${esc(JSON.stringify([fandomTitle(e), WIKI_NAME[lg.name] || lg.name]))}"><p class="muted">Loading pictures…</p></div>`}
         ${e.schemes.length ? `<h4>Colour schemes</h4>${e.schemes.map(schemeBlock).join("")}` : ""}
         ${succ.length ? `<h4>Successor Chapters in the Codex</h4><div class="chiplist">${succ.map((s) => `<button class="chip" data-open="${s.id}"><i style="background:${s.schemes[0].colours[0].h}"></i>${esc(s.name)}</button>`).join("")}</div>` : ""}
         ${lg.lost ? "" : `<h4>Pictures &amp; further reading</h4><div class="links">${lnk.map((l) => `<a href="${l.u}" target="_blank" rel="noopener">${esc(l.t)} ↗</a>`).join("")}</div>`}`;
@@ -208,10 +271,13 @@
           <div><h2>${esc(ch.name)}</h2><div class="meta">Successor of the <a href="#" data-open="${byLegion[lg.num].legion.id}">${esc(lg.name)}</a> (Legion ${lg.num}) · Founding: ${esc(ch.founding)}</div></div></div>
         <h4>About</h4><p>${esc(ch.bio)}</p>
         <h4>Colour scheme</h4>${schemeBlock(ch.scheme)}
+        <h4>Pictures from the wiki</h4><div class="gallery" data-gallery="${esc(JSON.stringify([fandomTitle(e)]))}"><p class="muted">Loading pictures…</p></div>
         <h4>Pictures &amp; further reading</h4><div class="links">${links(ch.name).map((l) => `<a href="${l.u}" target="_blank" rel="noopener">${esc(l.t)} ↗</a>`).join("")}</div>`;
     }
     const fav = `<button class="chip" data-fav="${e.id}" style="margin-top:16px">${favs.has(e.id) ? "★ On your shortlist (remove)" : "☆ Add to shortlist"}</button>`;
     $("#detailBody").innerHTML = `<div class="dlg"><button class="close" aria-label="Close">×</button>${body}${fav}</div>`;
+    const gal = $("#detailBody .gallery");
+    if (gal) fillGallery(gal, JSON.parse(gal.dataset.gallery));
     const dlg = $("#detail");
     if (!dlg.open) dlg.showModal();
     dlg.scrollTop = 0;
@@ -287,5 +353,6 @@
   $("#detail").addEventListener("close", () => { if (location.hash.startsWith("#/")) history.replaceState(null, "", location.pathname + location.search); });
 
   render();
+  loadLeadImages();
   if (location.hash.startsWith("#/")) openDetail(location.hash.slice(2), false);
 })();
