@@ -4605,6 +4605,3572 @@ const CHAPTERS = [
     }
    ]
   }
+ },
+ {
+  "name": "Accipiters",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter named after a genus of hunting hawks. Little else is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Blue-grey",
+     "h": "#6f8396",
+     "r": "trim"
+    },
+    {
+     "n": "Blue-grey helm & arms",
+     "h": "#6f8396",
+     "r": "detail"
+    },
+    {
+     "n": "Dark red aquila",
+     "h": "#7a1015",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Adulators",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter once sworn to support the shrine world of Ras Shakeh.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark blue-grey",
+     "h": "#4a5868",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angel Guard",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter of unknown origin in emerald green.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Emerald green",
+     "h": "#2f7a46",
+     "r": "armour"
+    },
+    {
+     "n": "Emerald green",
+     "h": "#2f7a46",
+     "r": "trim"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels Eradicant",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "One of the Astartes Praeses, the twenty Chapters raised to guard the regions around the Eye of Terror.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black arms & pack",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels Excelsis",
+  "legion": "IX",
+  "founding": "Unknown (36th Millennium)",
+  "bio": "A 36th Millennium son of Sanguinius, now lost. Most of the Chapter was destroyed in battle.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Deep crimson",
+     "h": "#8c1a1f",
+     "r": "armour"
+    },
+    {
+     "n": "Marble white",
+     "h": "#e8e4dc",
+     "r": "trim"
+    },
+    {
+     "n": "Marble white limbs & pack",
+     "h": "#e8e4dc",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels Numinous",
+  "legion": "IX",
+  "founding": "Unknown",
+  "bio": "A splinter of the Blood Eagles, and so of Sanguinius's line, in dark bronze armour.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark bronze",
+     "h": "#7a5a34",
+     "r": "armour"
+    },
+    {
+     "n": "Dark bronze",
+     "h": "#7a5a34",
+     "r": "trim"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels Porphyr",
+  "legion": "?",
+  "founding": "Unknown (31st Millennium)",
+  "bio": "A 31st Millennium Chapter of unknown lineage, nearly identical in look to the Eagle Warriors.",
+  "scheme": {
+   "pattern": "halved",
+   "colours": [
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour2"
+    },
+    {
+     "n": "Yellow aquila",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels Redeemed",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter of unknown origin. Nothing more is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark orange-red",
+     "h": "#b0401c",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black arms & pack",
+     "h": "#1b1b1e",
+     "r": "detail"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels Resplendent",
+  "legion": "IX",
+  "founding": "9th Founding",
+  "bio": "The original identity of the Angels Penitent: artisans who made nobility their creed and were, uniquely, free of the Black Rage. This is their scheme before the 'Undying Martyr' changed everything.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Orange",
+     "h": "#d9701f",
+     "r": "armour"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "trim"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels of Damnation",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in black with dark red limbs. Little else is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Dark red arms & legs",
+     "h": "#7a1015",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels of Iron",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown lineage in silver with blue, gold-trimmed shoulders.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Blue shoulders",
+     "h": "#1d3f8f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels of Penance",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter of unknown origin in yellow.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "armour"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "trim"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels of Repentance",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Some believe they descend from the Dark Angels, though nothing proves it.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark blue",
+     "h": "#1d2a52",
+     "r": "armour"
+    },
+    {
+     "n": "Dark blue",
+     "h": "#1d2a52",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders",
+     "h": "#1b1b1e",
+     "r": "detail"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Angels of Retribution",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A now-extinct Codex-compliant Chapter of unknown origin.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "armour"
+    },
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders",
+     "h": "#1b1b1e",
+     "r": "detail"
+    },
+    {
+     "n": "Red torso & helm",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Aquiloan Brotherhood",
+  "legion": "XIII",
+  "founding": "Unknown",
+  "bio": "An Ultramarines successor and one of the nine Shield Chapters of Ultramar.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Astral Hawks",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter of unknown origin in black and blue-grey.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Ebon",
+     "h": "#141416",
+     "r": "armour"
+    },
+    {
+     "n": "Dark greyish-blue",
+     "h": "#3f4f60",
+     "r": "trim"
+    },
+    {
+     "n": "Dark greyish-blue arms",
+     "h": "#3f4f60",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Astral Hounds",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Primaris-era Chapter created by White Dwarf, in purple and cream.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Purple",
+     "h": "#5b2a6e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Cream shoulders & faceplate",
+     "h": "#d9cca6",
+     "r": "detail"
+    },
+    {
+     "n": "Gold aquila",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Auric Patricians",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in gleaming gold armour.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Golden",
+     "h": "#c49a3c",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders & pack",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Avengers",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown lineage created some time after the Horus Heresy.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "armour"
+    },
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "trim"
+    },
+    {
+     "n": "Red shoulders & pack",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Black Inculpators",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter about which almost nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Black Talons",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown lineage in bone white and black.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black torso",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Black Vultures",
+  "legion": "?",
+  "founding": "Ultima Founding",
+  "bio": "An all-Primaris Chapter of unknown lineage from the Ultima Founding.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black helm & shoulders",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Black Wings",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "In 700.M35 half the Chapter betrayed their vows. The loyal half repainted half their armour black in mourning for their fallen brothers.",
+  "scheme": {
+   "pattern": "halved",
+   "colours": [
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour2"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Blazoned Legion",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown lineage in white with dark red.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Dark red",
+     "h": "#7a1015",
+     "r": "trim"
+    },
+    {
+     "n": "Dark red torso",
+     "h": "#7a1015",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Blood Knights",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown lineage in red with white helms and shoulders.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "White helm & shoulders",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Blood Legion",
+  "legion": "IX",
+  "founding": "Unknown",
+  "bio": "Blood Angels successors from Harkilae IV, famous for diagonal red and lightning-blue tiger stripes.",
+  "scheme": {
+   "pattern": "quartered",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Lightning blue",
+     "h": "#2a6fc0",
+     "r": "armour2"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Bone Knives",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown origin in magenta armour.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Magenta",
+     "h": "#9c2a6e",
+     "r": "armour"
+    },
+    {
+     "n": "Magenta",
+     "h": "#9c2a6e",
+     "r": "trim"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Brazen Skulls",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "They fought in the Sabbat Worlds Crusade, the war told in the Gaunt's Ghosts novels.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "armour"
+    },
+    {
+     "n": "Bronze",
+     "h": "#9a6e34",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Brotherhood of a Thousand",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter whose 'M' badge recalls a Great Crusade-era Legion symbol.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "armour"
+    },
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Celestial Guard",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "From the storm-shrouded ocean world of Erenon.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Azure",
+     "h": "#2a6fc0",
+     "r": "trim"
+    },
+    {
+     "n": "Azure",
+     "h": "#2a6fc0",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Champions of Thanatos",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown lineage in black and bone.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Bone insets",
+     "h": "#d9cca6",
+     "r": "detail"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Charnel Guard",
+  "legion": "IX",
+  "founding": "Third Founding (suspected)",
+  "bio": "A reclusive, fleet-based Blood Angels successor not recognised by the Sanguinary Brotherhood. They sleep in stasis crypts between campaigns and carry rare ancient weapons.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Maroon",
+     "h": "#6e1016",
+     "r": "trim"
+    },
+    {
+     "n": "Maroon",
+     "h": "#6e1016",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Claws of Ursus",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Specialists in cold and arctic warfare, in white and blue.",
+  "scheme": {
+   "pattern": "halved",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "armour2"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Clementine Knights",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Primaris-era Chapter in bright orange, created by a Games Workshop employee.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Orange",
+     "h": "#d9701f",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "White left shoulder",
+     "h": "#ecebe6",
+     "r": "detail"
+    },
+    {
+     "n": "Black helm",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Contenders",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter about which almost nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark grey",
+     "h": "#4a4f55",
+     "r": "armour"
+    },
+    {
+     "n": "Dark grey",
+     "h": "#4a4f55",
+     "r": "trim"
+    },
+    {
+     "n": "Light grey",
+     "h": "#a6abaf",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crimson Consuls",
+  "legion": "XIII",
+  "founding": "Unknown",
+  "bio": "Ultramarines successors destroyed by an Alpha Legion plot to steal their gene-seed for Abaddon's Black Legion.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Cream",
+     "h": "#d9cca6",
+     "r": "trim"
+    },
+    {
+     "n": "Cream",
+     "h": "#d9cca6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crimson Guard",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in halved red and gold.",
+  "scheme": {
+   "pattern": "halved",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Metallic yellow",
+     "h": "#c49a3c",
+     "r": "armour2"
+    },
+    {
+     "n": "Dark grey",
+     "h": "#7d8287",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crimson Knights",
+  "legion": "IX",
+  "founding": "Unknown (35th Millennium)",
+  "bio": "A 35th Millennium Blood Angels successor raised as a standing defence force.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Golden greaves",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crimson Paladins",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "From a homeworld simply named Fortress.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#c0241f",
+     "r": "trim"
+    },
+    {
+     "n": "Red arms & legs",
+     "h": "#c0241f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crimson Sabres",
+  "legion": "?",
+  "founding": "13th 'Dark' Founding",
+  "bio": "Once known for ruthless efficiency and strict Codex adherence, the Chapter slowly slid toward corruption.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "White shoulders & pack",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crimson Scions",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "An obscure Chapter about which virtually nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Red helm & shoulders",
+     "h": "#c0241f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crimson Shades",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Their Librarians follow shamanic traditions, like those of the Space Wolves and White Scars.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "White arms & shoulders",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crimson Talons",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "An obscure Chapter in crimson about which virtually nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "trim"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Crusaders",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in quartered red and white.",
+  "scheme": {
+   "pattern": "quartered",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour2"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Dark Brotherhood",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A late 41st Millennium Chapter in slate grey.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Slate grey",
+     "h": "#5a6066",
+     "r": "armour"
+    },
+    {
+     "n": "Slate grey",
+     "h": "#5a6066",
+     "r": "trim"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Dark Crusaders",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown origin in olive drab with bone details.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark olive-drab",
+     "h": "#5a6440",
+     "r": "armour"
+    },
+    {
+     "n": "Dark olive-drab",
+     "h": "#5a6440",
+     "r": "trim"
+    },
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Dark Hands",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in an unusual dull mint green.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dull mint-green",
+     "h": "#7fa58a",
+     "r": "armour"
+    },
+    {
+     "n": "Dull mint-green",
+     "h": "#7fa58a",
+     "r": "trim"
+    },
+    {
+     "n": "Black gauntlets & knees",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Darkspires",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter whose forces served with Battle Group Kallides in the Indomitus Crusade.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow helm",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Death Knights",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in emerald green. Nothing else is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Emerald green",
+     "h": "#2f7a46",
+     "r": "armour"
+    },
+    {
+     "n": "Emerald green",
+     "h": "#2f7a46",
+     "r": "trim"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Deathwatch",
+  "legion": "?",
+  "founding": "Varies",
+  "bio": "The Long Vigil: veterans from many Chapters who serve the Ordo Xenos as alien hunters. Their armour is painted black, except for the left arm, which keeps their home Chapter's colours.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Silver left arm",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Dragon Lords",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "All contact with their homeworld, Erwyn, was lost in 998.M41.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark green",
+     "h": "#1d4a2b",
+     "r": "armour"
+    },
+    {
+     "n": "Dark green",
+     "h": "#1d4a2b",
+     "r": "trim"
+    },
+    {
+     "n": "White shoulders",
+     "h": "#ecebe6",
+     "r": "detail"
+    },
+    {
+     "n": "Orange aquila",
+     "h": "#d9701f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Dragons Ardent",
+  "legion": "IX",
+  "founding": "Unknown (later refounded)",
+  "bio": "A Blood Angels successor that was destroyed and later refounded, in striking turquoise.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Turquoise",
+     "h": "#1f9a9a",
+     "r": "armour"
+    },
+    {
+     "n": "Turquoise",
+     "h": "#1f9a9a",
+     "r": "trim"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Emperor's Hands",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter from the world of Paragon.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark blue",
+     "h": "#1d2a52",
+     "r": "armour"
+    },
+    {
+     "n": "Dark blue",
+     "h": "#1d2a52",
+     "r": "trim"
+    },
+    {
+     "n": "White gauntlets",
+     "h": "#ecebe6",
+     "r": "detail"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Emperor's Hawks",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Jump-pack assault specialists in red and yellow.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Emperor's Scythes",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in purple. Little else is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Purple",
+     "h": "#5b2a6e",
+     "r": "armour"
+    },
+    {
+     "n": "Purple",
+     "h": "#5b2a6e",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow aquila",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Emperor's Shadows",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A scheme loosely based on the Black Templars, with red and turquoise details.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "detail"
+    },
+    {
+     "n": "Turquoise",
+     "h": "#1f9a9a",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Emperor's Shields",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in halved light green and yellow.",
+  "scheme": {
+   "pattern": "halved",
+   "colours": [
+    {
+     "n": "Light green",
+     "h": "#6fb85a",
+     "r": "armour"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "armour2"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Emperor's Storm",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in gold and white featured in GW's 'How to Paint Space Marines'.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Golden",
+     "h": "#c49a3c",
+     "r": "armour"
+    },
+    {
+     "n": "Maroon",
+     "h": "#6e1016",
+     "r": "trim"
+    },
+    {
+     "n": "White helm & shoulders",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Emperor's Wolves",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "They lost their 8th Company in the warp. It reappeared decades later, which raised hard questions.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Red shoulders",
+     "h": "#a3151c",
+     "r": "detail"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Exemplars",
+  "legion": "?",
+  "founding": "Unknown (after the Second Founding)",
+  "bio": "A Chapter raised some time after the Second Founding. Almost nothing else is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark blue",
+     "h": "#1d2a52",
+     "r": "armour"
+    },
+    {
+     "n": "Dark blue",
+     "h": "#1d2a52",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders",
+     "h": "#1b1b1e",
+     "r": "detail"
+    },
+    {
+     "n": "Red sergeant helm",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Exsanguinators",
+  "legion": "IX",
+  "founding": "Unknown",
+  "bio": "A Blood Angels successor that carries the Red Thirst and Black Rage like its brothers.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Fists Exemplar",
+  "legion": "VII",
+  "founding": "Second Founding",
+  "bio": "A Second Founding son of Dorn, drawn from the Legion's more progressive warriors. By tradition their armour was left unpainted, bare storm-cloud grey ceramite.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Storm cloud grey",
+     "h": "#7d8287",
+     "r": "armour"
+    },
+    {
+     "n": "Storm cloud grey",
+     "h": "#7d8287",
+     "r": "trim"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Golden Gryphons",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in gold armour.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Golden",
+     "h": "#c49a3c",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Golden Halos",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Veterans of the campaigns on Kistvaen and Podzul, and of the decades-long Siege of Nectis.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Ebon",
+     "h": "#141416",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Gold helm",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Golden Sons",
+  "legion": "IX",
+  "founding": "Unknown (38th Millennium)",
+  "bio": "A 38th Millennium Blood Angels successor raised as guardians, in black and gold.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Gorgons",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in lime green with black helms.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Lime green",
+     "h": "#7fb83a",
+     "r": "armour"
+    },
+    {
+     "n": "Lime green",
+     "h": "#7fb83a",
+     "r": "trim"
+    },
+    {
+     "n": "Black helm",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Grey Knights",
+  "legion": "?",
+  "founding": "Second Founding (secret)",
+  "bio": "A secret Chapter of psykers, the Chamber Militant of the Ordo Malleus, created to fight daemons. Their silver Aegis armour is warded against the warp.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "armour"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "trim"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "detail"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Grief Bringers",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Brave, self-sacrificing warriors who suffered heavy losses against the Enslavers on Valhall II. Famous for their pea-green armour with purple chevrons.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Sickly pea-green",
+     "h": "#8a9a3a",
+     "r": "armour"
+    },
+    {
+     "n": "Headachey purple",
+     "h": "#7a3a8a",
+     "r": "trim"
+    },
+    {
+     "n": "Purple chevrons",
+     "h": "#7a3a8a",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Guardians of Celeres",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in dark green with white shoulders.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark green",
+     "h": "#1d4a2b",
+     "r": "armour"
+    },
+    {
+     "n": "Dark green",
+     "h": "#1d4a2b",
+     "r": "trim"
+    },
+    {
+     "n": "White shoulders",
+     "h": "#ecebe6",
+     "r": "detail"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Halo Dragons",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in black armour about which little is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Ebon",
+     "h": "#141416",
+     "r": "armour"
+    },
+    {
+     "n": "Ebon",
+     "h": "#141416",
+     "r": "trim"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Harbingers",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter from the feral world of Birmingham.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "armour"
+    },
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow shoulders & limbs",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Helion Legion",
+  "legion": "XIII",
+  "founding": "Unknown",
+  "bio": "A fleet-based Chapter of Ultramarines lineage with no homeworld.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Bronze aquila",
+     "h": "#9a6e34",
+     "r": "detail"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Heralds of Vengeance",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in red with white helms. Almost nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "trim"
+    },
+    {
+     "n": "White helm",
+     "h": "#ecebe6",
+     "r": "detail"
+    },
+    {
+     "n": "Green lenses",
+     "h": "#4ca85a",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Imperial Castellans",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in cerulean blue and bone.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Cerulean blue",
+     "h": "#2f6fb8",
+     "r": "armour"
+    },
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "trim"
+    },
+    {
+     "n": "Bone limbs",
+     "h": "#d9cca6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Imperial Harbingers",
+  "legion": "?",
+  "founding": "23rd Founding",
+  "bio": "A 23rd Founding Chapter of unknown lineage in light grey.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Light grey",
+     "h": "#a6abaf",
+     "r": "armour"
+    },
+    {
+     "n": "Light grey",
+     "h": "#a6abaf",
+     "r": "trim"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Imperial Hawks",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Specialists in high-altitude jump-pack drops and fast air assaults.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "White shoulders & pack",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Imperial Paladins",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Believed, though unconfirmed, to be of Ultramarines stock.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Dark blue",
+     "h": "#1d2a52",
+     "r": "armour"
+    },
+    {
+     "n": "Dark blue",
+     "h": "#1d2a52",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Imperial Stars",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in purple. Nothing else is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Purple",
+     "h": "#5b2a6e",
+     "r": "armour"
+    },
+    {
+     "n": "Purple",
+     "h": "#5b2a6e",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Inceptors",
+  "legion": "XIII",
+  "founding": "Second Founding",
+  "bio": "A Second Founding Primogenitor of the Ultramarines in forest green and gold.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Forest green",
+     "h": "#21502f",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    },
+    {
+     "n": "Red lenses",
+     "h": "#9e1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Invictors",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A formerly loyal Chapter that entered the Eye of Terror in 321.M37 and fell to Chaos.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Purple",
+     "h": "#5b2a6e",
+     "r": "armour"
+    },
+    {
+     "n": "Purple",
+     "h": "#5b2a6e",
+     "r": "trim"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Iron Crusaders",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Last seen in 998.M41 heading toward a forbidden region of space.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Light grey",
+     "h": "#a6abaf",
+     "r": "armour"
+    },
+    {
+     "n": "Maroon",
+     "h": "#6e1016",
+     "r": "trim"
+    },
+    {
+     "n": "Maroon helm & shoulders",
+     "h": "#6e1016",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Iron Scepters",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "The product of a rushed Imperial Founding. Every warrior bears an unusual scarring pattern on his forehead.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Green",
+     "h": "#2f7a3b",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders & pack",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Iron Shades",
+  "legion": "?",
+  "founding": "7th Founding",
+  "bio": "A 7th Founding Chapter recruited from the death world of Shoba. Its warriors wear honour tattoos.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Deep black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Midnight blue",
+     "h": "#1b2445",
+     "r": "trim"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Knights of Eternity",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A lost Chapter of unknown origin in white and red.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Red helm & arms",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Knights of Gryphonne",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A fleet-based crusading Chapter in orange.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Orange",
+     "h": "#d9701f",
+     "r": "armour"
+    },
+    {
+     "n": "Orange",
+     "h": "#d9701f",
+     "r": "trim"
+    },
+    {
+     "n": "Black pack & aquila",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Knights of the Crimson Order",
+  "legion": "I",
+  "founding": "Unknown",
+  "bio": "Unforgiven in slate grey with crimson robes.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Slate grey",
+     "h": "#5a6066",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Crimson robes",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Legion of Night",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "They use fast Rhinos and Razorbacks for surgical strikes and to seize key points.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Legion of the Damned",
+  "legion": "?",
+  "founding": "Unknown (possibly 21st Founding)",
+  "bio": "Ghostly warriors who appear from nowhere when all hope is lost, then vanish. They may be the remnants of the lost Fire Hawks. Black armour covered in flames and bones.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Flat black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Bone skulls",
+     "h": "#d9cca6",
+     "r": "trim"
+    },
+    {
+     "n": "Orange flames",
+     "h": "#d9701f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Liberators",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in purple and black. Little else is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Purple",
+     "h": "#5b2a6e",
+     "r": "armour"
+    },
+    {
+     "n": "Purple",
+     "h": "#5b2a6e",
+     "r": "trim"
+    },
+    {
+     "n": "Black torso & pack",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Lion Warriors",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in mustard yellow with black shoulders.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Mustard yellow",
+     "h": "#d9a92a",
+     "r": "armour"
+    },
+    {
+     "n": "Mustard yellow",
+     "h": "#d9a92a",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Marines August",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in crimson with gold helms.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Crimson",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Gold helm",
+     "h": "#c49a3c",
+     "r": "detail"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Marines Mordant",
+  "legion": "XIII",
+  "founding": "Unknown (35th Millennium)",
+  "bio": "Ultramarines successors who guarded the Maelstrom's rimward edge. They were destroyed, with three sister Chapters, by an Alpha Legion plot.",
+  "scheme": {
+   "pattern": "halved",
+   "colours": [
+    {
+     "n": "Ultramarine blue",
+     "h": "#1d3f8f",
+     "r": "armour"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "armour2"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Masters of Protelus",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown origin in white and blue.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "trim"
+    },
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Metamarines",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown origin in white with blue.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "trim"
+    },
+    {
+     "n": "Blue torso & pack",
+     "h": "#1d3f8f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Night Swords",
+  "legion": "VII",
+  "founding": "Unknown (32nd Millennium)",
+  "bio": "A Codex-compliant Imperial Fists successor raised in the 32nd Millennium, in white armour.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Nova Wings",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in white with red trim. Almost nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Red pack & aquila",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Obsidian Glaives",
+  "legion": "XIII",
+  "founding": "Second Founding",
+  "bio": "A Primogenitor Chapter of the Ultramarines in glossy black and bone, recorded as annihilated.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Glossy black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "trim"
+    },
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Omega Marines",
+  "legion": "?",
+  "founding": "Unknown (40th Millennium)",
+  "bio": "A 40th Millennium Codex-compliant Chapter in halved white and black.",
+  "scheme": {
+   "pattern": "halved",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour2"
+    },
+    {
+     "n": "Dark yellow aquila",
+     "h": "#c79a1f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Penitents",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in black with white helms. Almost nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "White helm & gauntlets",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Praetors of Ultramar",
+  "legion": "XIII",
+  "founding": "Ultima Founding",
+  "bio": "An all-Primaris Chapter of Guilliman's line in black, gold and white.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Reclaimers",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "Close to the Adeptus Mechanicus, like the Iron Hands, with unusually advanced wargear. They feature in the Ciaphas Cain novels.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Off-white",
+     "h": "#d9cca6",
+     "r": "armour"
+    },
+    {
+     "n": "Off-white",
+     "h": "#d9cca6",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow faceplate & gauntlets",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Red Dragons",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in red.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow aquila",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Red Legion",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in red about which almost nothing is known.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "detail"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Red Scimitars",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter from the Pandraxx Sub-sector in red and black.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Red Seraphs",
+  "legion": "IX",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant splinter of the Blood Eagles, of Sanguinius's line, covered in runes and talismans of faith.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Blood red",
+     "h": "#8e1b17",
+     "r": "armour"
+    },
+    {
+     "n": "Blood red",
+     "h": "#8e1b17",
+     "r": "trim"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Red Wings",
+  "legion": "IX",
+  "founding": "Unknown",
+  "bio": "A Blood Angels successor in armour the colour of arctic snow, with a ruby-red left shoulder and knees.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Arctic blue-white",
+     "h": "#d9e4ea",
+     "r": "armour"
+    },
+    {
+     "n": "Arctic blue-white",
+     "h": "#d9e4ea",
+     "r": "trim"
+    },
+    {
+     "n": "Lacquered ruby shoulder & knees",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Red Wolves",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "They originally claimed the world of Bloodfall as their home.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Retributors",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown lineage that has faced many threats to the Imperium, including xenos hordes.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "armour"
+    },
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    },
+    {
+     "n": "White markings",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Rift Cobras",
+  "legion": "?",
+  "founding": "Ultima Founding",
+  "bio": "An all-Primaris Chapter of unknown lineage in black and light green.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Light green helm & arms",
+     "h": "#6fb85a",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Sable Swords",
+  "legion": "?",
+  "founding": "Unknown (late 41st Millennium)",
+  "bio": "Created to replace the Astral Knights after their sacrifice against the Necron World Engine. They took over the Knights' abandoned fortress-monastery.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "White knees",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Scar Lords",
+  "legion": "?",
+  "founding": "Second Founding",
+  "bio": "They lost over 90% of their strength when a T'au battlesuit pilot set off an Exterminatus warhead aboard their flagship.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Terracotta",
+     "h": "#a8442c",
+     "r": "armour"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "trim"
+    },
+    {
+     "n": "Gold",
+     "h": "#c49a3c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Shadow Haunters",
+  "legion": "XIX",
+  "founding": "Unknown",
+  "bio": "A Raven Guard successor in grey.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "armour"
+    },
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "trim"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Shadow Hawks",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter recorded in charcoal grey and red.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Charcoal grey",
+     "h": "#3d4044",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Sky Sentinels",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in sky blue, killed to the last man.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Sky blue",
+     "h": "#6aa8d8",
+     "r": "armour"
+    },
+    {
+     "n": "Dark blue",
+     "h": "#1d2a52",
+     "r": "trim"
+    },
+    {
+     "n": "Dark blue torso",
+     "h": "#1d2a52",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Sons of Antaeus",
+  "legion": "XIII",
+  "founding": "21st 'Cursed' Founding",
+  "bio": "Unusually huge and tough even for Space Marines, surviving wounds that would kill others, possibly due to a Cursed Founding mutation.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Space Sharks",
+  "legion": "XIX",
+  "founding": "23rd Founding",
+  "bio": "Current guardians of the Endymion Cluster, the Mantis Warriors' former territory. Possibly of Raven Guard stock, unconfirmed. Not to be confused with the Carcharodons.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "armour"
+    },
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "trim"
+    },
+    {
+     "n": "Red helm stripe",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Star Scorpions",
+  "legion": "?",
+  "founding": "25th Founding",
+  "bio": "Once one of the three Sentinels of the Veil, alongside the Celestial Lions and Emperor's Spears. Now extinct.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Forest green",
+     "h": "#21502f",
+     "r": "armour"
+    },
+    {
+     "n": "Forest green",
+     "h": "#21502f",
+     "r": "trim"
+    },
+    {
+     "n": "Bone limbs",
+     "h": "#d9cca6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Storm Callers",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in black and red split across the armour.",
+  "scheme": {
+   "pattern": "halved",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour2"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Storm Falcons",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "An obscure Codex-compliant Chapter in grey and black.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Grey",
+     "h": "#7d8287",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders",
+     "h": "#1b1b1e",
+     "r": "detail"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Storm Warriors",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in stone grey.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Stone grey",
+     "h": "#8a8f93",
+     "r": "armour"
+    },
+    {
+     "n": "Stone grey",
+     "h": "#8a8f93",
+     "r": "trim"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Stormwatchers",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter from the Caligari Sector with close ties to the Inquisition.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Dark blue limbs",
+     "h": "#1d2a52",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Taurans",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in bone white and black.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "armour"
+    },
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "trim"
+    },
+    {
+     "n": "Black helm & greaves",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Tempest Guard",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter of unknown origin in midnight blue.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Midnight blue",
+     "h": "#1b2445",
+     "r": "armour"
+    },
+    {
+     "n": "Midnight blue",
+     "h": "#1b2445",
+     "r": "trim"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Reborn",
+  "legion": "XIII",
+  "founding": "Unknown",
+  "bio": "An Ultramarines successor and one of the nine Shield Chapters of Ultramar.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Tigers Argent",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter that aided the Angevin Crusade.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Metallic silver",
+     "h": "#a9adb1",
+     "r": "armour"
+    },
+    {
+     "n": "Metallic silver",
+     "h": "#a9adb1",
+     "r": "trim"
+    },
+    {
+     "n": "Black insets",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Valedictors",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in light green. Almost nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Light green",
+     "h": "#6fb85a",
+     "r": "armour"
+    },
+    {
+     "n": "Light green",
+     "h": "#6fb85a",
+     "r": "trim"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Venerators of Osiron",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in white about which almost nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "trim"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Victors",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in orange-red. Almost nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Orange-red",
+     "h": "#c0401c",
+     "r": "armour"
+    },
+    {
+     "n": "Orange-red",
+     "h": "#c0401c",
+     "r": "trim"
+    },
+    {
+     "n": "Black knees & greaves",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Vorpal Swords",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in light green and black.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Light green",
+     "h": "#6fb85a",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black shoulders & pack",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "War Bearers",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in olive drab with silver details.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Olive-drab",
+     "h": "#5a6440",
+     "r": "armour"
+    },
+    {
+     "n": "Olive-drab",
+     "h": "#5a6440",
+     "r": "trim"
+    },
+    {
+     "n": "Silver",
+     "h": "#a9adb1",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Warmongers",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in midnight blue.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Midnight blue",
+     "h": "#1b2445",
+     "r": "armour"
+    },
+    {
+     "n": "Midnight blue",
+     "h": "#1b2445",
+     "r": "trim"
+    },
+    {
+     "n": "Contrast colour helm & pack",
+     "h": "#c79a1f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Warrior Adepts",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in quartered red and blue.",
+  "scheme": {
+   "pattern": "quartered",
+   "colours": [
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "armour"
+    },
+    {
+     "n": "Blue",
+     "h": "#1d3f8f",
+     "r": "armour2"
+    },
+    {
+     "n": "Dark yellow aquila",
+     "h": "#c79a1f",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Warriors Tempest",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in bone white. Almost nothing is recorded.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "armour"
+    },
+    {
+     "n": "Bone",
+     "h": "#d9cca6",
+     "r": "trim"
+    },
+    {
+     "n": "Contrast",
+     "h": "#1b2445",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "White Minotaurs",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Codex-compliant Chapter in golden bronze with red shoulders.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Golden bronze",
+     "h": "#9a6e34",
+     "r": "armour"
+    },
+    {
+     "n": "Red",
+     "h": "#a3151c",
+     "r": "trim"
+    },
+    {
+     "n": "Red shoulders",
+     "h": "#a3151c",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "White Panthers",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in black and white armour.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "White",
+     "h": "#ecebe6",
+     "r": "armour"
+    },
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "trim"
+    },
+    {
+     "n": "Black helm & gauntlets",
+     "h": "#1b1b1e",
+     "r": "detail"
+    }
+   ]
+  }
+ },
+ {
+  "name": "Yellow Jackets",
+  "legion": "?",
+  "founding": "Unknown",
+  "bio": "A Chapter in black and yellow, like its namesake wasp.",
+  "scheme": {
+   "pattern": "solid",
+   "colours": [
+    {
+     "n": "Black",
+     "h": "#1b1b1e",
+     "r": "armour"
+    },
+    {
+     "n": "Yellow",
+     "h": "#e8b923",
+     "r": "trim"
+    },
+    {
+     "n": "Yellow helm & legs",
+     "h": "#e8b923",
+     "r": "detail"
+    }
+   ]
+  }
  }
 ];
 
@@ -4791,7 +8357,111 @@ const PLATES = {
  "Angels of Fire": "Angels_Fire_Firstborn_Astartes.png",
  "Crimson Castellans": "Crimson_Castellans_Astartes.jpg",
  "Knights of the Chalice": "KnightsoftheChalicePrimaris.png",
- "Iron Champions": "Iron_Champions_Marine.jpg"
+ "Iron Champions": "Iron_Champions_Marine.jpg",
+ "Accipiters": "Accipiters_Tactical_Marine.png",
+ "Adulators": "Adulators_Battle-Brother.png",
+ "Angel Guard": "Angel_Guard_Battle-Brother.png",
+ "Angels Eradicant": "Angels_Eradican_Battle-Brother.png",
+ "Angels Porphyr": "Angels_Porphyr_Firstborn_Astartes.png",
+ "Angels Redeemed": "Angels_Redeemed_Firstborn_Astartes.png",
+ "Angels Resplendent": "AngelsResplendent2ndCompany.jpg",
+ "Angels of Damnation": "Angels_Damnation_Astartes.png",
+ "Angels of Iron": "Angels_Iron_Firstborn_Astartes.png",
+ "Angels of Penance": "Angels_Penance_Firstborn_Astartes.png",
+ "Angels of Repentance": "Angels_Repentance_Firstborn_Astartes.png",
+ "Angels of Retribution": "Angels_Retribution_Firstborn_Astartes.png",
+ "Astral Hawks": "Astral_Hawks_Firstborn_Astartes.png",
+ "Astral Hounds": "AstraHoundsPrimaris.png",
+ "Auric Patricians": "Auric_Patricians_Firstborn_Astartes.png",
+ "Avengers": "Avengers_Firstborn_Astartes.png",
+ "Black Inculpators": "Black_Inc_Astartes.jpg",
+ "Black Talons": "Black_Talons_Astartes.jpg",
+ "Black Wings": "Black_Wings_Scheme.jpg",
+ "Blazoned Legion": "Blazoned_Legion_Astartes.jpg",
+ "Blood Knights": "Blood_Knights_Astartes.jpg",
+ "Brazen Skulls": "Brazen_Skulls_Astartes.jpg",
+ "Brotherhood of a Thousand": "BoT_Battle-Brother.jpg",
+ "Celestial Guard": "CG_Battle-Brother.jpg",
+ "Champions of Thanatos": "Champion_Thanatos_Astartes.jpg",
+ "Clementine Knights": "ClementineKnightsPrimarisMarine.jpg",
+ "Contenders": "Contenders_Astartes.jpg",
+ "Crimson Guard": "Crimson_Guard_Astartes.jpg",
+ "Crimson Paladins": "Crimson_Paladins_scheme.jpg",
+ "Crimson Sabres": "Crimson_Sabre_scheme.jpg",
+ "Crimson Scions": "Crimson_Scions_Astartes.jpg",
+ "Crimson Shades": "Crimson_Shades_Scheme.jpg",
+ "Crimson Talons": "Crimson_Talons_Astartes.jpg",
+ "Crusaders": "Crusaders_Astartes.jpg",
+ "Dark Brotherhood": "Dark_Brotherhood_Astartes.jpg",
+ "Dark Crusaders": "Dark_Crusaders_Astartes.jpg",
+ "Dark Hands": "DarkHands_Colour_Scheme.jpg",
+ "Darkspires": "Darkspires_Primaris_Intercessor.png",
+ "Death Knights": "Death_Knights_Scheme.jpg",
+ "Deathwatch": "DW_Battle-Brother2.jpg",
+ "Dragon Lords": "Dragon_Lords_Astartes.jpg",
+ "Emperor's Hands": "Emp's_Hands_Scheme.jpg",
+ "Emperor's Hawks": "Emperor's_Hawks_Marine.jpg",
+ "Emperor's Scythes": "Emperor's_Scythes_Astartes.jpg",
+ "Emperor's Shadows": "Emperor's_Shadows_Marine.jpg",
+ "Emperor's Shields": "Emperor's_Shield_Astartes.jpg",
+ "Emperor's Storm": "Emperor's_Storm_Astartes.jpg",
+ "Emperor's Wolves": "Emperor's_Wolves_Scheme.jpg",
+ "Exemplars": "Exemplars_Astartes.jpg",
+ "Golden Gryphons": "Golden_Gryphons_Battle-Brother.jpg",
+ "Golden Halos": "Golden_Halos_Astartes.jpg",
+ "Gorgons": "Gorgons_Astartes.jpg",
+ "Grey Knights": "Justicar_Aegis_Power_Armour.jpg",
+ "Guardians of Celeres": "Guardians_of_Celeres_Astartes.jpg",
+ "Halo Dragons": "Halo_Dragons_Astartes.jpg",
+ "Harbingers": "Harbingers_Astartes.jpg",
+ "Heralds of Vengeance": "HoV_Astartes.jpg",
+ "Imperial Castellans": "Imperial_Castellans_Astartes.jpg",
+ "Imperial Harbingers": "Imperial_Harbinger_Colour_Scheme.jpg",
+ "Imperial Hawks": "Imperial_Hawks_Astartes.jpg",
+ "Imperial Paladins": "Imperial_Paladins_Battle-Brother.jpg",
+ "Imperial Stars": "Imperial_Stars_Armor.png",
+ "Inceptors": "Inceptors_Battle-Brother.jpg",
+ "Invictors": "Invictors_Astartes.jpg",
+ "Iron Crusaders": "Iron_Crusaders_Astartes.jpg",
+ "Iron Shades": "IronShadesPrimaris_Marine2.png",
+ "Knights of Eternity": "Knights_Eternity_Astartes.jpg",
+ "Knights of Gryphonne": "Knights_Of_Gryphonne_Colour_Scheme.jpg",
+ "Legion of Night": "LoN_Astartes.jpg",
+ "Legion of the Damned": "LoD_Scheme.jpg",
+ "Liberators": "Liberators_Astartes.jpg",
+ "Lion Warriors": "Lion_Warriors_Astartes.jpg",
+ "Marines August": "Marines_Augus_Astartes.jpg",
+ "Masters of Protelus": "Masters_of_Protelus_Battle-Brother.jpg",
+ "Metamarines": "Metamarine_Marine.jpg",
+ "Nova Wings": "Nova_Wings_Astartes.jpg",
+ "Omega Marines": "Omega_Marines_Scheme2.jpg",
+ "Penitents": "Penitents_Astartes.jpg",
+ "Red Dragons": "Red_Dragons_Astartes.jpg",
+ "Red Legion": "Red_Legion_Scheme2.jpg",
+ "Red Wolves": "Red_Wolves_Battle-Brother.jpg",
+ "Retributors": "RetributorsColourScheme.JPG",
+ "Rift Cobras": "Rift_Cobras_Primaris_Intercessor.png",
+ "Sable Swords": "Sable_Swords_Battle-Brother.jpg",
+ "Sky Sentinels": "Sky_Sentinels_Astartes.jpg",
+ "Space Sharks": "Space_Sharks_Marine.jpg",
+ "Star Scorpions": "StarScorpions.jpg",
+ "Storm Callers": "Storm_Callers_Astartes.jpg",
+ "Storm Falcons": "Storm_Falcons_Astartes1.jpg",
+ "Storm Warriors": "Storm_Warriors.jpg",
+ "Taurans": "Taurans_Colour_Scheme.jpg",
+ "Tempest Guard": "Tempest_Guard_Astartes.jpg",
+ "Tigers Argent": "Tigers_Argent_Scheme2.jpg",
+ "Valedictors": "Valedictors_Astartes.jpg",
+ "Venerators of Osiron": "Venators_of_Osiron_Astartes.jpg",
+ "Victors": "Victors_Astartes.jpg",
+ "Vorpal Swords": "Vorpal_Swords_Astartes.jpg",
+ "War Bearers": "War_Bearers_Updated.jpg",
+ "Warmongers": "Warmongers_Astartes.jpg",
+ "Warrior Adepts": "Warrior_Adepts_Scheme.jpg",
+ "Warriors Tempest": "Warriors_Tempest_Astartes.jpg",
+ "White Minotaurs": "White_Minotaurs_Marine.jpg",
+ "White Panthers": "White_Panthers.jpg",
+ "Yellow Jackets": "Yellow_Jackets_Marine.jpg"
 };
 const PRIMARCH_PICS = {
  "Lion El'Jonson": [

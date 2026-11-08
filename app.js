@@ -47,7 +47,7 @@
     if (/\bgold\b|golden(?! yellow)/.test(s)) return M.gold;
     if (/black|sable|ebon/.test(s)) return ["Abaddon Black", "#231f20"];
     if (/off-white|bone|ivory|vellum|cream|parchment/.test(s)) return nearest(c.h, BONES);
-    if (/white/.test(s)) return ["White Scar", "#ffffff"];
+    if (/white/.test(s) && !/blue-white/.test(s)) return ["White Scar", "#ffffff"];
     return nearest(c.h, PAINTS);
   }
   const PART = /\b(helms?|helmets?|stripe|shoulders?|pauldrons?|arms?|trim|aquila|lenses|pack|backpack|limbs|robes|tabard|faceplate|markings|flames|legs|insets?|skull|hands?|chevrons|vines|torso|knees|gauntlets|icons|horns|saltire|eye)\b/g;
@@ -196,8 +196,10 @@
     });
     const unk = byLegion["?"].subs;
     if (unk.length) {
-      html += `<div class="side-group"><div class="side-title">Unknown Lineage</div><div class="subs" style="margin-left:10px">${
-        unk.map((s) => `<button data-go="${s.id}" class="${current === s.id ? "sel" : ""}">${dots(s.schemes[0])}${esc(s.name)}</button>`).join("")}</div></div>`;
+      const isOpen = open.has("?");
+      html += `<div class="side-group"><div class="side-title">Other Chapters</div>
+        <button class="leg-row ${isOpen ? "open" : ""}" data-toggle="?"><span class="caret">▸</span><span class="num">?</span><span class="nm">Unknown lineage</span><span class="cnt">${unk.length}</span></button>
+        ${isOpen ? `<div class="subs">${unk.map((s) => `<button data-go="${s.id}" class="${current === s.id ? "sel" : ""}">${dots(s.schemes[0])}${esc(s.name)}</button>`).join("")}</div>` : ""}</div>`;
     }
     $("#sidebar").innerHTML = html;
   }
@@ -214,14 +216,18 @@
 
   // ---------- Primaris status ----------
   const FIRSTBORN_ONLY = new Set(["Astral Knights", "Knights of Blood", "Shadow Wolves", "Soul Drinkers", "Fire Hawks", "Iron Hounds",
-    "Emperor's Swords", "Crimson Castellans", "Astral Claws", "Relictors"]);
+    "Emperor's Swords", "Crimson Castellans", "Astral Claws", "Relictors", "Sky Sentinels", "Angels Excelsis", "Angels of Retribution",
+    "Crimson Consuls", "Marines Mordant", "Obsidian Glaives", "Star Scorpions", "Knights of Eternity", "Brazen Skulls", "Fists Exemplar",
+    "Invictors", "Crimson Sabres", "Angels Resplendent"]);
+  const SPECIAL_PRIMARIS = { "Grey Knights": "No Primaris (Grey Knights)", "Legion of the Damned": "Unknown (spectral warriors)", "Deathwatch": "Firstborn & Primaris (from many Chapters)" };
   function primaris(e) {
     if (e.kind === "legion") return e.legion.allegiance === "Traitor" ? "No Primaris (Traitor Legion)" : "Firstborn & Primaris";
+    if (SPECIAL_PRIMARIS[e.name]) return SPECIAL_PRIMARIS[e.name];
     if (/Ultima/i.test(e.chapter.founding)) return "All Primaris (Ultima Founding)";
     if (FIRSTBORN_ONLY.has(e.name)) return "Firstborn only (lost or renegade before the Primaris)";
     return "Firstborn & Primaris";
   }
-  const RENEGADE = new Set(["Soul Drinkers", "Knights of Blood", "Relictors"]), TRAITOR = new Set(["Astral Claws"]);
+  const RENEGADE = new Set(["Soul Drinkers", "Knights of Blood", "Relictors", "Crimson Sabres"]), TRAITOR = new Set(["Astral Claws", "Invictors"]);
   const allegianceOf = (e) => e.kind === "legion" ? e.legion.allegiance : TRAITOR.has(e.name) ? "Traitor" : RENEGADE.has(e.name) ? "Renegade" : "Loyalist";
   const allegBadge = (e) => `<span class="badge ${allegianceOf(e)}">${allegianceOf(e)}</span>`;
   const primBadge = (e) => `<span class="badge prim">${esc(primaris(e))}</span>`;
@@ -335,7 +341,7 @@
       return;
     }
     const tg = ev.target.closest("[data-toggle]");
-    if (tg && ev.target.closest(".caret")) {
+    if (tg && (ev.target.closest(".caret") || !tg.dataset.go)) {
       const n = tg.dataset.toggle; open.has(n) ? open.delete(n) : open.add(n); sidebar(); return;
     }
     const g = ev.target.closest("[data-go]");

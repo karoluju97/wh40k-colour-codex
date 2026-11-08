@@ -191,3 +191,5 @@ button { font: inherit; color: inherit; }
 .schemes { max-width: 1240px; margin-left: auto; margin-right: auto; }
 .welcome { max-width: 640px; }
 .view .prose { max-width: 1000px; }
+.leg-row .cnt { color: var(--muted); font-size: 12px; }
+.chip { white-space: nowrap; } .schemes .scheme { flex: 0 1 300px; }
