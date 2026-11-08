@@ -3,61 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Colour Codex · Warhammer 40k Primarchs, Legions & Chapters</title>
-  <meta name="description" content="A painter's reference to the Primarchs, Legions, Chapters and successor Chapters of Warhammer 40,000 and their colour schemes.">
+  <title>Colour Codex · Warhammer 40k Legions & Chapters</title>
+  <meta name="description" content="A painter's reference to the Primarchs, Legions and Chapters of Warhammer 40,000 and their colour schemes.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 110%22%3E%3Cpath d=%22M8 44 C8 14 26 6 50 6 C74 6 92 14 92 44 L92 92 C76 104 24 104 8 92 Z%22 fill=%22%231d3f8f%22 stroke=%22%23c49a3c%22 stroke-width=%228%22/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 110%22%3E%3Cpath d=%22M8 44 C8 14 26 6 50 6 C74 6 92 14 92 44 L92 92 C76 104 24 104 8 92 Z%22 fill=%22%231d3f8f%22 stroke=%22%23c49a3c%22 stroke-width=%228%22/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap">
-      <div class="brand">
-        <h1>Colour Codex</h1>
-        <p>Primarchs, Legions &amp; Chapters of the 41st Millennium, sorted for painters hunting their next scheme.</p>
-      </div>
-      <div class="controls">
-        <input id="search" type="search" placeholder="Search a name, Legion, Primarch or colour (e.g. 'purple', 'Dorn')" autocomplete="off">
-        <div class="row">
-          <span class="lbl">Show</span>
-          <div class="chips" id="typeChips">
-            <button data-type="all" class="on">Everything</button>
-            <button data-type="legion">Primarchs &amp; Legions</button>
-            <button data-type="successor">Successor Chapters</button>
-            <button data-type="fav">★ Shortlist</button>
-          </div>
-        </div>
-        <div class="row">
-          <span class="lbl">Allegiance</span>
-          <div class="chips" id="allegChips">
-            <button data-alleg="all" class="on">All</button>
-            <button data-alleg="Loyalist">Loyalist</button>
-            <button data-alleg="Traitor">Traitor</button>
-          </div>
-        </div>
-        <div class="row">
-          <span class="lbl">Armour colour</span>
-          <div class="chips colour" id="colourChips"></div>
-          <label class="tiny"><input type="checkbox" id="anyColour"> include trim &amp; details</label>
-        </div>
-      </div>
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+    <a class="brand" href="#" id="home">Colour Codex</a>
+    <div class="search">
+      <input id="search" type="search" placeholder="Search a Legion, Chapter, Primarch or colour…" autocomplete="off" aria-label="Search">
+      <div class="results" id="results" hidden></div>
     </div>
   </header>
 
-  <nav class="jump wrap" id="jump"></nav>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Legions and Chapters"></aside>
+    <main class="view" id="view"></main>
+  </div>
 
-  <main class="wrap" id="main"></main>
-  <p class="empty wrap" id="empty" hidden>Nothing matches those filters. Try clearing a colour or the search.</p>
-
-  <footer class="wrap foot">
-    <p>Lore summarised from <a href="https://wh40k.lexicanum.com" target="_blank" rel="noopener">Lexicanum</a> and the <a href="https://warhammer40k.fandom.com" target="_blank" rel="noopener">Warhammer 40k Fandom wiki</a>. Swatches are painter's approximations of each described livery. Use the links on each entry for official artwork and model photos. Unofficial fan reference, not affiliated with Games Workshop.</p>
-  </footer>
-
-  <dialog id="detail"><div id="detailBody"></div></dialog>
   <div id="toast" role="status"></div>
-
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
