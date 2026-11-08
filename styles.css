@@ -173,3 +173,5 @@ button { font: inherit; color: inherit; }
 .section-hint { color: var(--muted); font-size: 12px; margin: -4px 0 10px; }
 /* Centre the scheme cards */
 .schemes { grid-template-columns: repeat(auto-fit, minmax(250px, 290px)); justify-content: center; max-width: none; }
+.schemes { display: flex; flex-wrap: wrap; justify-content: center; }
+.schemes .scheme { flex: 0 1 280px; }
