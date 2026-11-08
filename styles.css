@@ -111,7 +111,7 @@ button { font: inherit; color: inherit; }
 .chip { display: inline-flex; align-items: center; gap: 7px; background: #151517; border: 1px solid var(--line); border-radius: 7px; padding: 4px 9px 4px 4px; font-size: 13px; cursor: pointer; }
 .chip:hover { border-color: var(--gold); }
 .chip i { width: 24px; height: 24px; border-radius: 5px; border: 1px solid rgba(255,255,255,.18); display: block; }
-.chip small { color: var(--muted); font-family: ui-monospace, monospace; }
+.chip small { color: var(--muted); font-size: 11.5px; }
 .swatches { display: flex; border-radius: 5px; overflow: hidden; height: 10px; }
 .swatches span { flex: 1; }
 .swatches span.armour, .swatches span.armour2 { flex: 2.4; }
@@ -158,3 +158,4 @@ button { font: inherit; color: inherit; }
 .brand { white-space: nowrap; width: auto; min-width: calc(var(--sidew) - 40px); font-size: 17px; }
 .badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 .badge.prim { background: rgba(201,162,74,.14); color: #e2c27a; }
+.badge.Renegade { background: rgba(217,140,40,.16); color: #f0b46a; }

@@ -16,6 +16,56 @@
     ];
   };
 
+
+  // ---------- Citadel paint matching ----------
+  function lab(hex) {
+    const n = parseInt(hex.slice(1), 16);
+    let [r, g, b] = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => { v /= 255; return v > 0.04045 ? ((v + 0.055) / 1.055) ** 2.4 : v / 12.92; });
+    let x = (r * 0.4124 + g * 0.3576 + b * 0.1805) / 0.95047, y = r * 0.2126 + g * 0.7152 + b * 0.0722, z = (r * 0.0193 + g * 0.1192 + b * 0.9505) / 1.08883;
+    const f = (t) => (t > 0.008856 ? Math.cbrt(t) : 7.787 * t + 16 / 116);
+    [x, y, z] = [f(x), f(y), f(z)];
+    return [116 * y - 16, 500 * (x - y), 200 * (y - z)];
+  }
+  const PAINTS = window.CITADEL_PAINTS.map(([n, h]) => ({ n, h, lab: lab(h) }));
+  const BONES = PAINTS.filter((p) => /Wraithbone|Ushabti|Screaming Skull|Rakarth|Pallid/.test(p.n));
+  const M = window.CITADEL_METALS;
+  const nearest = (hex, pool) => { const l = lab(hex); let best = null, bd = 1e9;
+    pool.forEach((p) => { const d = (p.lab[0] - l[0]) ** 2 + (p.lab[1] - l[1]) ** 2 + (p.lab[2] - l[2]) ** 2; if (d < bd) { bd = d; best = p; } });
+    return [best.n, best.h]; };
+  const OVERRIDE = { "ultramarine blue": ["Macragge Blue", "#0d407f"], "sorcerous blue": ["Thousand Sons Blue", "#18abcc"],
+    "wolf grey-blue": ["The Fang", "#436174"], "sea green": ["Sons of Horus Green", "#14544f"], "midnight blue": ["Kantor Blue", "#02134e"],
+    "salamander green": ["Warpstone Glow", "#1e7331"], "plague green": ["Death Guard Green", "#6d774d"] };
+  function paintFor(c) {
+    const s = c.n.toLowerCase();
+    if (OVERRIDE[s]) return OVERRIDE[s];
+    if (/silver-white|polished steel|stormhost/.test(s)) return M.brightsilver;
+    if (/gunmetal|metallic grey|metallic dark grey|dark silver|blue gunmetal/.test(s)) return M.gunmetal;
+    if (/silver|steel|nickel/.test(s)) return M.silver;
+    if (/brass/.test(s)) return M.brass;
+    if (/bronze/.test(s)) return M.bronze;
+    if (/copper/.test(s)) return M.copper;
+    if (/\bgold\b|golden(?! yellow)/.test(s)) return M.gold;
+    if (/black|sable|ebon/.test(s)) return ["Abaddon Black", "#231f20"];
+    if (/off-white|bone|ivory|vellum|cream|parchment/.test(s)) return nearest(c.h, BONES);
+    if (/white/.test(s)) return ["White Scar", "#ffffff"];
+    return nearest(c.h, PAINTS);
+  }
+  const PART = /\b(helms?|helmets?|stripe|shoulders?|pauldrons?|arms?|trim|aquila|lenses|pack|backpack|limbs|robes|tabard|faceplate|markings|flames|legs|insets?|skull|hands?|chevrons|vines|torso|knees|gauntlets|icons|horns|saltire|eye)\b/g;
+  function partOf(c) {
+    const words = c.n.toLowerCase().match(PART);
+    if (words) return [...new Set(words)].join(" ").replace(/\bhelms?\b|\bhelmets?\b/, "helm");
+    return { armour: "armour", armour2: "armour", trim: "trim" }[c.r] || "details";
+  }
+  function toPaints(scheme) {
+    const seen = new Set();
+    scheme.colours = scheme.colours.map((c) => {
+      const [pn, ph] = paintFor(c);
+      return { n: pn, h: ph, r: c.r, part: partOf(c), orig: c.n, origHex: c.h };
+    }).filter((c) => { const k = c.n + "|" + c.part; if (seen.has(k)) return false; seen.add(k); return true; });
+  }
+  LEGIONS.forEach((lg) => lg.schemes.forEach(toPaints));
+  CHAPTERS.forEach((ch) => toPaints(ch.scheme));
+
   // ---------- colour families (search by colour word) ----------
   function hsl(hex) {
     const n = parseInt(hex.slice(1), 16);
@@ -30,10 +80,10 @@
     return { h, s, l };
   }
   function family(c) {
-    const name = c.n.toLowerCase();
+    const name = (c.orig || c.n).toLowerCase();
     if (/silver|steel|gold|brass|bronze|gunmetal|metal/.test(name)) return "metallic";
     if (/bone|ivory|parchment/.test(name)) return "bone";
-    const { h, s, l } = hsl(c.h);
+    const { h, s, l } = hsl(c.origHex || c.h);
     if (l < 0.16) return "black";
     if (s < 0.12) return l > 0.82 ? "white" : "grey";
     if (h >= 15 && h < 45 && l < 0.4) return "brown";
@@ -86,7 +136,7 @@
   entries.forEach((e) => {
     const lg = e.legion;
     e.hay = [e.name, lg.name, lg.primarch, lg.allegiance, e.kind === "chapter" ? e.chapter.founding : "",
-      ...e.schemes.flatMap((s) => s.colours.map((c) => c.n + " " + family(c)))].join(" ").toLowerCase();
+      ...e.schemes.flatMap((s) => s.colours.map((c) => c.n + " " + c.orig + " " + family(c)))].join(" ").toLowerCase();
   });
 
   // ---------- pictures: hand-picked files on the Warhammer 40k Fandom wiki, loaded live ----------
@@ -167,15 +217,16 @@
     if (FIRSTBORN_ONLY.has(e.name)) return "Firstborn only (lost or renegade before the Primaris)";
     return "Firstborn & Primaris";
   }
+  const RENEGADE = new Set(["Soul Drinkers", "Knights of Blood", "Relictors"]), TRAITOR = new Set(["Astral Claws"]);
+  const allegianceOf = (e) => e.kind === "legion" ? e.legion.allegiance : TRAITOR.has(e.name) ? "Traitor" : RENEGADE.has(e.name) ? "Renegade" : "Loyalist";
+  const allegBadge = (e) => `<span class="badge ${allegianceOf(e)}">${allegianceOf(e)}</span>`;
   const primBadge = (e) => `<span class="badge prim">${esc(primaris(e))}</span>`;
 
   // ---------- views ----------
   function schemeBlock(s) {
-    const seen = new Set();
-    const cols = s.colours.filter((c) => { const k = c.h + c.n; if (seen.has(k)) return false; seen.add(k); return true; });
     return `<div class="scheme">${pad(s)}<div>${s.label ? `<div class="name">${esc(s.label)}</div>` : ""}
-      <div class="chiplist">${cols.map((c) => `<button class="chip" data-hex="${c.h}" title="Copy ${c.h}"><i style="background:${c.h}"></i>${esc(c.n)} <small>${c.h}</small></button>`).join("")}</div>
-      <div class="hint">${s.pattern === "halved" ? "Halved livery" : s.pattern === "quartered" ? "Quartered livery" : "Solid main colour"} · click a colour to copy its hex</div></div></div>`;
+      <div class="chiplist">${s.colours.map((c) => `<button class="chip" data-copy="${esc(c.n)}" title="Copy &quot;${esc(c.n)}&quot;"><i style="background:${c.h}"></i>${esc(c.n)} <small>${esc(c.part)}</small></button>`).join("")}</div>
+      <div class="hint">Closest Citadel paints · ${s.pattern === "halved" ? "halved livery" : s.pattern === "quartered" ? "quartered livery" : "solid main colour"} · click a paint to copy its name</div></div></div>`;
   }
   const favBtn = (id) => `<button class="btn ${favs.has(id) ? "on" : ""}" data-fav="${id}">${favs.has(id) ? "★ Shortlisted" : "☆ Shortlist"}</button>`;
   const linkBtns = (name) => linksFor(name).map((l) => `<a class="btn" href="${l.u}" target="_blank" rel="noopener">${esc(l.t)} ↗</a>`).join("");
@@ -204,7 +255,7 @@
     const unk = lg.num === "?";
     return `<div class="crumbs">${unk ? "Unknown lineage" : `<button data-go="${g.e.id}">${esc(lg.name)}</button>`} › ${unk ? "Chapter" : "Successor Chapter"}</div>
       <div class="head"><div><h1>${esc(ch.name)}</h1><div class="meta">${unk ? "Gene-seed origin unknown" : `Successor of the ${esc(lg.name)}`} · Founding: ${esc(ch.founding)}</div>
-        <div class="badges">${primBadge(e)}</div></div>
+        <div class="badges">${allegBadge(e)}${primBadge(e)}</div></div>
         <div class="actions">${favBtn(e.id)}${linkBtns(ch.name)}</div></div>
       <div class="prose">${ch.bio.split(/\n\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
       <div class="section-title">Colour scheme</div>${schemeBlock(ch.scheme)}
@@ -273,10 +324,10 @@
       if (keepOpen) $("#slPanel").hidden = false;
       return;
     }
-    const hex = ev.target.closest("[data-hex]");
-    if (hex) {
-      const h = hex.dataset.hex;
-      (navigator.clipboard ? navigator.clipboard.writeText(h) : Promise.reject()).then(() => toast(`Copied ${h}`), () => toast(h));
+    const cp = ev.target.closest("[data-copy]");
+    if (cp) {
+      const t = cp.dataset.copy;
+      (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast(`Copied ${t}`), () => toast(t));
       return;
     }
     const tg = ev.target.closest("[data-toggle]");
