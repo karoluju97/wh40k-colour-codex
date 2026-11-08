@@ -164,7 +164,7 @@
   const tile = (e) => `<button class="tile" data-go="${e.id}">${plate(plateSrc(e), e.name)}<span class="t">${esc(e.name)}</span>${bar(e.schemes[0])}</button>`;
 
   function welcome() {
-    return `<div class="welcome"><h1>Colour Codex</h1><p>Pick a Legion or Chapter from the sidebar, or search above.</p></div>`;
+    return `<div class="welcome"><h1>Kuur0's Warhammer Color Codex</h1><p>Pick a Legion or Chapter from the sidebar, or search above.</p></div>`;
   }
 
   function legionView(e) {
@@ -197,7 +197,7 @@
     if (e) open.add(e.legion.num);
     uid = 0;
     $("#view").innerHTML = !e ? welcome() : e.kind === "legion" ? legionView(e) : chapterView(e);
-    document.title = e ? `${e.name} · Colour Codex` : "Colour Codex · Warhammer 40k Legions & Chapters";
+    document.title = e ? `${e.name} · Kuur0's Warhammer Color Codex` : "Kuur0's Warhammer Color Codex";
     sidebar();
     shortlistUI();
     window.scrollTo(0, 0);

@@ -1,4 +1,4 @@
-# Colour Codex
+# Kuur0's Warhammer Color Codex
 
 A painter's reference to the Warhammer 40,000 Primarchs, Legions, Chapters and successor Chapters, made for finding new colour schemes.
 
