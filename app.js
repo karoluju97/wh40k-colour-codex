@@ -225,10 +225,10 @@
     "Emperor's Swords", "Crimson Castellans", "Astral Claws", "Relictors", "Sky Sentinels", "Angels Excelsis", "Angels of Retribution",
     "Crimson Consuls", "Marines Mordant", "Obsidian Glaives", "Star Scorpions", "Knights of Eternity", "Brazen Skulls", "Fists Exemplar",
     "Invictors", "Crimson Sabres", "Angels Resplendent"]);
-  const SPECIAL_PRIMARIS = { "Grey Knights": "No Primaris (Grey Knights)", "Adeptus Custodes": "Not Space Marines (Custodians)", "Legion of the Damned": "Unknown (spectral warriors)", "Deathwatch": "Firstborn & Primaris (from many Chapters)" };
+  const SPECIAL_PRIMARIS = { "Grey Knights": null, "Adeptus Custodes": null, "Legion of the Damned": "Unknown (spectral warriors)", "Deathwatch": "Firstborn & Primaris (from many Chapters)" };
   function primaris(e) {
     if (e.kind === "legion") return e.legion.allegiance === "Traitor" ? "No Primaris (Traitor Legion)" : "Firstborn & Primaris";
-    if (SPECIAL_PRIMARIS[e.name]) return SPECIAL_PRIMARIS[e.name];
+    if (e.name in SPECIAL_PRIMARIS) return SPECIAL_PRIMARIS[e.name];
     if (/Ultima/i.test(e.chapter.founding)) return "All Primaris (Ultima Founding)";
     if (FIRSTBORN_ONLY.has(e.name)) return "Firstborn only (lost or renegade before the Primaris)";
     return "Firstborn & Primaris";
@@ -236,7 +236,7 @@
   const RENEGADE = new Set(["Soul Drinkers", "Knights of Blood", "Relictors", "Crimson Sabres"]), TRAITOR = new Set(["Astral Claws", "Invictors"]);
   const allegianceOf = (e) => e.kind === "legion" ? e.legion.allegiance : TRAITOR.has(e.name) ? "Traitor" : RENEGADE.has(e.name) ? "Renegade" : "Loyalist";
   const allegBadge = (e) => `<span class="badge ${allegianceOf(e)}">${allegianceOf(e)}</span>`;
-  const primBadge = (e) => `<span class="badge prim">${esc(primaris(e))}</span>`;
+  const primBadge = (e) => { const p = primaris(e); return p ? `<span class="badge prim">${esc(p)}</span>` : ""; };
 
   // ---------- views ----------
   function schemeBlock(s) {
