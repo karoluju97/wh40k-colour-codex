@@ -121,7 +121,7 @@
       <circle cx="50" cy="57" r="11" fill="${emblem}" stroke="rgba(0,0,0,.45)" stroke-width="1.5"/></svg>`;
   }
   const bar = (s) => `<div class="swatches">${s.colours.map((c) => `<span class="${c.r}" style="background:${c.h}"></span>`).join("")}</div>`;
-  const dots = (s) => `<span class="dotset">${s.colours.filter((c) => c.r === "armour" || c.r === "armour2" || c.r === "trim").slice(0, 3).map((c) => `<i style="background:${c.h}"></i>`).join("")}</span>`;
+  const dots = (s) => `<span class="dotset">${s.colours.slice(0, 2).map((c) => `<i style="background:${c.h}"></i>`).join("")}</span>`;
 
   // ---------- entries ----------
   const entries = [], byId = {}, byLegion = {};
