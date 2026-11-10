@@ -27,7 +27,7 @@ const LEGIONS = [
     primarchBio: "Found as a feral boy in Caliban's monster-haunted forests and raised by its knightly orders, the Lion was a cold, brilliant strategist. His relationship with his sons was shattered by Luther's rebellion on Caliban, and he slept for ten thousand years before returning.",
     legionBio: "The First Legion, keepers of secrets. Their modern Chapter hides the shame of the Fallen and hunts them relentlessly. They field the bone-armoured Deathwing and the black-armoured Ravenwing alongside the green battle companies.",
     schemes: [
-      { label: "Battle companies (modern)", pattern: "solid", colours: [L("Dark green", "#1d4a2b"), T("Dark green", "#1d4a2b"), D("Bone robes", BONE), D("Red", RED), D("Gold", GOLD)] },
+      { label: "Battle companies (modern)", img: "DA_Primaris_Intercessor.png", pattern: "solid", colours: [L("Dark green", "#1d4a2b"), T("Dark green", "#1d4a2b"), D("Bone robes", BONE), D("Red", RED), D("Gold", GOLD)] },
       { label: "Deathwing", img: "Deathwing_Termi.jpg", pattern: "solid", colours: [L("Bone", BONE), T("Bone", BONE), D("Red", RED), D("Dark green", "#1d4a2b")] },
       { label: "Ravenwing", img: "BlackKnight.jpg", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Bone", BONE), D("Silver", SILVER)] },
       { label: "Horus Heresy Legion", img: "DA_Legionary_MK_III_Artificer.png", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red", RED), D("Bone", BONE)] },
@@ -40,8 +40,8 @@ const LEGIONS = [
     primarchBio: "Fulgrim the Phoenician pursued perfection in every art. A cursed daemon blade led him toward excess and he slew his closest brother, Ferrus Manus, at Isstvan V before ascending as a daemon of Slaanesh.",
     legionBio: "Once the proud bearers of the Emperor's own aquila, the III Legion fell into hedonism and sensory obsession. Their regal purple and gold became garish pinks, purples and blacks.",
     schemes: [
-      { label: "Pre-Heresy / Heresy", pattern: "solid", colours: [L("Royal purple", "#5b2a6e"), T("Gold", GOLD), D("White", WHITE), D("Black", BLACK)] },
-      { label: "Chaos (modern)", pattern: "solid", colours: [L("Pink", "#d1579c"), T("Gold", GOLD), D("Purple", "#5b2a6e"), D("Black", BLACK)] },
+      { label: "Pre-Heresy / Heresy", img: "EC_Legionary_Mk_IV.jpg", pattern: "solid", colours: [L("Royal purple", "#5b2a6e"), T("Gold", GOLD), D("White", WHITE), D("Black", BLACK)] },
+      { label: "Chaos (modern)", img: "MandrakhBlissEmperorsChildren.jpg", pattern: "solid", colours: [L("Pink", "#d1579c"), T("Gold", GOLD), D("Purple", "#5b2a6e"), D("Black", BLACK)] },
     ],
   },
   {
@@ -68,8 +68,8 @@ const LEGIONS = [
     primarchBio: "Raised among the savage tribes of icy Fenris, Leman Russ became the Emperor's executioner. He was a boisterous, saga-loving warrior king who led the burning of Prospero and later left on a final hunt from which he has not returned.",
     legionBio: "A non-Codex Chapter organised into Great Companies under Wolf Lords, with heavy Norse-style culture. Their unstable gene-seed means true successors are extremely rare (the lost Wolf Brothers and the Primaris Wolfspear). Pelts, talismans and runes cover their armour.",
     schemes: [
-      { label: "Chapter colours (modern)", pattern: "solid", colours: [L("Wolf grey-blue", "#5f7d94"), T("Wolf grey-blue", "#5f7d94"), D("Yellow", "#e0b23a"), D("Red", "#a8312a"), D("Fur brown", "#6b5136")] },
-      { label: "Horus Heresy Legion", pattern: "solid", colours: [L("Storm grey", "#6e7378"), T("Dark grey", "#45494d"), D("Bone", BONE), D("Red", "#a8312a")] },
+      { label: "Chapter colours (modern)", img: "Space_Wolves_Scheme2.jpg", pattern: "solid", colours: [L("Wolf grey-blue", "#5f7d94"), T("Wolf grey-blue", "#5f7d94"), D("Yellow", "#e0b23a"), D("Red", "#a8312a"), D("Fur brown", "#6b5136")] },
+      { label: "Horus Heresy Legion", img: "SW_Legionary_Mk_II.jpg", pattern: "solid", colours: [L("Storm grey", "#6e7378"), T("Dark grey", "#45494d"), D("Bone", BONE), D("Red", "#a8312a")] },
     ],
   },
   {
@@ -96,9 +96,9 @@ const LEGIONS = [
     primarchBio: "The Great Angel, a winged primarch of radiant nobility, loved by all his brothers. He died confronting Horus on the Warmaster's flagship. His death echoes through his gene-line as the Red Thirst and the Black Rage.",
     legionBio: "Noble, artistic warriors who fight an inner hunger for blood. Their crimson armour is offset by the gold of the Sanguinary Guard and the black of the doomed Death Company.",
     schemes: [
-      { label: "Chapter colours", pattern: "solid", colours: [L("Crimson", "#a3151c"), T("Crimson", "#a3151c"), D("Gold", GOLD), D("Black", BLACK), D("Bone", BONE)] },
-      { label: "Death Company", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red saltire", "#a3151c"), D("Bone", BONE)] },
-      { label: "Sanguinary Guard", pattern: "solid", colours: [L("Gold", GOLD), T("Gold", GOLD), D("Red", "#a3151c"), D("Black", BLACK)] },
+      { label: "Chapter colours", img: "BA_Intercessor.png", pattern: "solid", colours: [L("Crimson", "#a3151c"), T("Crimson", "#a3151c"), D("Gold", GOLD), D("Black", BLACK), D("Bone", BONE)] },
+      { label: "Death Company", img: "Death_Company_Colour_Scheme.jpg", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red saltire", "#a3151c"), D("Bone", BONE)] },
+      { label: "Sanguinary Guard", img: "Brother_Donotriel.png", pattern: "solid", colours: [L("Gold", GOLD), T("Gold", GOLD), D("Red", "#a3151c"), D("Black", BLACK)] },
     ],
   },
   {
@@ -117,8 +117,8 @@ const LEGIONS = [
     primarchBio: "Angron was a gladiator-slave with the Butcher's Nails, a brutal neural implant, hammered into his brain. The Emperor took him from his doomed rebellion and he never forgave it. Rage-driven and in agony, he ascended as a daemon of the Blood God.",
     legionBio: "Formerly the War Hounds, the XII Legion copied their primarch's implants and descended into berserk slaughter for Khorne. Their white and blue livery became blood red and brass.",
     schemes: [
-      { label: "Heresy era", pattern: "solid", colours: [L("White", "#e6e2d6"), T("Blue", "#2f5597"), D("Brass", BRASS), D("Black", BLACK)] },
-      { label: "Khorne (modern)", pattern: "solid", colours: [L("Blood red", "#8e1b17"), T("Brass", BRASS), D("Black", BLACK), D("Bone", BONE)] },
+      { label: "Heresy era", img: "OlvarrWorldEaters.jpg", pattern: "solid", colours: [L("White", "#e6e2d6"), T("Blue", "#2f5597"), D("Brass", BRASS), D("Black", BLACK)] },
+      { label: "Khorne (modern)", img: "VastyxKhadeWorldEaters.jpg", pattern: "solid", colours: [L("Blood red", "#8e1b17"), T("Brass", BRASS), D("Black", BLACK), D("Bone", BONE)] },
     ],
   },
   {
@@ -136,8 +136,8 @@ const LEGIONS = [
     primarchBio: "Mortarion grew up on poison-fogged Barbarus under a tyrant warlord and led its people in revolt. He prized endurance above all, and in a warp-stranded plague fleet he gave himself and his Legion to Nurgle.",
     legionBio: "Relentless, unstoppable infantry who march through any punishment. As Plague Marines they now carry rot and disease. Their bone-white armour became sickly green, rusted and brass-studded.",
     schemes: [
-      { label: "Heresy era", pattern: "solid", colours: [L("Bone white", "#d9d2bb"), T("Dark green", "#48603f"), D("Brass", BRASS), D("Black", BLACK)] },
-      { label: "Nurgle (modern)", pattern: "solid", colours: [L("Plague green", "#76804f"), T("Brass", "#8f7434"), D("Rust", "#7a3f22"), D("Bone", BONE)] },
+      { label: "Heresy era", img: "DG_Legionary_Mk_II_Mod.jpg", pattern: "solid", colours: [L("Bone white", "#d9d2bb"), T("Dark green", "#48603f"), D("Brass", BRASS), D("Black", BLACK)] },
+      { label: "Nurgle (modern)", img: "DeathGuardColourScheme2.png", pattern: "solid", colours: [L("Plague green", "#76804f"), T("Brass", "#8f7434"), D("Rust", "#7a3f22"), D("Bone", BONE)] },
     ],
   },
   {
@@ -146,8 +146,8 @@ const LEGIONS = [
     primarchBio: "A one-eyed giant of sorcerous genius, Magnus believed psychic knowledge could be mastered safely. His desperate warning to the Emperor shattered the Palace's wards. Russ was sent to burn Prospero, which drove Magnus into Tzeentch's arms.",
     legionBio: "Scholar-sorcerers whose mutations were 'cured' by the Rubric of Ahriman, which turned most of the Legion into dust-filled automata. Their old crimson changed to Tzeentchian blue and gold.",
     schemes: [
-      { label: "Heresy era", pattern: "solid", colours: [L("Crimson", "#a51e22"), T("Ivory", "#e6dcc0"), D("Gold", GOLD), D("Black", BLACK)] },
-      { label: "Tzeentch (modern)", pattern: "solid", colours: [L("Sorcerous blue", "#1f4fa0"), T("Gold", GOLD), D("Black", BLACK), D("Bone", BONE)] },
+      { label: "Heresy era", img: "TS_Legionary_Mark_II.jpg", pattern: "solid", colours: [L("Crimson", "#a51e22"), T("Ivory", "#e6dcc0"), D("Gold", GOLD), D("Black", BLACK)] },
+      { label: "Tzeentch (modern)", img: "Tizcan_Host_Heretic_Astartes.png", pattern: "solid", colours: [L("Sorcerous blue", "#1f4fa0"), T("Gold", GOLD), D("Black", BLACK), D("Bone", BONE)] },
     ],
   },
   {
@@ -156,9 +156,9 @@ const LEGIONS = [
     primarchBio: "The Emperor's favoured son and first Warmaster, Horus led the Great Crusade. He was corrupted by Chaos after a near-fatal wound on Davin, and his rebellion split the Imperium in the Horus Heresy.",
     legionBio: "Begun as the Luna Wolves, renamed the Sons of Horus, and after their master's death rebuilt by Abaddon as the Black Legion. They are the spearhead of the Black Crusades. Three famous schemes in one lineage.",
     schemes: [
-      { label: "Luna Wolves", pattern: "solid", colours: [L("White", WHITE), T("White", WHITE), D("Black", BLACK), D("Gold", GOLD)] },
-      { label: "Sons of Horus", pattern: "solid", colours: [L("Sea green", "#3f8a7a"), T("Black", BLACK), D("Bronze", "#9a6e34"), D("Red eye", RED)] },
-      { label: "Black Legion", pattern: "solid", colours: [L("Black", BLACK), T("Gold", GOLD), D("Red", RED), D("Brass", BRASS)] },
+      { label: "Luna Wolves", img: "Luna_Wolf_Legionary_Mk_II.jpg", pattern: "solid", colours: [L("White", WHITE), T("White", WHITE), D("Black", BLACK), D("Gold", GOLD)] },
+      { label: "Sons of Horus", img: "Pre-Heresy_SoH_2_Mk_V.jpg", pattern: "solid", colours: [L("Sea green", "#3f8a7a"), T("Black", BLACK), D("Bronze", "#9a6e34"), D("Red eye", RED)] },
+      { label: "Black Legion", img: "BlackLegionNarghast.jpg", pattern: "solid", colours: [L("Black", BLACK), T("Gold", GOLD), D("Red", RED), D("Brass", BRASS)] },
     ],
   },
   {
@@ -167,8 +167,8 @@ const LEGIONS = [
     primarchBio: "A preacher who worshipped the Emperor as a god, Lorgar was publicly shamed at Monarchia for it. He searched for new gods and found Chaos, then quietly built the conspiracy that became the Horus Heresy.",
     legionBio: "Fanatical zealots, the first Legion to turn wholly to the Dark Gods, led by Dark Apostles. Their armour is covered in scripture and sigils. They wore grey before Monarchia, then crimson in mourning and rage.",
     schemes: [
-      { label: "Pre-Monarchia", pattern: "solid", colours: [L("Grey", "#8d9095"), T("Gold", GOLD), D("Black", BLACK), D("Parchment", BONE)] },
-      { label: "Heresy & Chaos", pattern: "solid", colours: [L("Crimson", "#7c1a20"), T("Black", BLACK), D("Gold", GOLD), D("Parchment", BONE)] },
+      { label: "Pre-Monarchia", img: "WB_Legionary_Crusade_Armour.jpg", pattern: "solid", colours: [L("Grey", "#8d9095"), T("Gold", GOLD), D("Black", BLACK), D("Parchment", BONE)] },
+      { label: "Heresy & Chaos", img: "WB_Legion_Tactical_Legionary.jpg", pattern: "solid", colours: [L("Crimson", "#7c1a20"), T("Black", BLACK), D("Gold", GOLD), D("Parchment", BONE)] },
     ],
   },
   {
@@ -8227,7 +8227,8 @@ const CHAPTERS = [
       "h": "#1b1b1e",
       "r": "detail"
      }
-    ]
+    ],
+    "img": "Modern_Era_Custodian.jpg"
    },
    {
     "label": "Emissaries Imperatus",
@@ -8253,7 +8254,8 @@ const CHAPTERS = [
       "h": "#1b1b1e",
       "r": "detail"
      }
-    ]
+    ],
+    "img": "Custodian_Emissaries_Imperatus.png"
    },
    {
     "label": "Shadowkeepers",
@@ -8274,7 +8276,8 @@ const CHAPTERS = [
       "h": "#c49a3c",
       "r": "detail"
      }
-    ]
+    ],
+    "img": "Custodian_Warden.png"
    }
   ]
  }

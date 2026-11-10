@@ -256,8 +256,8 @@
   function legionView(e) {
     const lg = e.legion, g = byLegion[lg.num];
     const pics = [...(PRIMARCH_PICS[lg.primarch] || []).map((p) => ({ label: `${lg.primarch}: ${p.label}`, src: imgUrl[p.file] })),
-      { label: `${lg.name.split(" /")[0]}: ${lg.schemes[0] && lg.schemes[0].label ? lg.schemes[0].label : "colour scheme"}`, src: plateSrc(e) },
-      ...lg.schemes.slice(1).filter((s) => s.img).map((s) => ({ label: `${lg.name.split(" /")[0]}: ${s.label}`, src: imgUrl[s.img] }))];
+      ...lg.schemes.map((s, i) => ({ label: `${lg.name.split(" /")[0]}: ${s.label || "colour scheme"}`, src: imgUrl[s.img] || (i === 0 && !s.img ? plateSrc(e) : null), pending: !!s.img || i === 0 }))
+        .filter((p) => p.pending)];
     return `<div class="head"><div><h1>${esc(lg.name)}</h1>
         <div class="meta">Legion ${lg.num} · Primarch ${esc(lg.primarch)} · ${esc(lg.status)}</div>
         <div class="badges"><span class="badge ${lg.allegiance}">${lg.allegiance}</span>${primBadge(e)}</div></div>
@@ -277,7 +277,9 @@
         <div class="actions">${favBtn(e.id)}${linkBtns(ch.name)}</div></div>
       <div class="prose">${ch.bio.split(/\n\n+/).map((p) => `<p>${esc(p)}</p>`).join("")}</div>
       <div class="section-title">Colour scheme${e.schemes.length > 1 ? "s" : ""}</div><div class="section-hint">Closest Citadel paints · click one to copy its name</div><div class="schemes">${e.schemes.map(schemeBlock).join("")}</div>
-      <div class="section-title">Picture</div><div class="pics"><figure>${plate(plateSrc(e), ch.name)}<figcaption>${esc(ch.name)}: colour scheme</figcaption></figure></div>`;
+      ${e.schemes.some((s) => s.img)
+        ? `<div class="section-title">Pictures</div><div class="pics">${e.schemes.filter((s) => s.img).map((s) => `<figure>${plate(imgUrl[s.img], s.label)}<figcaption>${esc(ch.name)}: ${esc(s.label)}</figcaption></figure>`).join("")}</div>`
+        : `<div class="section-title">Picture</div><div class="pics"><figure>${plate(plateSrc(e), ch.name)}<figcaption>${esc(ch.name)}: colour scheme</figcaption></figure></div>`}`;
   }
 
   function route() {
