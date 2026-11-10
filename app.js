@@ -203,10 +203,15 @@
     });
     const unk = byLegion["?"].subs;
     if (unk.length) {
-      const isOpen = open.has("?");
-      html += `<div class="side-group"><div class="side-title">Other Chapters</div>
-        <button class="leg-row ${isOpen ? "open" : ""}" data-toggle="?"><span class="caret">▸</span><span class="num">?</span><span class="nm">Unknown lineage</span><span class="cnt">${unk.length}</span></button>
-        ${isOpen ? `<div class="subs">${unk.map((s) => `<button data-go="${s.id}" class="${current === s.id ? "sel" : ""}">${dots(s.schemes[0])}${esc(s.name)}</button>`).join("")}</div>` : ""}</div>`;
+      html += `<div class="side-group"><div class="side-title">Unknown Lineage</div>`;
+      [["Loyalist", "?L"], ["Renegade", "?R"], ["Traitor", "?T"]].forEach(([key, tk]) => {
+        const list = unk.filter((s) => allegianceOf(s) === key);
+        if (!list.length) return;
+        const isOpen = open.has(tk);
+        html += `<button class="leg-row ${isOpen ? "open" : ""}" data-toggle="${tk}"><span class="caret">▸</span><span class="num">?</span><span class="nm">${key}</span><span class="cnt">${list.length}</span></button>`;
+        if (isOpen) html += `<div class="subs">${list.map((s) => `<button data-go="${s.id}" class="${current === s.id ? "sel" : ""}">${dots(s.schemes[0])}${esc(s.name)}</button>`).join("")}</div>`;
+      });
+      html += `</div>`;
     }
     $("#sidebar").innerHTML = html;
   }
@@ -286,7 +291,7 @@
     const id = location.hash.replace(/^#\/?/, "");
     const e = byId[id];
     current = e ? e.id : null;
-    if (e) open.add(e.legion.num);
+    if (e) open.add(e.legion.num === "?" ? "?" + allegianceOf(e)[0] : e.legion.num);
     uid = 0;
     $("#view").innerHTML = !e ? welcome() : e.kind === "legion" ? legionView(e) : chapterView(e);
     document.title = e ? `${e.name} · Kuur0's Warhammer Color Codex` : "Kuur0's Warhammer Color Codex";
