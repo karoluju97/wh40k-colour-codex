@@ -8708,6 +8708,10 @@ const PRIMARCH_PICS = {
  ],
  "Magnus the Red": [
   {
+   "label": "Warhammer 40k model",
+   "file": "Magnus_daemon_primarch_of_tzeentch.jpg"
+  },
+  {
    "label": "Official art",
    "file": "Magnus_The_Red_Portrait.png"
   }
