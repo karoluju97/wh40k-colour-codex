@@ -148,7 +148,8 @@
   const imgUrl = {};
   let imagesDone = false;
   async function loadImages() {
-    const files = [...new Set([...Object.values(PLATES), ...Object.values(PRIMARCH_PICS).flat().map((p) => p.file)])];
+    const schemeImgs = [...LEGIONS.flatMap((l) => l.schemes), ...CHAPTERS.flatMap((c) => c.schemes || [c.scheme])].map((s) => s.img).filter(Boolean);
+    const files = [...new Set([...Object.values(PLATES), ...Object.values(PRIMARCH_PICS).flat().map((p) => p.file), ...schemeImgs])];
     const norm = (f) => { const t = f.replace(/_/g, " "); return t.charAt(0).toUpperCase() + t.slice(1); };
     const byNorm = Object.fromEntries(files.map((f) => [norm(f), f]));
     for (let i = 0; i < files.length; i += 50) {
@@ -255,7 +256,8 @@
   function legionView(e) {
     const lg = e.legion, g = byLegion[lg.num];
     const pics = [...(PRIMARCH_PICS[lg.primarch] || []).map((p) => ({ label: `${lg.primarch}: ${p.label}`, src: imgUrl[p.file] })),
-      { label: `${lg.name.split(" /")[0]}: colour scheme`, src: plateSrc(e) }];
+      { label: `${lg.name.split(" /")[0]}: ${lg.schemes[0] && lg.schemes[0].label ? lg.schemes[0].label : "colour scheme"}`, src: plateSrc(e) },
+      ...lg.schemes.slice(1).filter((s) => s.img).map((s) => ({ label: `${lg.name.split(" /")[0]}: ${s.label}`, src: imgUrl[s.img] }))];
     return `<div class="head"><div><h1>${esc(lg.name)}</h1>
         <div class="meta">Legion ${lg.num} · Primarch ${esc(lg.primarch)} · ${esc(lg.status)}</div>
         <div class="badges"><span class="badge ${lg.allegiance}">${lg.allegiance}</span>${primBadge(e)}</div></div>

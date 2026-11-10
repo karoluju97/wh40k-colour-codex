@@ -28,9 +28,9 @@ const LEGIONS = [
     legionBio: "The First Legion, keepers of secrets. Their modern Chapter hides the shame of the Fallen and hunts them relentlessly. They field the bone-armoured Deathwing and the black-armoured Ravenwing alongside the green battle companies.",
     schemes: [
       { label: "Battle companies (modern)", pattern: "solid", colours: [L("Dark green", "#1d4a2b"), T("Dark green", "#1d4a2b"), D("Bone robes", BONE), D("Red", RED), D("Gold", GOLD)] },
-      { label: "Deathwing", pattern: "solid", colours: [L("Bone", BONE), T("Bone", BONE), D("Red", RED), D("Dark green", "#1d4a2b")] },
-      { label: "Ravenwing", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Bone", BONE), D("Silver", SILVER)] },
-      { label: "Horus Heresy Legion", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red", RED), D("Bone", BONE)] },
+      { label: "Deathwing", img: "Deathwing_Termi.jpg", pattern: "solid", colours: [L("Bone", BONE), T("Bone", BONE), D("Red", RED), D("Dark green", "#1d4a2b")] },
+      { label: "Ravenwing", img: "BlackKnight.jpg", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Bone", BONE), D("Silver", SILVER)] },
+      { label: "Horus Heresy Legion", img: "DA_Legionary_MK_III_Artificer.png", pattern: "solid", colours: [L("Black", BLACK), T("Black", BLACK), D("Red", RED), D("Bone", BONE)] },
     ],
   },
 
